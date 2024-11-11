@@ -1,0 +1,184 @@
+2024-11-11 14:08:12,542 - TradingLogger - INFO - Fetching data for: DOGE-USD
+2024-11-11 14:08:12,754 - TradingLogger - INFO - Applying moving average strategy
+2024-11-11 14:08:12,761 - TradingLogger - INFO - Backtesting strategy
+2024-11-11 14:08:12,769 - TradingLogger - INFO - Plotting results
+2024-11-11 14:13:58,782 - TradingLogger - INFO - Fetching historical data for: DOGE-USD
+2024-11-11 14:13:59,043 - TradingLogger - INFO - Starting real-time data stream for DOGE/USDT
+2024-11-11 14:53:18,070 - TradingLogger - INFO - Fetching historical data for: DOGE-USD
+2024-11-11 14:53:18,289 - TradingLogger - INFO - Starting real-time data stream for DOGE/USDT
+2024-11-11 15:01:05,411 - TradingLogger - INFO - Fetching historical data for: DOGE-USD
+2024-11-11 15:01:05,685 - TradingLogger - INFO - Starting real-time data stream for DOGE/USDT
+2024-11-11 15:10:51,303 - TradingLogger - INFO - Fetching historical data for: DOGE-USD
+2024-11-11 15:10:51,541 - TradingLogger - INFO - Starting real-time data stream for DOGE/USDT
+2024-11-11 15:11:14,489 - TradingLogger - INFO - Real-time data stream stopped.
+2024-11-11 15:19:58,811 - TradingLogger - INFO - Fetching historical data for: DOGE-USD
+2024-11-11 15:19:59,011 - TradingLogger - INFO - Starting real-time data stream for DOGE/USDT
+2024-11-11 15:20:23,460 - TradingLogger - INFO - Real-time data stream stopped.
+2024-11-11 16:20:21,045 - TradingLogger - INFO - Fetching historical data for: DOGE-USD
+2024-11-11 16:20:21,344 - TradingLogger - INFO - Starting real-time data stream for DOGE/USDT
+2024-11-11 16:20:38,368 - TradingLogger - INFO - Real-time data stream stopped.
+2024-11-11 16:24:40,862 - TradingLogger - INFO - Fetching historical data for: DOGE-USD
+2024-11-11 16:24:41,131 - TradingLogger - INFO - Starting real-time data stream for DOGE/USDT
+2024-11-11 16:25:02,375 - TradingLogger - INFO - Real-time data stream stopped.
+2024-11-11 16:28:52,716 - TradingLogger - INFO - Fetching historical data for: DOGE-USD
+2024-11-11 16:28:53,008 - TradingLogger - INFO - Starting real-time data stream for DOGE/USDT
+2024-11-11 16:29:01,613 - TradingLogger - INFO - Real-time data stream stopped.
+2024-11-11 16:30:05,115 - TradingLogger - INFO - Fetching historical data for: DOGE-USD
+2024-11-11 16:30:05,396 - TradingLogger - INFO - Starting real-time data stream for DOGE/USDT
+2024-11-11 16:30:11,073 - TradingLogger - INFO - Real-time data stream stopped.
+2024-11-11 16:30:23,882 - TradingLogger - INFO - Fetching historical data for: DOGE-USD
+2024-11-11 16:30:24,092 - TradingLogger - INFO - Starting real-time data stream for DOGE/USDT
+2024-11-11 16:30:29,123 - TradingLogger - INFO - Real-time data stream stopped.
+2024-11-11 16:39:02,946 - TradingLogger - INFO - Fetching historical data for: DOGE-USD
+2024-11-11 16:39:03,293 - TradingLogger - INFO - Starting real-time data stream for DOGE/USDT
+2024-11-11 16:39:11,606 - TradingLogger - INFO - Real-time data stream stopped.
+2024-11-11 16:46:48,702 - TradingLogger - INFO - Fetching historical data for: DOGE-USD
+2024-11-11 16:46:48,954 - TradingLogger - INFO - Starting real-time data stream for DOGE/USDT
+2024-11-11 16:47:05,468 - TradingLogger - INFO - User interrupted the stream. Closing.
+2024-11-11 17:01:44,861 - TradingLogger - INFO - Fetching historical data for: DOGE-USD
+2024-11-11 17:01:45,123 - TradingLogger - INFO - Starting real-time data stream for DOGE/USDT
+2024-11-11 17:01:54,318 - TradingLogger - INFO - User interrupted the stream. Closing.
+2024-11-11 19:10:29,643 - TradingLogger - INFO - Fetching historical data for: DOGE-USD
+2024-11-11 19:10:29,938 - TradingLogger - INFO - Starting real-time data stream for DOGE/USDT
+2024-11-11 19:10:35,731 - TradingLogger - INFO - User interrupted the stream. Closing.
+2024-11-11 19:12:23,280 - TradingLogger - INFO - Fetching historical data for: DOGE-USD
+2024-11-11 19:12:23,505 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 19:19:04,647 - TradingLogger - INFO - User interrupted the stream. Closing.
+2024-11-11 19:21:06,029 - TradingLogger - INFO - Fetching historical data for: DOGE-USD
+2024-11-11 19:21:06,298 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 19:21:31,986 - TradingLogger - INFO - User interrupted the stream. Closing.
+2024-11-11 19:21:45,082 - TradingLogger - INFO - Fetching historical data for: DOGE-USD
+2024-11-11 19:21:45,272 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 19:22:47,832 - TradingLogger - INFO - User interrupted the stream. Closing.
+2024-11-11 19:49:48,962 - TradingLogger - INFO - Fetching historical data for: DOGE-USD
+2024-11-11 19:49:49,804 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 19:50:12,316 - TradingLogger - INFO - User interrupted the stream. Closing.
+2024-11-11 19:50:17,460 - TradingLogger - INFO - Fetching historical data for: DOGE-USD
+2024-11-11 19:50:17,648 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 19:51:20,643 - TradingLogger - INFO - User interrupted the stream. Closing.
+2024-11-11 19:51:28,227 - TradingLogger - INFO - Fetching historical data for: DOGE-USD
+2024-11-11 19:51:28,410 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 19:51:47,580 - TradingLogger - INFO - User interrupted the stream. Closing.
+2024-11-11 19:52:11,717 - TradingLogger - INFO - Fetching historical data for: DOGE-USD
+2024-11-11 19:52:11,922 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 19:56:16,365 - TradingLogger - INFO - Fetching historical data for: DOGE-USD
+2024-11-11 19:56:16,573 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 19:58:26,076 - TradingLogger - INFO - Fetching historical data for: DOGE-USD
+2024-11-11 19:58:26,310 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 19:59:13,564 - TradingLogger - INFO - Fetching historical data for: DOGE-USD
+2024-11-11 19:59:13,765 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 20:01:18,128 - TradingLogger - INFO - Fetching historical data for: DOGE-USD
+2024-11-11 20:01:18,337 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 20:03:05,238 - TradingLogger - INFO - Fetching historical data for: DOGE-USD
+2024-11-11 20:03:05,481 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 20:05:30,601 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 20:05:53,511 - TradingLogger - INFO - User interrupted the stream. Closing.
+2024-11-11 20:08:31,344 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 20:09:01,872 - TradingLogger - INFO - 用户正常退出程序
+2024-11-11 20:09:02,161 - TradingLogger - INFO - 程序已完全退出
+2024-11-11 20:11:06,911 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 20:14:29,651 - TradingLogger - INFO - 用户正常退出程序
+2024-11-11 20:14:29,921 - TradingLogger - INFO - 程序已完全退出
+2024-11-11 20:16:36,187 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 20:18:58,382 - TradingLogger - INFO - 用户正常退出程序
+2024-11-11 20:18:58,710 - TradingLogger - INFO - 程序已完全退出
+2024-11-11 20:22:05,351 - TradingLogger - INFO - 配置信息: SHORT_WINDOW=50, LONG_WINDOW=200
+2024-11-11 20:22:05,353 - TradingLogger - INFO - 交易品种: DOGE-USD
+2024-11-11 20:22:05,556 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 20:39:10,910 - TradingLogger - INFO - 用户正常退出程序
+2024-11-11 20:39:11,227 - TradingLogger - INFO - 程序已完全退出
+2024-11-11 20:39:16,958 - TradingLogger - INFO - 配置信息: SHORT_WINDOW=20, LONG_WINDOW=50
+2024-11-11 20:39:16,958 - TradingLogger - INFO - 交易品种: DOGE-USD
+2024-11-11 20:39:17,106 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 20:41:03,330 - TradingLogger - INFO - 用户正常退出程序
+2024-11-11 20:41:03,603 - TradingLogger - INFO - 程序已完全退出
+2024-11-11 20:41:07,229 - TradingLogger - INFO - 配置信息: SHORT_WINDOW=20, LONG_WINDOW=50
+2024-11-11 20:41:07,230 - TradingLogger - INFO - 交易品种: DOGE-USD
+2024-11-11 20:41:07,402 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 20:44:18,075 - TradingLogger - INFO - 用户正常退出程序
+2024-11-11 20:44:18,412 - TradingLogger - INFO - 程序已完全退出
+2024-11-11 20:44:22,044 - TradingLogger - INFO - 配置信息: SHORT_WINDOW=20, LONG_WINDOW=50
+2024-11-11 20:44:22,044 - TradingLogger - INFO - 交易品种: DOGE-USD
+2024-11-11 20:44:22,206 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 20:45:02,493 - TradingLogger - INFO - 用户正常退出程序
+2024-11-11 20:45:02,493 - TradingLogger - INFO - 程序已完全退出
+2024-11-11 20:45:06,466 - TradingLogger - INFO - 配置信息: SHORT_WINDOW=20, LONG_WINDOW=50
+2024-11-11 20:45:06,467 - TradingLogger - INFO - 交易品种: DOGE-USD
+2024-11-11 20:45:06,664 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 20:51:01,313 - TradingLogger - INFO - 用户正常退出程序
+2024-11-11 20:51:01,654 - TradingLogger - INFO - 程序已完全退出
+2024-11-11 20:51:06,334 - TradingLogger - INFO - 配置信息: SHORT_WINDOW=20, LONG_WINDOW=50
+2024-11-11 20:51:06,334 - TradingLogger - INFO - 交易品种: DOGE-USD
+2024-11-11 20:51:06,592 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 20:52:45,699 - TradingLogger - INFO - 程序已完全退出
+2024-11-11 20:52:50,504 - TradingLogger - INFO - 配置信息: SHORT_WINDOW=20, LONG_WINDOW=50
+2024-11-11 20:52:50,505 - TradingLogger - INFO - 交易品种: DOGE-USD
+2024-11-11 20:52:50,730 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 20:52:56,909 - TradingLogger - INFO - 程序已完全退出
+2024-11-11 20:55:34,991 - TradingLogger - INFO - 配置信息: SHORT_WINDOW=20, LONG_WINDOW=50
+2024-11-11 20:55:34,994 - TradingLogger - INFO - 交易品种: DOGE-USD
+2024-11-11 20:55:35,296 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 20:57:35,461 - TradingLogger - INFO - 用户主动中断连接
+2024-11-11 20:57:35,775 - TradingLogger - INFO - 程序已完全退出
+2024-11-11 20:57:40,036 - TradingLogger - INFO - 配置信息: SHORT_WINDOW=20, LONG_WINDOW=50
+2024-11-11 20:57:40,036 - TradingLogger - INFO - 交易品种: DOGE-USD
+2024-11-11 20:57:40,233 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 21:04:39,122 - TradingLogger - INFO - 用户主动中断连接
+2024-11-11 21:04:39,387 - TradingLogger - INFO - 程序已完全退出
+2024-11-11 21:15:17,342 - TradingLogger - INFO - 配置信息: SHORT_WINDOW=20, LONG_WINDOW=50
+2024-11-11 21:15:17,342 - TradingLogger - INFO - 交易品种: DOGE-USD
+2024-11-11 21:15:17,552 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 21:15:41,857 - TradingLogger - INFO - 用户正常退出程序
+2024-11-11 21:15:42,164 - TradingLogger - INFO - 程序已完全退出
+2024-11-11 21:16:50,712 - TradingLogger - INFO - 配置信息: SHORT_WINDOW=20, LONG_WINDOW=50
+2024-11-11 21:16:50,712 - TradingLogger - INFO - 交易品种: DOGE-USD
+2024-11-11 21:16:50,882 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 21:16:56,335 - TradingLogger - INFO - 用户正常退出程序
+2024-11-11 21:16:56,614 - TradingLogger - INFO - 程序已完全退出
+2024-11-11 21:18:03,184 - TradingLogger - INFO - 配置信息: SHORT_WINDOW=20, LONG_WINDOW=50
+2024-11-11 21:18:03,185 - TradingLogger - INFO - 交易品种: DOGE-USD
+2024-11-11 21:18:03,412 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 21:18:09,270 - TradingLogger - INFO - 用户正常退出程序
+2024-11-11 21:18:09,505 - TradingLogger - INFO - 程序已完全退出
+2024-11-11 21:21:57,100 - TradingLogger - INFO - 配置信息: SHORT_WINDOW=20, LONG_WINDOW=50
+2024-11-11 21:21:57,102 - TradingLogger - INFO - 交易品种: DOGE-USD
+2024-11-11 21:21:57,349 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 21:22:20,858 - TradingLogger - INFO - 用户正常退出程序
+2024-11-11 21:22:21,636 - TradingLogger - INFO - 程序已完全退出
+2024-11-11 21:22:56,677 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 21:23:03,906 - TradingLogger - INFO - User interrupted the stream. Closing.
+2024-11-11 21:38:19,170 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 21:45:01,696 - TradingLogger - INFO - User interrupted the stream. Closing.
+2024-11-11 21:45:04,809 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 21:45:09,521 - TradingLogger - INFO - User interrupted the stream. Closing.
+2024-11-11 21:46:38,269 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 21:50:15,709 - TradingLogger - INFO - User interrupted the stream. Closing.
+2024-11-11 21:50:28,863 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 21:51:20,295 - TradingLogger - INFO - User interrupted the stream. Closing.
+2024-11-11 21:52:45,601 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 21:55:04,545 - TradingLogger - INFO - User interrupted the stream. Closing.
+2024-11-11 21:55:07,882 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 21:56:55,683 - TradingLogger - INFO - User interrupted the stream. Closing.
+2024-11-11 22:27:46,932 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 22:29:24,173 - TradingLogger - INFO - User interrupted the stream. Closing.
+2024-11-11 22:29:27,313 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 22:34:25,822 - TradingLogger - INFO - User interrupted the stream. Closing.
+2024-11-11 22:34:29,081 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 22:35:39,642 - TradingLogger - INFO - User interrupted the stream. Closing.
+2024-11-11 22:37:42,078 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 22:37:45,093 - TradingLogger - INFO - 当前价格: 0.32425
+2024-11-11 22:37:46,166 - TradingLogger - INFO - 当前价格: 0.32425
+2024-11-11 22:37:47,218 - TradingLogger - INFO - 当前价格: 0.32449
+2024-11-11 22:37:48,269 - TradingLogger - INFO - 当前价格: 0.32449
+2024-11-11 22:37:48,506 - TradingLogger - INFO - User interrupted the stream. Closing.
+2024-11-11 22:38:00,826 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 22:38:52,476 - TradingLogger - INFO - User interrupted the stream. Closing.
+2024-11-11 22:41:37,363 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 22:41:43,878 - TradingLogger - INFO - User interrupted the stream. Closing.
+2024-11-11 22:43:57,905 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 22:44:31,726 - TradingLogger - INFO - User interrupted the stream. Closing.
+2024-11-11 22:51:11,727 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 22:51:55,963 - TradingLogger - INFO - User interrupted the stream. Closing.
+2024-11-11 22:53:52,814 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 22:57:00,478 - TradingLogger - INFO - User interrupted the stream. Closing.
+2024-11-11 22:58:51,777 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
