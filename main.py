@@ -51,112 +51,75 @@ def display_data(latest, rt_data):
         print(f"\n实时市场数据 - {time.strftime('%Y-%m-%d %H:%M:%S')}")
         print("=" * 60)
         
+        # 显示交易建议
+        if ('Trading_Advice', '') in latest:
+            print(f"\n交易建议:")
+            print("-" * 60)
+            print(latest[('Trading_Details', '')])
+            
         # 基本价格信息
         print(f"\n价格信息:")
         print("-" * 60)
         print(f"当前价格:     {latest[('Close', TICKER)]:.5f}")
-        print(f"短期MA({SHORT_WINDOW}):   {latest[('Short_MA', '')]:.5f}")
-        print(f"长期MA({LONG_WINDOW}):  {latest[('Long_MA', '')]:.5f}")
+        
+        # 检查并显示移动平均线
+        if ('Short_MA', '') in latest:
+            print(f"短期MA({SHORT_WINDOW}):   {latest[('Short_MA', '')]:.5f}")
+        if ('Long_MA', '') in latest:
+            print(f"长期MA({LONG_WINDOW}):  {latest[('Long_MA', '')]:.5f}")
         
         # MACD指标
-        print(f"\nMACD指标:")
-        print("-" * 60)
-        print(f"MACD:         {latest[('MACD', '')]:.5f}")
-        print(f"信号线:       {latest[('Signal_Line', '')]:.5f}")
-        print(f"MACD柱状:     {latest[('MACD_Hist', '')]:.5f}")
+        if all(x in latest for x in [('MACD', ''), ('Signal_Line', ''), ('MACD_Hist', '')]):
+            print(f"\nMACD指标:")
+            print("-" * 60)
+            print(f"MACD:         {latest[('MACD', '')]:.5f}")
+            print(f"信号线:       {latest[('Signal_Line', '')]:.5f}")
+            print(f"MACD柱状:     {latest[('MACD_Hist', '')]:.5f}")
         
         # RSI指标
-        print(f"\nRSI指标:")
-        print("-" * 60)
-        print(f"RSI(14):      {latest[('RSI', '')]:.2f}")
-        rsi_signal = "超卖" if latest[('RSI', '')] < 30 else "超买" if latest[('RSI', '')] > 70 else "中性"
-        print(f"RSI信号:      {rsi_signal}")
+        if ('RSI', '') in latest:
+            print(f"\nRSI指标:")
+            print("-" * 60)
+            print(f"RSI(14):      {latest[('RSI', '')]:.2f}")
+            rsi_signal = "超卖" if latest[('RSI', '')] < 30 else "超买" if latest[('RSI', '')] > 70 else "中性"
+            print(f"RSI信号:      {rsi_signal}")
         
         # 布林带
-        print(f"\n布林带:")
-        print("-" * 60)
-        print(f"上轨:         {latest[('BB_Upper', '')]:.5f}")
-        print(f"中轨:         {latest[('BB_Middle', '')]:.5f}")
-        print(f"下轨:         {latest[('BB_Lower', '')]:.5f}")
+        if all(x in latest for x in [('BB_Upper', ''), ('BB_Middle', ''), ('BB_Lower', '')]):
+            print(f"\n布林带:")
+            print("-" * 60)
+            print(f"上轨:         {latest[('BB_Upper', '')]:.5f}")
+            print(f"中轨:         {latest[('BB_Middle', '')]:.5f}")
+            print(f"下轨:         {latest[('BB_Lower', '')]:.5f}")
         
         # 趋势分析
-        print(f"\n趋势分析:")
-        print("-" * 60)
-        trend = "上升" if latest[('Trend', '')] > 0 else "下降"
-        trend_strength = latest[('Trend_Strength', '')]
-        print(f"当前趋势:     {trend}")
-        print(f"趋势强度:     {trend_strength:.2f}%")
-        print(f"动量:         {latest[('Momentum', '')]:.5f}")
+        if ('Trend', '') in latest:
+            print(f"\n趋势分析:")
+            print("-" * 60)
+            trend = "上升" if latest[('Trend', '')] > 0 else "下降"
+            print(f"当前趋势:     {trend}")
+            
+            if ('Trend_Strength', '') in latest:
+                print(f"趋势强度:     {latest[('Trend_Strength', '')]:.2f}%")
+            if ('Momentum', '') in latest:
+                print(f"动量:         {latest[('Momentum', '')]:.5f}")
         
         # 价格偏离度
         print(f"\n价格偏离度:")
         print("-" * 60)
-        print(f"距短期MA:     {latest[('Price_Dev_Short', '')]:.2f}%")
-        print(f"距长期MA:     {latest[('Price_Dev_Long', '')]:.2f}%")
         
-        # 交易信号
-        print(f"\n交易信号:")
-        print("-" * 60)
-        signal = latest[('Signal', '')]
-        signal_text = "买入" if signal == 1 else "卖出" if signal == -1 else "持有"
-        print(f"主要信号:     {signal_text}")
+        # 计算价格偏离度
+        if ('Short_MA', '') in latest:
+            short_dev = (latest[('Close', TICKER)] - latest[('Short_MA', '')]) / latest[('Short_MA', '')] * 100
+            print(f"距短期MA:     {short_dev:.2f}%")
         
-        # 综合建议
-        print(f"\n综合分析:")
-        print("-" * 60)
-        
-        # 基于多个指标的综合分析
-        bullish_signals = 0
-        bearish_signals = 0
-        
-        # MACD信号
-        if latest[('MACD_Hist', '')] > 0:
-            bullish_signals += 1
-        else:
-            bearish_signals += 1
-            
-        # RSI信号
-        if latest[('RSI', '')] < 30:
-            bullish_signals += 1
-        elif latest[('RSI', '')] > 70:
-            bearish_signals += 1
-            
-        # 布林带信号
-        price = latest[('Close', TICKER)]
-        if price < latest[('BB_Lower', '')]:
-            bullish_signals += 1
-        elif price > latest[('BB_Upper', '')]:
-            bearish_signals += 1
-            
-        # 趋势信号
-        if latest[('Trend', '')] > 0:
-            bullish_signals += 1
-        else:
-            bearish_signals += 1
-            
-        # 输出综合建议
-        total_signals = bullish_signals + bearish_signals
-        bull_strength = (bullish_signals / total_signals) * 100 if total_signals > 0 else 0
-        
-        print(f"看涨信号:     {bullish_signals}")
-        print(f"看跌信号:     {bearish_signals}")
-        print(f"多头强度:     {bull_strength:.1f}%")
-        
-        if bull_strength > 60:
-            print("建议:         可以考虑买入")
-        elif bull_strength < 40:
-            print("建议:         可以考虑卖出")
-        else:
-            print("建议:         建议观望")
-            
-        # 风险提示
-        if abs(latest[('Price_Dev_Short', '')]) > 5:
-            print("\n风险提示:     价格偏离均线过大，注意风险")
-        if latest[('RSI', '')] > 75 or latest[('RSI', '')] < 25:
-            print("风险提示:     RSI处于极值区域，注意反转风险")
+        if ('Long_MA', '') in latest:
+            long_dev = (latest[('Close', TICKER)] - latest[('Long_MA', '')]) / latest[('Long_MA', '')] * 100
+            print(f"距长期MA:     {long_dev:.2f}%")
         
         print("=" * 60)
-        sys.stdout.flush()  # 确保输出被立即显示
+        sys.stdout.flush()
+        
     except Exception as e:
         logger.error(f"显示数据时出错: {str(e)}")
 

@@ -24,8 +24,9 @@ def load_data(ticker: str, start_date: str, end_date: str) -> pd.DataFrame:
             print(f"没有找到 {ticker} 的数据.")
             return None
         
-        # 保留收盘价列，并重命名为 'Close'
+        # 创建多级列索引
         data = data[['Close']]
+        data.columns = pd.MultiIndex.from_product([['Close'], [ticker]])
         data.dropna(inplace=True)  # 移除缺失值
         print(f"成功加载 {ticker} 的数据，包含 {len(data)} 条记录.")
         

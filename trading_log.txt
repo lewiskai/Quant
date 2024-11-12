@@ -182,3 +182,50 @@
 2024-11-11 22:53:52,814 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
 2024-11-11 22:57:00,478 - TradingLogger - INFO - User interrupted the stream. Closing.
 2024-11-11 22:58:51,777 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 23:48:54,923 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 23:48:58,138 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:49:00,150 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:49:02,147 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:49:04,268 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:49:06,278 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:49:08,287 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:49:10,197 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:49:12,321 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:49:14,329 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:49:16,444 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:49:18,555 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:49:20,571 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:49:22,589 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:49:24,705 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:49:26,710 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:49:28,948 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:49:30,950 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:49:32,966 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:49:35,088 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:49:37,100 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:49:39,327 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:49:41,328 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:49:43,347 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:49:45,362 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:49:47,595 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:49:49,957 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:49:51,964 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:49:53,976 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:49:56,093 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:49:58,205 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:50:00,115 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:50:02,231 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:50:04,244 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:50:06,259 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:50:08,377 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:50:10,494 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:50:12,498 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:50:14,615 - TradingLogger - ERROR - 显示数据时出错: ('Price_Dev_Short', '')
+2024-11-11 23:50:15,830 - TradingLogger - INFO - User interrupted the stream. Closing.
+2024-11-11 23:51:18,811 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 23:55:53,584 - TradingLogger - INFO - User interrupted the stream. Closing.
+2024-11-11 23:55:57,193 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-11 23:57:29,657 - TradingLogger - INFO - User interrupted the stream. Closing.
+2024-11-11 23:57:32,785 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 00:02:55,304 - TradingLogger - INFO - User interrupted the stream. Closing.
+2024-11-12 00:04:06,647 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
