@@ -3,144 +3,120 @@
 import pandas as pd
 import logging
 import numpy as np
+from datetime import datetime
 
 # 配置日志记录器
 logger = logging.getLogger(__name__)
 
 def generate_trading_signals(data: pd.DataFrame) -> dict:
     """
-    生成交易信号和建议
-    
-    返回:
-    - dict: 包含交易信号和详细分析的字典
+    Generate trading signals and recommendations with improved strategy
     """
-    latest = data.iloc[-1]
-    prev = data.iloc[-2] if len(data) > 1 else None
-    
-    # 获取基础数据
-    close_price = latest[('Close', data.columns.get_level_values(1)[0])]
-    
-    signals = {
-        'price': close_price,
-        'signal': latest[('Signal', '')],
-        'strength': 0,  # 信号强度 (0-100)
-        'confidence': 0,  # 置信度 (0-100)
-        'reasons': [],  # 建议原因
-        'risks': [],    # 风险提示
-        'supports': [], # 支撑位
-        'resistances': [], # 阻力位
-        'stop_loss': None, # 建议止损
-        'take_profit': None # 建议止盈
-    }
-    
-    # === 趋势分析 ===
-    if latest[('Short_MA', '')] > latest[('Long_MA', '')]:
-        signals['reasons'].append("短期均线位于长期均线上方，趋势向上")
-        signals['strength'] += 20
-    else:
-        signals['reasons'].append("短期均线位于长期均线下方，趋势向下")
-        signals['strength'] -= 20
+    try:
+        latest = data.iloc[-1]
+        prev = data.iloc[-2] if len(data) > 1 else None
         
-    # === MACD分析 ===
-    if latest[('MACD_Hist', '')] > 0:
-        if prev and latest[('MACD_Hist', '')] > prev[('MACD_Hist', '')]:
-            signals['reasons'].append("MACD柱状图增长，买入动能增强")
+        close_price = float(latest['close'])
+        
+        signals = {
+            'price': close_price,
+            'signal': 0,
+            'strength': 0,
+            'confidence': 0,
+            'reasons': [],
+            'risks': []
+        }
+
+        # Trend Analysis
+        short_ma = float(latest['SMA_short'])
+        long_ma = float(latest['SMA_long'])
+        ma_50 = float(latest['MA_50'])
+        ma_200 = float(latest['MA_200'])
+        
+        # MACD Analysis
+        macd = float(latest['MACD'])
+        macd_signal = float(latest['Signal_Line'])
+        macd_hist = float(latest['MACD_Hist'])
+        
+        # RSI Analysis
+        rsi = float(latest['RSI'])
+        
+        # Bollinger Bands
+        bb_upper = float(latest['BB_Upper'])
+        bb_lower = float(latest['BB_Lower'])
+        
+        # Volume Analysis
+        volume = float(latest['volume'])
+        avg_volume = float(latest['Volume_MA'])
+
+        # Trend Confirmation (更严格的条件)
+        if short_ma > long_ma and ma_50 > ma_200 and close_price > ma_50:
+            signals['reasons'].append("Strong uptrend confirmed")
+            signals['strength'] += 20
+            signals['signal'] = 1
+        elif short_ma < long_ma and ma_50 < ma_200 and close_price < ma_50:
+            signals['reasons'].append("Strong downtrend confirmed")
+            signals['strength'] -= 20
+            signals['signal'] = -1
+
+        # MACD Signal (增加确认条件)
+        if macd > macd_signal and macd_hist > 0 and macd_hist > prev['MACD_Hist']:
+            signals['reasons'].append("MACD indicates increasing bullish momentum")
             signals['strength'] += 15
-    else:
-        signals['reasons'].append("MACD柱状图为负，可能存在下跌风险")
-        signals['risks'].append("MACD显示下跌趋势")
+            signals['signal'] = max(signals['signal'], 0) + 1
+        elif macd < macd_signal and macd_hist < 0 and macd_hist < prev['MACD_Hist']:
+            signals['reasons'].append("MACD indicates increasing bearish momentum")
+            signals['strength'] -= 15
+            signals['signal'] = min(signals['signal'], 0) - 1
+
+        # RSI Overbought/Oversold (调整阈值)
+        if rsi > 75:
+            signals['risks'].append("RSI indicates strong overbought conditions")
+            signals['strength'] -= 15
+        elif rsi < 25:
+            signals['reasons'].append("RSI indicates strong oversold conditions")
+            signals['strength'] += 15
+
+        # Bollinger Bands Breakout (增加确认条件)
+        if close_price > bb_upper and volume > avg_volume * 1.2:
+            signals['risks'].append("Price above upper Bollinger Band with high volume, potential reversal")
+            signals['strength'] -= 10
+        elif close_price < bb_lower and volume > avg_volume * 1.2:
+            signals['reasons'].append("Price below lower Bollinger Band with high volume, potential buying opportunity")
+            signals['strength'] += 10
+
+        # Volume Confirmation (增加条件)
+        if volume > avg_volume * 2:
+            signals['reasons'].append("Extremely high volume confirms the move")
+            signals['strength'] = signals['strength'] * 1.3 if signals['strength'] > 0 else signals['strength'] * 0.7
+
+        # Determine final signal (调整阈值)
+        if signals['strength'] > 40:
+            signals['signal'] = 1  # Strong Buy
+        elif signals['strength'] > 20:
+            signals['signal'] = 0.5  # Buy
+        elif signals['strength'] < -40:
+            signals['signal'] = -1  # Strong Sell
+        elif signals['strength'] < -20:
+            signals['signal'] = -0.5  # Sell
+        else:
+            signals['signal'] = 0  # Hold
+
+        # Calculate final confidence
+        signals['confidence'] = min(100, max(0, abs(signals['strength'])))
         
-    # === RSI分析 ===
-    rsi = latest[('RSI', '')]
-    if rsi > 70:
-        signals['risks'].append(f"RSI超买（{rsi:.1f}），注意回调风险")
-        signals['strength'] -= 10
-    elif rsi < 30:
-        signals['reasons'].append(f"RSI超卖（{rsi:.1f}），可能存在反弹机会")
-        signals['strength'] += 10
+        return signals
         
-    # === 布林带分析 ===
-    bb_width = latest[('BB_Width', '')]
-    if close_price > latest[('BB_Upper', '')]:
-        signals['risks'].append("价格突破布林带上轨，注意回调")
-        signals['strength'] -= 15
-    elif close_price < latest[('BB_Lower', '')]:
-        signals['reasons'].append("价格突破布林带下轨，可能存在反弹")
-        signals['strength'] += 15
-        
-    if bb_width > 0.1:
-        signals['reasons'].append("布林带扩张，趋势走强")
-    else:
-        signals['risks'].append("布林带收窄，可能即将突破")
-        
-    # === 支撑阻力位计算 ===
-    signals['supports'] = [
-        latest[('BB_Lower', '')],
-        latest[('Long_MA', '')],
-        latest[('Short_MA', '')]
-    ]
-    signals['resistances'] = [
-        latest[('BB_Upper', '')],
-        latest[('Long_MA', '')],
-        latest[('Short_MA', '')]
-    ]
-    
-    # === 止损止盈建议 ===
-    atr = latest[('ATR', '')] if ('ATR', '') in latest else (latest[('BB_Upper', '')] - latest[('BB_Lower', '')]) / 2
-    signals['stop_loss'] = close_price - (atr * 2)
-    signals['take_profit'] = close_price + (atr * 3)
-    
-    # === 计算置信度 ===
-    signals['confidence'] = min(100, max(0, signals['strength']))
-    
-    # === 生成建议摘要 ===
-    if signals['signal'] == 1:
-        reasons_text = '\n'.join(['• ' + r for r in signals['reasons']])
-        risks_text = '\n'.join(['• ' + r for r in signals['risks']])
-        supports_text = '\n'.join([f'• {s:.5f}' for s in signals['supports']])
-        resistances_text = '\n'.join([f'• {r:.5f}' for r in signals['resistances']])
-        
-        signals['summary'] = "建议买入"
-        signals['details'] = (
-            f"交易建议：买入\n"
-            f"价格：{close_price:.5f}\n"
-            f"建议止损：{signals['stop_loss']:.5f}\n"
-            f"建议止盈：{signals['take_profit']:.5f}\n"
-            f"信号强度：{signals['strength']}%\n"
-            f"置信度：{signals['confidence']}%\n\n"
-            f"做多理由：\n{reasons_text}\n\n"
-            f"风险提示：\n{risks_text}\n\n"
-            f"支撑位：\n{supports_text}\n\n"
-            f"阻力位：\n{resistances_text}"
-        )
-    elif signals['signal'] == -1:
-        reasons_text = '\n'.join(['• ' + r for r in signals['reasons']])
-        risks_text = '\n'.join(['• ' + r for r in signals['risks']])
-        
-        signals['summary'] = "建议卖出"
-        signals['details'] = (
-            f"交易建议：卖出\n"
-            f"价格：{close_price:.5f}\n"
-            f"信号强度：{signals['strength']}%\n"
-            f"置信度：{signals['confidence']}%\n\n"
-            f"卖出理由：\n{reasons_text}\n\n"
-            f"风险提示：\n{risks_text}"
-        )
-    else:
-        reasons_text = '\n'.join(['• ' + r for r in signals['reasons']])
-        risks_text = '\n'.join(['• ' + r for r in signals['risks']])
-        
-        signals['summary'] = "建议观望"
-        signals['details'] = (
-            f"交易建议：观望\n"
-            f"当前价格：{close_price:.5f}\n"
-            f"信号强度：{signals['strength']}%\n"
-            f"置信度：{signals['confidence']}%\n\n"
-            f"市场分析：\n{reasons_text}\n\n"
-            f"需注意：\n{risks_text}"
-        )
-    
-    return signals
+    except Exception as e:
+        logger.error(f"Error in signal generation: {str(e)}")
+        return {
+            'price': 0,
+            'signal': 0,
+            'strength': 0,
+            'confidence': 0,
+            'reasons': [],
+            'risks': []
+        }
 
 def moving_average_strategy(data: pd.DataFrame, short_window: int, long_window: int) -> pd.DataFrame:
     """

@@ -1,24 +1,28 @@
 # logger.py
 
 import logging
-import config
+import sys
 
 def setup_logger():
-    """
-    设置日志记录器。
-    返回: logger 对象
-    """
-    # 创建logger
+    """Setup and configure logger with proper encoding"""
     logger = logging.getLogger('TradingLogger')
-    logger.setLevel(getattr(logging, config.LOG_LEVEL))
-
-    # 创建文件处理器并设置日志格式
-    file_handler = logging.FileHandler(config.LOG_FILE)
+    logger.setLevel(logging.DEBUG)
+    
+    # File handler with UTF-8 encoding
+    fh = logging.FileHandler('trading_log.txt', encoding='utf-8')
+    fh.setLevel(logging.DEBUG)
+    
+    # Console handler
+    ch = logging.StreamHandler(sys.stdout)
+    ch.setLevel(logging.INFO)
+    
+    # Formatter
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-    file_handler.setFormatter(formatter)
-
-    # 将处理器添加到logger
-    if not logger.handlers:
-        logger.addHandler(file_handler)
-
+    fh.setFormatter(formatter)
+    ch.setFormatter(formatter)
+    
+    # Add handlers
+    logger.addHandler(fh)
+    logger.addHandler(ch)
+    
     return logger

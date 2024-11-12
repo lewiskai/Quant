@@ -229,3 +229,2045 @@
 2024-11-11 23:57:32,785 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
 2024-11-12 00:02:55,304 - TradingLogger - INFO - User interrupted the stream. Closing.
 2024-11-12 00:04:06,647 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 00:18:02,978 - TradingLogger - INFO - User interrupted the stream. Closing.
+2024-11-12 00:21:15,062 - TradingLogger - INFO - Starting real-time data stream for DOGEUSDT
+2024-11-12 00:21:57,519 - TradingLogger - ERROR - ≥Ã–Ú‘À––≥ˆ¥Ì: 'result'
+2024-11-12 00:21:57,521 - TradingLogger - INFO - ≥Ã–ÚÕÍ»´ÕÀ≥ˆ
+2024-11-12 00:22:54,107 - TradingLogger - INFO - ’˝‘⁄∆Ù∂Ø DOGEUSDT µƒ µ ± ˝æ›¡˜...
+2024-11-12 00:23:36,530 - TradingLogger - ERROR - ≥Ã–Ú‘À––≥ˆ¥Ì: API¥ÌŒÛ: Unknown error
+2024-11-12 00:23:36,530 - TradingLogger - DEBUG - ¥ÌŒÛœÍ«È:
+Traceback (most recent call last):
+  File "D:\Quant\main.py", line 97, in main
+    rt_data = RealTimeData(
+  File "D:\Quant\realtime_data.py", line 22, in __init__
+    self._initialize_data_structure()
+  File "D:\Quant\realtime_data.py", line 45, in _initialize_data_structure
+    klines = self.api.get_klines(self.symbol, timeframe="1m", limit=1000)
+  File "D:\Quant\crypto_api.py", line 77, in get_klines
+    raise Exception(f"API¥ÌŒÛ: {data.get('msg', 'Unknown error')}")
+Exception: API¥ÌŒÛ: Unknown error
+2024-11-12 00:23:36,533 - TradingLogger - INFO - ≥Ã–ÚÕÍ»´ÕÀ≥ˆ
+2024-11-12 00:25:46,478 - TradingLogger - INFO - ªÒ»°ø…”√Ωª“◊∂‘...
+2024-11-12 00:25:46,478 - TradingLogger - ERROR - ≤‚ ‘ ß∞‹: 'CryptoComAPI' object has no attribute 'get_instruments'
+2024-11-12 00:25:53,170 - TradingLogger - INFO - ªÒ»°ø…”√Ωª“◊∂‘...
+2024-11-12 00:25:53,170 - TradingLogger - ERROR - ≤‚ ‘ ß∞‹: 'CryptoComAPI' object has no attribute 'get_instruments'
+2024-11-12 00:26:04,134 - TradingLogger - INFO - ’˝‘⁄∆Ù∂Ø DOGE_USDT µƒ µ ± ˝æ›¡˜...
+2024-11-12 00:26:46,551 - TradingLogger - ERROR - ≥Ã–Ú‘À––≥ˆ¥Ì: API¥ÌŒÛ: Œ¥÷™¥ÌŒÛ
+2024-11-12 00:26:46,551 - TradingLogger - DEBUG - ¥ÌŒÛœÍ«È:
+Traceback (most recent call last):
+  File "D:\Quant\main.py", line 97, in main
+    rt_data = RealTimeData(
+  File "D:\Quant\realtime_data.py", line 22, in __init__
+    self._initialize_data_structure()
+  File "D:\Quant\realtime_data.py", line 45, in _initialize_data_structure
+    klines = self.api.get_klines(self.symbol, timeframe="1m", limit=1000)
+  File "D:\Quant\crypto_api.py", line 91, in get_klines
+    raise Exception(f"API¥ÌŒÛ: {data.get('msg', 'Œ¥÷™¥ÌŒÛ')}")
+Exception: API¥ÌŒÛ: Œ¥÷™¥ÌŒÛ
+2024-11-12 00:26:46,553 - TradingLogger - INFO - ≥Ã–ÚÕÍ»´ÕÀ≥ˆ
+2024-11-12 00:31:04,308 - TradingLogger - INFO - ’˝‘⁄∆Ù∂Ø DOGE_USD µƒ µ ± ˝æ›¡˜...
+2024-11-12 00:31:46,737 - TradingLogger - ERROR - ≥Ã–Ú‘À––≥ˆ¥Ì: could not convert string to float: 'r'
+2024-11-12 00:31:46,737 - TradingLogger - DEBUG - ¥ÌŒÛœÍ«È:
+Traceback (most recent call last):
+  File "D:\Quant\main.py", line 97, in main
+    rt_data = RealTimeData(
+  File "D:\Quant\realtime_data.py", line 22, in __init__
+    self._initialize_data_structure()
+  File "D:\Quant\realtime_data.py", line 56, in _initialize_data_structure
+    ('Close', self.symbol): float(k[4])  #  ’≈Ãº€‘⁄À˜“˝4µƒŒª÷√
+ValueError: could not convert string to float: 'r'
+2024-11-12 00:31:46,739 - TradingLogger - INFO - ≥Ã–ÚÕÍ»´ÕÀ≥ˆ
+2024-11-12 00:33:45,784 - TradingLogger - INFO - ’˝‘⁄∆Ù∂Ø DOGE_USDT µƒ µ ± ˝æ›¡˜...
+2024-11-12 00:34:07,193 - TradingLogger - INFO - ’˝‘⁄≥ı ºªØ ˝æ›...
+2024-11-12 00:34:07,194 - TradingLogger - INFO - µ»¥˝ ˝æ›¡˜≥ı ºªØ...
+2024-11-12 00:34:09,195 - TradingLogger - INFO - ø™ º÷˜—≠≥Ã...
+2024-11-12 00:37:26,620 - TradingLogger - INFO - ”√ªß÷–∂œ≥Ã–Ú‘À––
+2024-11-12 00:37:26,620 - TradingLogger - INFO - ≥Ã–ÚÕÍ»´ÕÀ≥ˆ
+2024-11-12 00:37:32,098 - TradingLogger - INFO - ’˝‘⁄∆Ù∂Ø DOGE_USDT µƒ µ ± ˝æ›¡˜...
+2024-11-12 00:37:32,466 - TradingLogger - INFO - ’˝‘⁄≥ı ºªØ ˝æ›...
+2024-11-12 00:37:32,468 - TradingLogger - INFO - µ»¥˝ ˝æ›¡˜≥ı ºªØ...
+2024-11-12 00:37:34,469 - TradingLogger - INFO - ø™ º÷˜—≠≥Ã...
+2024-11-12 00:40:12,068 - TradingLogger - INFO - ”√ªß÷–∂œ≥Ã–Ú‘À––
+2024-11-12 00:40:12,068 - TradingLogger - INFO - ≥Ã–ÚÕÍ»´ÕÀ≥ˆ
+2024-11-12 00:40:15,341 - TradingLogger - INFO - ’˝‘⁄∆Ù∂Ø DOGE_USDT µƒ µ ± ˝æ›¡˜...
+2024-11-12 00:40:16,822 - TradingLogger - INFO - ’˝‘⁄≥ı ºªØ ˝æ›...
+2024-11-12 00:40:16,823 - TradingLogger - INFO - µ»¥˝ ˝æ›¡˜≥ı ºªØ...
+2024-11-12 00:40:18,831 - TradingLogger - INFO - ø™ º÷˜—≠≥Ã...
+2024-11-12 00:41:39,529 - TradingLogger - INFO - ”√ªß÷–∂œ≥Ã–Ú‘À––
+2024-11-12 00:41:39,529 - TradingLogger - INFO - ≥Ã–ÚÕÍ»´ÕÀ≥ˆ
+2024-11-12 00:41:42,621 - TradingLogger - INFO - ’˝‘⁄∆Ù∂Ø DOGE_USDT µƒ µ ± ˝æ›¡˜...
+2024-11-12 00:41:44,005 - TradingLogger - INFO - ’˝‘⁄≥ı ºªØ ˝æ›...
+2024-11-12 00:41:44,008 - TradingLogger - INFO - µ»¥˝ ˝æ›¡˜≥ı ºªØ...
+2024-11-12 00:41:46,020 - TradingLogger - INFO - ø™ º÷˜—≠≥Ã...
+2024-11-12 00:43:55,075 - TradingLogger - INFO - ”√ªß÷–∂œ≥Ã–Ú‘À––
+2024-11-12 00:43:55,076 - TradingLogger - INFO - ≥Ã–ÚÕÍ»´ÕÀ≥ˆ
+2024-11-12 00:43:58,081 - TradingLogger - INFO - ’˝‘⁄∆Ù∂Ø DOGE_USDT µƒ µ ± ˝æ›¡˜...
+2024-11-12 00:43:58,480 - TradingLogger - INFO - ’˝‘⁄≥ı ºªØ ˝æ›...
+2024-11-12 00:43:58,482 - TradingLogger - INFO - µ»¥˝ ˝æ›¡˜≥ı ºªØ...
+2024-11-12 00:44:00,489 - TradingLogger - INFO - ø™ º÷˜—≠≥Ã...
+2024-11-12 00:44:58,945 - TradingLogger - INFO - ”√ªß÷–∂œ≥Ã–Ú‘À––
+2024-11-12 00:44:59,244 - TradingLogger - INFO - ≥Ã–ÚÕÍ»´ÕÀ≥ˆ
+2024-11-12 00:45:01,824 - TradingLogger - INFO - ’˝‘⁄∆Ù∂Ø DOGE_USDT µƒ µ ± ˝æ›¡˜...
+2024-11-12 00:45:02,476 - TradingLogger - INFO - ’˝‘⁄≥ı ºªØ ˝æ›...
+2024-11-12 00:45:02,479 - TradingLogger - INFO - µ»¥˝ ˝æ›¡˜≥ı ºªØ...
+2024-11-12 00:45:04,485 - TradingLogger - INFO - ø™ º÷˜—≠≥Ã...
+2024-11-12 00:46:56,422 - TradingLogger - INFO - ”√ªß÷–∂œ≥Ã–Ú‘À––
+2024-11-12 00:46:56,422 - TradingLogger - INFO - ≥Ã–ÚÕÍ»´ÕÀ≥ˆ
+2024-11-12 00:47:00,268 - TradingLogger - INFO - ’˝‘⁄∆Ù∂Ø DOGE_USDT µƒ µ ± ˝æ›¡˜...
+2024-11-12 00:47:00,660 - TradingLogger - INFO - ’˝‘⁄≥ı ºªØ ˝æ›...
+2024-11-12 00:47:00,662 - TradingLogger - INFO - µ»¥˝ ˝æ›¡˜≥ı ºªØ...
+2024-11-12 00:47:02,668 - TradingLogger - INFO - ø™ º÷˜—≠≥Ã...
+2024-11-12 00:47:02,711 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:03,750 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:04,792 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:05,834 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:06,881 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:07,919 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:08,965 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:10,016 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:11,055 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:12,094 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:13,145 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:14,187 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:15,239 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:16,292 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:17,329 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:18,371 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:19,420 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:20,458 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:21,497 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:22,536 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:23,577 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:24,620 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:25,660 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:26,712 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:27,754 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:28,805 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:29,856 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:30,906 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:31,957 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:33,010 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:34,047 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:35,095 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:36,141 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:37,191 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:38,233 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:39,280 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:40,328 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:41,375 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:42,426 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:43,473 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:44,527 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:45,578 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:46,633 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:47,681 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:48,730 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:49,781 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:50,829 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:51,880 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:52,931 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:53,973 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:55,023 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:56,072 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:57,119 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:58,169 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:47:59,219 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:48:00,269 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:48:01,319 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:48:02,357 - TradingLogger - ERROR - œ‘ æ ˝æ› ±≥ˆ¥Ì: 'RealTimeData' object has no attribute 'short_window'
+2024-11-12 00:48:03,017 - TradingLogger - INFO - ”√ªß÷–∂œ≥Ã–Ú‘À––
+2024-11-12 00:48:03,307 - TradingLogger - INFO - ≥Ã–ÚÕÍ»´ÕÀ≥ˆ
+2024-11-12 00:48:05,769 - TradingLogger - INFO - ’˝‘⁄∆Ù∂Ø DOGE_USDT µƒ µ ± ˝æ›¡˜...
+2024-11-12 00:48:06,148 - TradingLogger - INFO - ’˝‘⁄≥ı ºªØ ˝æ›...
+2024-11-12 00:48:06,149 - TradingLogger - INFO - µ»¥˝ ˝æ›¡˜≥ı ºªØ...
+2024-11-12 00:48:08,157 - TradingLogger - INFO - ø™ º÷˜—≠≥Ã...
+2024-11-12 00:49:52,879 - TradingLogger - INFO - ”√ªß÷–∂œ≥Ã–Ú‘À––
+2024-11-12 00:49:52,880 - TradingLogger - INFO - ≥Ã–ÚÕÍ»´ÕÀ≥ˆ
+2024-11-12 00:49:55,543 - TradingLogger - INFO - ’˝‘⁄∆Ù∂Ø DOGE_USDT µƒ µ ± ˝æ›¡˜...
+2024-11-12 00:49:56,163 - TradingLogger - INFO - ’˝‘⁄≥ı ºªØ ˝æ›...
+2024-11-12 00:49:56,164 - TradingLogger - INFO - µ»¥˝ ˝æ›¡˜≥ı ºªØ...
+2024-11-12 00:49:58,169 - TradingLogger - INFO - ø™ º÷˜—≠≥Ã...
+2024-11-12 13:16:54,318 - TradingLogger - INFO - ”√ªß÷–∂œ≥Ã–Ú‘À––
+2024-11-12 13:16:54,320 - TradingLogger - INFO - ≥Ã–ÚÕÍ»´ÕÀ≥ˆ
+2024-11-12 13:16:57,842 - TradingLogger - INFO - ’˝‘⁄∆Ù∂Ø DOGE_USDT µƒ µ ± ˝æ›¡˜...
+2024-11-12 13:16:59,193 - TradingLogger - INFO - ’˝‘⁄≥ı ºªØ ˝æ›...
+2024-11-12 13:16:59,194 - TradingLogger - INFO - µ»¥˝ ˝æ›¡˜≥ı ºªØ...
+2024-11-12 13:17:01,207 - TradingLogger - INFO - ø™ º÷˜—≠≥Ã...
+2024-11-12 13:19:31,637 - TradingLogger - INFO - ”√ªß÷–∂œ≥Ã–Ú‘À––
+2024-11-12 13:19:31,637 - TradingLogger - INFO - ≥Ã–ÚÕÍ»´ÕÀ≥ˆ
+2024-11-12 13:19:34,054 - TradingLogger - INFO - ’˝‘⁄∆Ù∂Ø DOGE_USDT µƒ µ ± ˝æ›¡˜...
+2024-11-12 13:19:35,426 - TradingLogger - INFO - ’˝‘⁄≥ı ºªØ ˝æ›...
+2024-11-12 13:19:35,428 - TradingLogger - INFO - µ»¥˝ ˝æ›¡˜≥ı ºªØ...
+2024-11-12 13:19:37,432 - TradingLogger - INFO - ø™ º÷˜—≠≥Ã...
+2024-11-12 13:21:25,519 - TradingLogger - INFO - ”√ªß÷–∂œ≥Ã–Ú‘À––
+2024-11-12 13:21:25,520 - TradingLogger - INFO - ≥Ã–ÚÕÍ»´ÕÀ≥ˆ
+2024-11-12 13:21:27,926 - TradingLogger - INFO - ’˝‘⁄∆Ù∂Ø DOGE_USDT µƒ µ ± ˝æ›¡˜...
+2024-11-12 13:21:27,926 - TradingLogger - ERROR - ≥Ã–Ú‘À––≥ˆ¥Ì: __init__() got an unexpected keyword argument 'short_window'
+2024-11-12 13:21:27,926 - TradingLogger - DEBUG - ¥ÌŒÛœÍ«È:
+Traceback (most recent call last):
+  File "D:\Quant\main.py", line 127, in main
+    rt_data = RealTimeData(
+TypeError: __init__() got an unexpected keyword argument 'short_window'
+2024-11-12 13:21:27,927 - TradingLogger - INFO - ≥Ã–ÚÕÍ»´ÕÀ≥ˆ
+2024-11-12 13:21:34,411 - TradingLogger - INFO - ’˝‘⁄∆Ù∂Ø DOGE_USDT µƒ µ ± ˝æ›¡˜...
+2024-11-12 13:21:34,411 - TradingLogger - ERROR - ≥Ã–Ú‘À––≥ˆ¥Ì: __init__() got an unexpected keyword argument 'short_window'
+2024-11-12 13:21:34,411 - TradingLogger - DEBUG - ¥ÌŒÛœÍ«È:
+Traceback (most recent call last):
+  File "D:\Quant\main.py", line 127, in main
+    rt_data = RealTimeData(
+TypeError: __init__() got an unexpected keyword argument 'short_window'
+2024-11-12 13:21:34,411 - TradingLogger - INFO - ≥Ã–ÚÕÍ»´ÕÀ≥ˆ
+2024-11-12 13:21:37,046 - TradingLogger - INFO - ’˝‘⁄∆Ù∂Ø DOGE_USDT µƒ µ ± ˝æ›¡˜...
+2024-11-12 13:21:37,046 - TradingLogger - ERROR - ≥Ã–Ú‘À––≥ˆ¥Ì: __init__() got an unexpected keyword argument 'short_window'
+2024-11-12 13:21:37,046 - TradingLogger - DEBUG - ¥ÌŒÛœÍ«È:
+Traceback (most recent call last):
+  File "D:\Quant\main.py", line 127, in main
+    rt_data = RealTimeData(
+TypeError: __init__() got an unexpected keyword argument 'short_window'
+2024-11-12 13:21:37,047 - TradingLogger - INFO - ≥Ã–ÚÕÍ»´ÕÀ≥ˆ
+2024-11-12 13:23:10,566 - TradingLogger - INFO - ’˝‘⁄∆Ù∂Ø DOGE_USDT µƒ µ ± ˝æ›¡˜...
+2024-11-12 13:23:10,927 - TradingLogger - ERROR - ≥Ã–Ú‘À––≥ˆ¥Ì: 'RealTimeData' object has no attribute 'logger'
+2024-11-12 13:23:10,927 - TradingLogger - DEBUG - ¥ÌŒÛœÍ«È:
+Traceback (most recent call last):
+  File "D:\Quant\realtime_data.py", line 59, in _initialize_data_structure
+    self.logger.info(f"≥…π¶º”‘ÿ {len(self.data)} Ãı¿˙ ∑ ˝æ›")
+AttributeError: 'RealTimeData' object has no attribute 'logger'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Quant\main.py", line 127, in main
+    rt_data = RealTimeData(
+  File "D:\Quant\realtime_data.py", line 23, in __init__
+    self._initialize_data_structure()
+  File "D:\Quant\realtime_data.py", line 66, in _initialize_data_structure
+    self.logger.error(f"≥ı ºªØ ˝æ›Ω·ππ ß∞‹: {str(e)}")
+AttributeError: 'RealTimeData' object has no attribute 'logger'
+2024-11-12 13:23:10,930 - TradingLogger - INFO - ≥Ã–ÚÕÍ»´ÕÀ≥ˆ
+2024-11-12 13:24:02,847 - TradingLogger - INFO - ’˝‘⁄∆Ù∂Ø DOGE_USDT µƒ µ ± ˝æ›¡˜...
+2024-11-12 13:24:04,537 - TradingLogger - ERROR - ≥Ã–Ú‘À––≥ˆ¥Ì: 'RealTimeData' object has no attribute 'logger'
+2024-11-12 13:24:04,537 - TradingLogger - DEBUG - ¥ÌŒÛœÍ«È:
+Traceback (most recent call last):
+  File "D:\Quant\realtime_data.py", line 59, in _initialize_data_structure
+    self.logger.info(f"≥…π¶º”‘ÿ {len(self.data)} Ãı¿˙ ∑ ˝æ›")
+AttributeError: 'RealTimeData' object has no attribute 'logger'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Quant\main.py", line 131, in main
+    rt_data = RealTimeData(
+  File "D:\Quant\realtime_data.py", line 23, in __init__
+    self._initialize_data_structure()
+  File "D:\Quant\realtime_data.py", line 66, in _initialize_data_structure
+    self.logger.error(f"≥ı ºªØ ˝æ›Ω·ππ ß∞‹: {str(e)}")
+AttributeError: 'RealTimeData' object has no attribute 'logger'
+2024-11-12 13:24:04,539 - TradingLogger - INFO - ≥Ã–ÚÕÍ»´ÕÀ≥ˆ
+2024-11-12 13:24:18,395 - TradingLogger - INFO - ’˝‘⁄∆Ù∂Ø DOGE_USDT µƒ µ ± ˝æ›¡˜...
+2024-11-12 13:24:19,748 - TradingLogger - INFO - ’˝‘⁄≥ı ºªØ ˝æ›...
+2024-11-12 13:24:19,750 - TradingLogger - INFO - µ»¥˝ ˝æ›¡˜≥ı ºªØ...
+2024-11-12 13:24:21,760 - TradingLogger - INFO - ø™ º÷˜—≠≥Ã...
+2024-11-12 13:24:44,875 - TradingLogger - INFO - ”√ªß÷–∂œ≥Ã–Ú‘À––
+2024-11-12 13:24:45,142 - TradingLogger - INFO - ≥Ã–ÚÕÍ»´ÕÀ≥ˆ
+2024-11-12 13:25:39,469 - TradingLogger - INFO - ’˝‘⁄∆Ù∂Ø DOGE_USDT µƒ µ ± ˝æ›¡˜...
+2024-11-12 13:25:40,081 - TradingLogger - ERROR - ≥Ã–Ú‘À––≥ˆ¥Ì: 'result'
+2024-11-12 13:25:40,081 - TradingLogger - DEBUG - ¥ÌŒÛœÍ«È:
+Traceback (most recent call last):
+  File "D:\Quant\main.py", line 131, in main
+    rt_data = RealTimeData(
+  File "D:\Quant\realtime_data.py", line 24, in __init__
+    self._initialize_data_structure()
+  File "D:\Quant\realtime_data.py", line 34, in _initialize_data_structure
+    for k in klines['result']['data']:
+KeyError: 'result'
+2024-11-12 13:25:40,083 - TradingLogger - INFO - ≥Ã–ÚÕÍ»´ÕÀ≥ˆ
+2024-11-12 13:26:19,266 - TradingLogger - INFO - ’˝‘⁄∆Ù∂Ø DOGE_USDT µƒ µ ± ˝æ›¡˜...
+2024-11-12 13:26:19,653 - TradingLogger - ERROR - ≥Ã–Ú‘À––≥ˆ¥Ì: 'result'
+2024-11-12 13:26:19,653 - TradingLogger - DEBUG - ¥ÌŒÛœÍ«È:
+Traceback (most recent call last):
+  File "D:\Quant\main.py", line 131, in main
+    rt_data = RealTimeData(
+  File "D:\Quant\realtime_data.py", line 24, in __init__
+    self._initialize_data_structure()
+  File "D:\Quant\realtime_data.py", line 34, in _initialize_data_structure
+    for k in klines['result']['data']:
+KeyError: 'result'
+2024-11-12 13:26:19,655 - TradingLogger - INFO - ≥Ã–ÚÕÍ»´ÕÀ≥ˆ
+2024-11-12 13:26:53,415 - TradingLogger - INFO - ’˝‘⁄∆Ù∂Ø DOGE_USDT µƒ µ ± ˝æ›¡˜...
+2024-11-12 13:26:53,415 - TradingLogger - ERROR - ≥Ã–Ú‘À––≥ˆ¥Ì: __init__() got an unexpected keyword argument 'short_window'
+2024-11-12 13:26:53,415 - TradingLogger - DEBUG - ¥ÌŒÛœÍ«È:
+Traceback (most recent call last):
+  File "D:\Quant\main.py", line 131, in main
+    rt_data = RealTimeData(
+TypeError: __init__() got an unexpected keyword argument 'short_window'
+2024-11-12 13:26:53,416 - TradingLogger - INFO - ≥Ã–ÚÕÍ»´ÕÀ≥ˆ
+2024-11-12 13:27:10,635 - TradingLogger - INFO - ’˝‘⁄∆Ù∂Ø DOGE_USDT µƒ µ ± ˝æ›¡˜...
+2024-11-12 13:27:10,635 - TradingLogger - ERROR - ≥Ã–Ú‘À––≥ˆ¥Ì: __init__() got an unexpected keyword argument 'short_window'
+2024-11-12 13:27:10,635 - TradingLogger - DEBUG - ¥ÌŒÛœÍ«È:
+Traceback (most recent call last):
+  File "D:\Quant\main.py", line 131, in main
+    rt_data = RealTimeData(
+TypeError: __init__() got an unexpected keyword argument 'short_window'
+2024-11-12 13:27:10,636 - TradingLogger - INFO - ≥Ã–ÚÕÍ»´ÕÀ≥ˆ
+2024-11-12 13:27:34,082 - TradingLogger - INFO - ’˝‘⁄∆Ù∂Ø DOGE_USDT µƒ µ ± ˝æ›¡˜...
+2024-11-12 13:27:35,582 - TradingLogger - INFO - ’˝‘⁄≥ı ºªØ ˝æ›...
+2024-11-12 13:27:35,584 - TradingLogger - INFO - µ»¥˝ ˝æ›¡˜≥ı ºªØ...
+2024-11-12 13:27:37,599 - TradingLogger - INFO - ø™ º÷˜—≠ª∑...
+2024-11-12 13:27:37,599 - TradingLogger - INFO - µ±«∞º€∏Ò: 0.37111
+2024-11-12 13:27:38,602 - TradingLogger - INFO - µ±«∞º€∏Ò: 0.37111
+2024-11-12 13:27:39,605 - TradingLogger - INFO - µ±«∞º€∏Ò: 0.37111
+2024-11-12 13:27:40,610 - TradingLogger - INFO - µ±«∞º€∏Ò: 0.37056
+2024-11-12 13:27:41,617 - TradingLogger - INFO - µ±«∞º€∏Ò: 0.37056
+2024-11-12 13:27:42,628 - TradingLogger - INFO - µ±«∞º€∏Ò: 0.37038
+2024-11-12 13:27:43,639 - TradingLogger - INFO - µ±«∞º€∏Ò: 0.37037
+2024-11-12 13:27:44,645 - TradingLogger - INFO - µ±«∞º€∏Ò: 0.37037
+2024-11-12 13:27:45,652 - TradingLogger - INFO - µ±«∞º€∏Ò: 0.37037
+2024-11-12 13:27:46,664 - TradingLogger - INFO - µ±«∞º€∏Ò: 0.37063
+2024-11-12 13:27:46,995 - TradingLogger - INFO - ”√ªß÷–∂œ≥Ã–Ú‘À––
+2024-11-12 13:27:47,260 - TradingLogger - INFO - ≥Ã–ÚÕÍ»´ÕÀ≥ˆ
+2024-11-12 13:27:49,751 - TradingLogger - INFO - ’˝‘⁄∆Ù∂Ø DOGE_USDT µƒ µ ± ˝æ›¡˜...
+2024-11-12 13:27:50,912 - TradingLogger - ERROR - ≥Ã–Ú‘À––≥ˆ¥Ì: ªÒ»°Kœﬂ ˝æ› ß∞‹: API«Î«Û ß∞‹: 404
+2024-11-12 13:27:50,913 - TradingLogger - DEBUG - ¥ÌŒÛœÍ«È:
+Traceback (most recent call last):
+  File "D:\Quant\crypto_api.py", line 67, in get_klines
+    raise Exception(f"API«Î«Û ß∞‹: {response.status_code}")
+Exception: API«Î«Û ß∞‹: 404
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Quant\main.py", line 127, in main
+    rt_data = RealTimeData(
+  File "D:\Quant\realtime_data.py", line 33, in __init__
+    self._initialize_data_structure()
+  File "D:\Quant\realtime_data.py", line 40, in _initialize_data_structure
+    klines = self.api.get_klines(self.symbol)
+  File "D:\Quant\crypto_api.py", line 77, in get_klines
+    raise Exception(f"ªÒ»°Kœﬂ ˝æ› ß∞‹: {str(e)}")
+Exception: ªÒ»°Kœﬂ ˝æ› ß∞‹: API«Î«Û ß∞‹: 404
+2024-11-12 13:27:50,915 - TradingLogger - INFO - ≥Ã–ÚÕÍ»´ÕÀ≥ˆ
+2024-11-12 13:28:29,491 - TradingLogger - INFO - Ê≠£Âú®ÂêØÂä® DOGE_USDT ÁöÑÂÆûÊó∂Êï∞ÊçÆÊµÅ...
+2024-11-12 13:28:29,846 - TradingLogger - ERROR - Á®ãÂ∫èËøêË°åÂá∫Èîô: Ëé∑ÂèñKÁ∫øÊï∞ÊçÆÂ§±Ë¥•: APIËØ∑Ê±ÇÂ§±Ë¥•: 404
+2024-11-12 13:28:29,846 - TradingLogger - DEBUG - ÈîôËØØËØ¶ÊÉÖ:
+Traceback (most recent call last):
+  File "D:\Quant\crypto_api.py", line 67, in get_klines
+    raise Exception(f"APIËØ∑Ê±ÇÂ§±Ë¥•: {response.status_code}")
+Exception: APIËØ∑Ê±ÇÂ§±Ë¥•: 404
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Quant\main.py", line 127, in main
+    rt_data = RealTimeData(
+  File "D:\Quant\realtime_data.py", line 33, in __init__
+    self._initialize_data_structure()
+  File "D:\Quant\realtime_data.py", line 40, in _initialize_data_structure
+    klines = self.api.get_klines(self.symbol)
+  File "D:\Quant\crypto_api.py", line 77, in get_klines
+    raise Exception(f"Ëé∑ÂèñKÁ∫øÊï∞ÊçÆÂ§±Ë¥•: {str(e)}")
+Exception: Ëé∑ÂèñKÁ∫øÊï∞ÊçÆÂ§±Ë¥•: APIËØ∑Ê±ÇÂ§±Ë¥•: 404
+2024-11-12 13:28:29,848 - TradingLogger - INFO - Á®ãÂ∫èÂÆåÂÖ®ÈÄÄÂá∫
+2024-11-12 13:35:55,342 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 13:42:29,601 - TradingLogger - INFO - User interrupted the stream. Closing.
+2024-11-12 13:42:32,794 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 13:44:41,502 - TradingLogger - INFO - User interrupted the stream. Closing.
+2024-11-12 13:44:44,578 - TradingLogger - ERROR - Á®ãÂ∫èËøêË°åÂá∫Èîô: APIÈîôËØØ: Unknown error
+2024-11-12 13:44:53,151 - TradingLogger - ERROR - Á®ãÂ∫èËøêË°åÂá∫Èîô: APIÈîôËØØ: Unknown error
+2024-11-12 13:46:15,669 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 13:46:15,670 - TradingLogger - ERROR - Program error: name 'API_KEY' is not defined
+2024-11-12 13:46:15,670 - TradingLogger - INFO - Program completely exited
+2024-11-12 13:49:49,035 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 13:49:49,035 - TradingLogger - ERROR - Program error: name 'API_KEY' is not defined
+2024-11-12 13:49:49,036 - TradingLogger - INFO - Program completely exited
+2024-11-12 13:53:48,568 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 13:53:49,750 - TradingLogger - ERROR - Program error: Failed to get kline data: API error: Unknown error
+2024-11-12 13:53:49,750 - TradingLogger - DEBUG - Error details:
+Traceback (most recent call last):
+  File "D:\Quant\crypto_api.py", line 55, in get_klines
+    raise Exception(f"API error: {error_msg}")
+Exception: API error: Unknown error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Quant\main.py", line 142, in main
+    rt_data = RealTimeData(
+  File "D:\Quant\realtime_data.py", line 48, in __init__
+    self._initialize_data_structure()
+  File "D:\Quant\realtime_data.py", line 54, in _initialize_data_structure
+    klines = self.api.get_klines(self.symbol)
+  File "D:\Quant\crypto_api.py", line 61, in get_klines
+    raise Exception(f"Failed to get kline data: {str(e)}")
+Exception: Failed to get kline data: API error: Unknown error
+2024-11-12 13:53:49,752 - TradingLogger - INFO - Program completely exited
+2024-11-12 13:54:02,121 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 13:54:03,363 - TradingLogger - ERROR - Program error: Failed to get kline data: API error: Unknown error
+2024-11-12 13:54:03,364 - TradingLogger - DEBUG - Error details:
+Traceback (most recent call last):
+  File "D:\Quant\crypto_api.py", line 55, in get_klines
+    raise Exception(f"API error: {error_msg}")
+Exception: API error: Unknown error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Quant\main.py", line 142, in main
+    rt_data = RealTimeData(
+  File "D:\Quant\realtime_data.py", line 48, in __init__
+    self._initialize_data_structure()
+  File "D:\Quant\realtime_data.py", line 54, in _initialize_data_structure
+    klines = self.api.get_klines(self.symbol)
+  File "D:\Quant\crypto_api.py", line 61, in get_klines
+    raise Exception(f"Failed to get kline data: {str(e)}")
+Exception: Failed to get kline data: API error: Unknown error
+2024-11-12 13:54:03,367 - TradingLogger - INFO - Program completely exited
+2024-11-12 13:56:08,171 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 13:56:09,383 - TradingLogger - ERROR - Program error: Failed to get kline data: API error: Unknown error
+2024-11-12 13:56:09,383 - TradingLogger - INFO - Program completely exited
+2024-11-12 13:57:08,753 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 13:57:10,163 - TradingLogger - ERROR - Program error: Error fetching kline data: Failed to fetch data from both APIs
+2024-11-12 13:57:10,163 - TradingLogger - INFO - Program completely exited
+2024-11-12 13:58:30,976 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 13:58:31,567 - TradingLogger - ERROR - Program error: list indices must be integers or slices, not str
+2024-11-12 13:58:31,567 - TradingLogger - INFO - Program completely exited
+2024-11-12 13:59:48,387 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 13:59:49,111 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 13:59:49,113 - TradingLogger - INFO - Waiting for data stream initialization...
+2024-11-12 13:59:51,128 - TradingLogger - INFO - Starting main loop...
+2024-11-12 14:00:04,162 - TradingLogger - INFO - User interrupted the stream
+2024-11-12 14:00:04,438 - TradingLogger - INFO - Program completely exited
+2024-11-12 14:01:31,075 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 14:01:32,647 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 14:01:32,648 - TradingLogger - INFO - Waiting for data stream initialization...
+2024-11-12 14:01:34,664 - TradingLogger - INFO - Starting main loop...
+2024-11-12 14:02:37,039 - TradingLogger - INFO - User interrupted the stream
+2024-11-12 14:02:37,398 - TradingLogger - INFO - Program completely exited
+2024-11-12 14:04:56,870 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 14:04:58,317 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 14:04:58,318 - TradingLogger - ERROR - Program error: 'RealTimeData' object has no attribute 'start_stream'
+2024-11-12 14:05:32,855 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 14:05:33,259 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 14:05:33,260 - TradingLogger - INFO - Waiting for data stream initialization...
+2024-11-12 14:05:35,262 - TradingLogger - INFO - Starting main loop...
+2024-11-12 14:06:31,773 - TradingLogger - INFO - User interrupted the stream
+2024-11-12 14:06:32,039 - TradingLogger - INFO - Program completely exited
+2024-11-12 14:07:05,141 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 14:07:05,515 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 14:07:05,518 - TradingLogger - INFO - Waiting for data stream initialization...
+2024-11-12 14:07:07,531 - TradingLogger - INFO - Starting main loop...
+2024-11-12 14:08:13,742 - TradingLogger - INFO - User interrupted the stream
+2024-11-12 14:08:14,429 - TradingLogger - INFO - Program completely exited
+2024-11-12 14:08:49,169 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 14:08:50,627 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 14:08:50,629 - TradingLogger - INFO - Waiting for data stream initialization...
+2024-11-12 14:08:52,631 - TradingLogger - INFO - Starting main loop...
+2024-11-12 15:18:40,089 - TradingLogger - INFO - User interrupted the stream
+2024-11-12 15:18:40,373 - TradingLogger - INFO - Program completely exited
+2024-11-12 15:18:44,081 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 15:18:44,737 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 15:18:44,739 - TradingLogger - INFO - Waiting for data stream initialization...
+2024-11-12 15:18:46,740 - TradingLogger - INFO - Starting main loop...
+2024-11-12 15:21:22,919 - TradingLogger - INFO - User interrupted the stream
+2024-11-12 15:21:23,198 - TradingLogger - INFO - Program completely exited
+2024-11-12 15:21:26,831 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 15:21:28,258 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 15:21:28,260 - TradingLogger - INFO - Waiting for data stream initialization...
+2024-11-12 15:21:30,265 - TradingLogger - INFO - Starting main loop...
+2024-11-12 15:25:55,985 - TradingLogger - INFO - User interrupted the stream
+2024-11-12 15:25:56,259 - TradingLogger - INFO - Program completely exited
+2024-11-12 15:25:59,850 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 15:26:01,579 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 15:26:01,580 - TradingLogger - INFO - Waiting for data stream initialization...
+2024-11-12 15:26:03,589 - TradingLogger - INFO - Starting main loop...
+2024-11-12 15:28:22,209 - TradingLogger - INFO - User interrupted the stream
+2024-11-12 15:28:22,498 - TradingLogger - INFO - Paper Trading Summary:
+2024-11-12 15:28:22,499 - TradingLogger - INFO - Total Trades: 0
+2024-11-12 15:28:22,499 - TradingLogger - INFO - Win Rate: 0.00%
+2024-11-12 15:28:22,499 - TradingLogger - INFO - Total Return: 0.00%
+2024-11-12 15:28:22,500 - TradingLogger - INFO - Program completely exited
+2024-11-12 15:28:25,875 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 15:28:27,402 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 15:28:27,403 - TradingLogger - INFO - Waiting for data stream initialization...
+2024-11-12 15:28:29,412 - TradingLogger - INFO - Starting main loop...
+2024-11-12 15:30:26,362 - TradingLogger - INFO - User interrupted the stream
+2024-11-12 15:30:26,643 - TradingLogger - INFO - Paper Trading Summary:
+2024-11-12 15:30:26,645 - TradingLogger - INFO - Total Trades: 0
+2024-11-12 15:30:26,645 - TradingLogger - INFO - Win Rate: 0.00%
+2024-11-12 15:30:26,646 - TradingLogger - INFO - Total Return: 0.00%
+2024-11-12 15:30:26,646 - TradingLogger - INFO - Program completely exited
+2024-11-12 15:30:29,798 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 15:30:31,570 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 15:30:31,572 - TradingLogger - INFO - Waiting for data stream initialization...
+2024-11-12 15:30:33,582 - TradingLogger - INFO - Starting main loop...
+2024-11-12 15:30:33,627 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:30:34,675 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:30:35,720 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:30:36,765 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:30:37,814 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:30:38,866 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:30:39,902 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:30:40,579 - TradingLogger - INFO - User interrupted the stream
+2024-11-12 15:30:40,874 - TradingLogger - INFO - Paper Trading Summary:
+2024-11-12 15:30:40,874 - TradingLogger - INFO - Total Trades: 0
+2024-11-12 15:30:40,874 - TradingLogger - INFO - Win Rate: 0.00%
+2024-11-12 15:30:40,874 - TradingLogger - INFO - Total Return: 0.00%
+2024-11-12 15:30:40,874 - TradingLogger - INFO - Program completely exited
+2024-11-12 15:32:44,947 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 15:32:45,892 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 15:32:45,895 - TradingLogger - INFO - Waiting for data stream initialization...
+2024-11-12 15:32:47,903 - TradingLogger - INFO - Starting main loop...
+2024-11-12 15:32:47,945 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:32:48,991 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:32:49,840 - TradingLogger - INFO - User interrupted the stream
+2024-11-12 15:32:50,134 - TradingLogger - INFO - Paper Trading Summary:
+2024-11-12 15:32:50,134 - TradingLogger - INFO - Total Trades: 0
+2024-11-12 15:32:50,135 - TradingLogger - INFO - Win Rate: 0.00%
+2024-11-12 15:32:50,135 - TradingLogger - INFO - Total Return: 0.00%
+2024-11-12 15:32:50,135 - TradingLogger - INFO - Program completely exited
+2024-11-12 15:33:24,564 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 15:33:26,031 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 15:33:26,034 - TradingLogger - INFO - Waiting for data stream initialization...
+2024-11-12 15:33:28,046 - TradingLogger - INFO - Starting main loop...
+2024-11-12 15:33:28,093 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:33:29,153 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:33:30,211 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:33:31,275 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:33:32,334 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:33:33,379 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:33:34,431 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:33:35,483 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:33:36,529 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:33:37,573 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:33:38,620 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:33:39,677 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:33:40,723 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:33:41,767 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:33:42,820 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:33:43,868 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:33:44,923 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:33:45,971 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:33:47,015 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:33:48,065 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:33:49,116 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:33:50,163 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:33:51,214 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:33:52,269 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:33:53,317 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:33:54,368 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:33:55,417 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:33:56,469 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:33:57,514 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:33:58,559 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:33:59,610 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:34:00,657 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:34:01,698 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:34:02,753 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:34:03,801 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'STRONG_BUY')
+2024-11-12 15:34:04,845 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:34:05,913 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:34:06,958 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:34:08,004 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:34:09,053 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:34:10,105 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:34:11,149 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:34:12,198 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:34:13,247 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:34:14,301 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:34:15,346 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:34:16,396 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:34:17,445 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:34:18,489 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:34:19,548 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:34:20,591 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:34:21,636 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:34:22,698 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:34:23,518 - TradingLogger - INFO - User interrupted the stream
+2024-11-12 15:34:23,796 - TradingLogger - INFO - Paper Trading Summary:
+2024-11-12 15:34:23,796 - TradingLogger - INFO - Total Trades: 0
+2024-11-12 15:34:23,796 - TradingLogger - INFO - Win Rate: 0.00%
+2024-11-12 15:34:23,797 - TradingLogger - INFO - Total Return: 0.00%
+2024-11-12 15:34:23,797 - TradingLogger - INFO - Program completely exited
+2024-11-12 15:34:29,569 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 15:34:30,990 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 15:34:30,992 - TradingLogger - INFO - Waiting for data stream initialization...
+2024-11-12 15:34:33,000 - TradingLogger - INFO - Starting main loop...
+2024-11-12 15:34:33,044 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:34:34,090 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:34:35,147 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:34:36,188 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:34:37,243 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:34:38,287 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:34:39,341 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:34:40,390 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:34:41,450 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:34:42,490 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:34:43,549 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:34:44,591 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:34:45,648 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:34:46,693 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:34:47,740 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:34:48,790 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:34:49,838 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:34:50,891 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:34:51,932 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:34:52,982 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:34:54,038 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:34:55,087 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:34:56,143 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:34:57,194 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:34:58,245 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:34:59,291 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:00,345 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:01,402 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:02,450 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:03,498 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:04,552 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:05,628 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:06,687 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:07,740 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:08,796 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:09,843 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:35:10,890 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:35:11,940 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:35:12,968 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:35:14,016 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:35:15,062 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:35:16,112 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:35:17,155 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:35:18,206 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'STRONG_BUY')
+2024-11-12 15:35:19,253 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:35:20,302 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:35:21,380 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:35:22,436 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:35:23,489 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:35:24,533 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:35:25,579 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:35:26,629 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:35:27,683 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:35:28,737 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:35:29,782 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:30,833 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:31,880 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:32,928 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:33,987 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:35,033 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:36,100 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:37,185 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:38,245 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:39,294 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:40,341 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:41,401 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:42,450 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:43,497 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:44,550 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:45,596 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:46,650 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:47,706 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:48,758 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:49,814 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:50,869 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:51,938 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:52,999 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:54,069 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:55,118 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:56,164 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:57,217 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:58,262 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:35:59,310 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:00,358 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:01,411 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:02,456 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:03,503 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:04,554 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:05,605 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:06,656 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:07,709 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:08,762 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:09,813 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:10,859 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:11,913 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:12,967 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:14,011 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:15,064 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:16,116 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:17,168 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:18,214 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:19,266 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:20,322 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:21,378 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:22,425 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:23,484 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:24,540 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:25,601 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:36:26,658 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:36:27,714 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:36:28,770 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:36:29,819 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:30,887 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:31,947 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:33,014 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:34,067 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:35,123 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:36,174 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:37,227 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:38,278 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:39,340 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:40,392 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:41,446 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:36:42,502 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:36:43,551 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:36:44,582 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:36:45,627 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:36:46,667 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:36:47,718 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:36:48,779 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:36:49,821 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'STRONG_BUY')
+2024-11-12 15:36:50,880 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:51,927 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:52,979 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:54,023 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:55,072 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:56,117 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:57,163 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:58,210 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:36:59,266 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:37:00,312 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:37:01,360 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:01,458 - TradingLogger - INFO - User interrupted the stream
+2024-11-12 15:37:01,775 - TradingLogger - INFO - Paper Trading Summary:
+2024-11-12 15:37:01,776 - TradingLogger - INFO - Total Trades: 0
+2024-11-12 15:37:01,776 - TradingLogger - INFO - Win Rate: 0.00%
+2024-11-12 15:37:01,776 - TradingLogger - INFO - Total Return: 0.00%
+2024-11-12 15:37:01,777 - TradingLogger - INFO - Program completely exited
+2024-11-12 15:37:05,514 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 15:37:06,170 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 15:37:06,172 - TradingLogger - INFO - Waiting for data stream initialization...
+2024-11-12 15:37:08,181 - TradingLogger - INFO - Starting main loop...
+2024-11-12 15:37:08,210 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:09,262 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:10,310 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:11,359 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:12,407 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:13,460 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:14,513 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:15,565 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:16,618 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'STRONG_BUY')
+2024-11-12 15:37:17,670 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:37:18,717 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:19,764 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:37:20,818 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'STRONG_SELL')
+2024-11-12 15:37:21,868 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:22,919 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:23,972 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:25,021 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:26,074 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:27,127 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:28,175 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:29,225 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:30,276 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:31,328 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:32,376 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:33,428 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:34,480 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:35,528 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:36,578 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:37,637 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:38,686 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:39,744 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:37:40,800 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:41,846 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:42,903 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:43,949 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:45,028 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:46,087 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:47,149 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:48,205 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'STRONG_BUY')
+2024-11-12 15:37:49,255 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:37:50,301 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:37:51,359 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:37:52,417 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:37:53,468 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:37:54,527 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:37:55,587 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:37:56,644 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:37:57,694 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:37:58,745 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:37:59,798 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:38:00,855 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:38:01,909 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:38:02,956 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:38:04,024 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:38:05,079 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:38:06,138 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:38:07,197 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:38:08,247 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:09,303 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:10,349 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:11,408 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:12,457 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:13,507 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:14,559 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:15,665 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:16,722 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:17,791 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:18,839 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:19,898 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:20,954 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:22,005 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:23,057 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:24,110 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:25,164 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:26,211 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:27,264 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:28,321 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:29,367 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:30,436 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:31,484 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:32,533 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:33,573 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:34,622 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:35,669 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:36,714 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:37,771 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:38,821 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:38:39,867 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:38:40,918 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:38:41,976 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:38:43,023 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:38:44,074 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:38:45,127 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:38:46,173 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:38:47,207 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:47,464 - TradingLogger - INFO - User interrupted the stream
+2024-11-12 15:38:47,732 - TradingLogger - INFO - Paper Trading Summary:
+2024-11-12 15:38:47,733 - TradingLogger - INFO - Total Trades: 0
+2024-11-12 15:38:47,733 - TradingLogger - INFO - Win Rate: 0.00%
+2024-11-12 15:38:47,733 - TradingLogger - INFO - Total Return: 0.00%
+2024-11-12 15:38:47,733 - TradingLogger - INFO - Program completely exited
+2024-11-12 15:38:50,896 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 15:38:52,395 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 15:38:52,397 - TradingLogger - INFO - Waiting for data stream initialization...
+2024-11-12 15:38:54,398 - TradingLogger - INFO - Starting main loop...
+2024-11-12 15:38:54,440 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:55,489 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:56,544 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:57,587 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:58,634 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:38:59,690 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:00,750 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:01,808 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:02,860 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:03,913 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:04,966 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:06,044 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:07,093 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:08,145 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:09,204 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:10,257 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:39:11,307 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:39:12,357 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:39:13,410 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:14,462 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:15,513 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:16,561 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:17,614 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:18,673 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:19,717 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:20,764 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:21,808 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:22,863 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:23,919 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:24,966 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:26,016 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:27,061 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:28,107 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:29,160 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:30,206 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:31,252 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:32,309 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:33,356 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:34,412 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:35,464 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:36,513 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:37,571 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:38,619 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:39,664 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:40,713 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:41,768 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:42,821 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:43,882 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:44,931 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:39:45,338 - TradingLogger - INFO - User interrupted the stream
+2024-11-12 15:39:45,611 - TradingLogger - INFO - Paper Trading Summary:
+2024-11-12 15:39:45,612 - TradingLogger - INFO - Total Trades: 0
+2024-11-12 15:39:45,613 - TradingLogger - INFO - Win Rate: 0.00%
+2024-11-12 15:39:45,613 - TradingLogger - INFO - Total Return: 0.00%
+2024-11-12 15:39:45,613 - TradingLogger - INFO - Program completely exited
+2024-11-12 15:41:22,995 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 15:41:24,609 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 15:41:24,611 - TradingLogger - INFO - Waiting for data stream initialization...
+2024-11-12 15:41:26,626 - TradingLogger - INFO - Starting main loop...
+2024-11-12 15:41:26,676 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:41:27,729 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:41:28,803 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:41:29,856 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:41:30,904 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:41:31,950 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:41:33,000 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:41:34,050 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:41:35,098 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:41:36,146 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:41:37,191 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:41:38,237 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:41:39,291 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:41:40,343 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:41:41,391 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:41:42,444 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:41:43,503 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:41:44,551 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:41:45,597 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:41:46,646 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:41:47,698 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:41:48,748 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:41:49,793 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:41:50,841 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:41:51,896 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:41:52,953 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:41:54,004 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:41:55,063 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:41:56,109 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:41:57,163 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:41:58,211 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:41:59,256 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:42:00,303 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:42:01,347 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'STRONG_SELL')
+2024-11-12 15:42:02,405 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:42:03,453 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:42:04,506 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:42:05,564 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:42:06,608 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:42:07,666 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:42:08,719 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:42:09,776 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:42:10,852 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:42:11,901 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:42:12,952 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:42:14,006 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:42:15,057 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:42:16,103 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:42:17,158 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:42:18,206 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:42:19,254 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:42:20,306 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:42:21,355 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:42:22,409 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:42:23,461 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:42:24,514 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'STRONG_BUY')
+2024-11-12 15:42:25,570 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:42:26,625 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:42:27,674 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:42:28,726 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:42:29,776 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:42:30,826 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:42:31,878 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:42:32,927 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:42:33,988 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:42:35,040 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:42:36,092 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:42:37,151 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:42:38,208 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:42:39,252 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:42:40,305 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:42:41,360 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:42:42,429 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:42:43,481 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:42:44,540 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:42:45,589 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:42:46,647 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:42:47,707 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:42:48,758 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:42:49,814 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:42:50,867 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:42:51,935 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:42:52,991 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:42:54,048 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:42:55,092 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:42:56,155 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:42:57,201 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:42:58,254 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:42:59,313 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:43:00,361 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:43:01,415 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:43:02,467 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:43:03,522 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:43:04,572 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:43:05,625 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:43:06,678 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:43:07,730 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:43:08,777 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:43:09,831 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:43:10,875 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:43:11,929 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:43:12,981 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:43:14,033 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'STRONG_SELL')
+2024-11-12 15:43:15,086 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:43:16,138 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:43:17,178 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:43:18,233 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:43:19,279 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:43:20,333 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:43:21,387 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:43:22,436 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:43:23,483 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:43:24,539 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:43:25,595 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:43:26,637 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:43:27,730 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:43:28,782 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:43:29,835 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:43:30,887 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:43:31,962 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:43:33,007 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:43:34,059 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:43:35,101 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:43:36,147 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:43:37,188 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:43:38,244 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:43:39,294 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'BUY')
+2024-11-12 15:43:40,345 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:43:41,395 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:43:42,443 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:43:43,505 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:43:44,558 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:43:45,621 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:43:46,683 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:43:47,744 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:43:48,802 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:43:49,862 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:43:50,921 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:43:51,971 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:43:53,022 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:43:54,078 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:43:54,680 - TradingLogger - INFO - User interrupted the stream
+2024-11-12 15:43:55,014 - TradingLogger - INFO - Paper Trading Summary:
+2024-11-12 15:43:55,014 - TradingLogger - INFO - Total Trades: 0
+2024-11-12 15:43:55,015 - TradingLogger - INFO - Win Rate: 0.00%
+2024-11-12 15:43:55,015 - TradingLogger - INFO - Total Return: 0.00%
+2024-11-12 15:43:55,015 - TradingLogger - INFO - Program completely exited
+2024-11-12 15:43:58,775 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 15:44:00,209 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 15:44:00,211 - TradingLogger - INFO - Waiting for data stream initialization...
+2024-11-12 15:44:02,221 - TradingLogger - INFO - Starting main loop...
+2024-11-12 15:44:02,265 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:44:03,323 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:44:04,373 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:44:05,444 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:44:06,501 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:44:07,549 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:44:08,599 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:44:09,652 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:44:10,110 - TradingLogger - INFO - User interrupted the stream
+2024-11-12 15:44:10,373 - TradingLogger - INFO - Paper Trading Summary:
+2024-11-12 15:44:10,374 - TradingLogger - INFO - Total Trades: 0
+2024-11-12 15:44:10,374 - TradingLogger - INFO - Win Rate: 0.00%
+2024-11-12 15:44:10,374 - TradingLogger - INFO - Total Return: 0.00%
+2024-11-12 15:44:10,374 - TradingLogger - INFO - Program completely exited
+2024-11-12 15:44:13,640 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 15:44:15,150 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 15:44:15,152 - TradingLogger - INFO - Waiting for data stream initialization...
+2024-11-12 15:44:17,157 - TradingLogger - INFO - Starting main loop...
+2024-11-12 15:44:17,202 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:44:18,255 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:44:19,313 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:44:20,366 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:44:21,432 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:44:22,486 - TradingLogger - ERROR - Error displaying data: ('MA Cross', 'SELL')
+2024-11-12 15:44:22,487 - TradingLogger - INFO - User interrupted the stream
+2024-11-12 15:44:22,758 - TradingLogger - INFO - Paper Trading Summary:
+2024-11-12 15:44:22,758 - TradingLogger - INFO - Total Trades: 0
+2024-11-12 15:44:22,758 - TradingLogger - INFO - Win Rate: 0.00%
+2024-11-12 15:44:22,759 - TradingLogger - INFO - Total Return: 0.00%
+2024-11-12 15:44:22,759 - TradingLogger - INFO - Program completely exited
+2024-11-12 15:44:25,994 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 15:44:26,623 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 15:44:26,626 - TradingLogger - INFO - Waiting for data stream initialization...
+2024-11-12 15:44:28,635 - TradingLogger - INFO - Starting main loop...
+2024-11-12 15:44:28,923 - TradingLogger - INFO - Paper Trading Summary:
+2024-11-12 15:44:28,923 - TradingLogger - INFO - Total Trades: 0
+2024-11-12 15:44:28,923 - TradingLogger - INFO - Win Rate: 0.00%
+2024-11-12 15:44:28,924 - TradingLogger - INFO - Total Return: 0.00%
+2024-11-12 15:44:28,924 - TradingLogger - INFO - Program completely exited
+2024-11-12 15:46:25,897 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 15:46:26,280 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 15:46:26,282 - TradingLogger - INFO - Waiting for data stream initialization...
+2024-11-12 15:46:28,288 - TradingLogger - INFO - Starting main loop...
+2024-11-12 15:47:52,635 - TradingLogger - INFO - User interrupted the stream
+2024-11-12 15:47:52,932 - TradingLogger - INFO - Paper Trading Summary:
+2024-11-12 15:47:52,932 - TradingLogger - INFO - Total Trades: 0
+2024-11-12 15:47:52,932 - TradingLogger - INFO - Win Rate: 0.00%
+2024-11-12 15:47:52,933 - TradingLogger - INFO - Total Return: 0.00%
+2024-11-12 15:47:52,933 - TradingLogger - INFO - Program completely exited
+2024-11-12 15:47:56,256 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 15:47:58,004 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 15:47:58,006 - TradingLogger - INFO - Waiting for data stream initialization...
+2024-11-12 15:48:00,018 - TradingLogger - INFO - Starting main loop...
+2024-11-12 15:48:12,098 - TradingLogger - INFO - PAPER TRADE: BUY 25663.1909 units at 0.3702
+2024-11-12 15:48:15,122 - TradingLogger - INFO - PAPER TRADE: SELL 25663.1909 units at 0.3702
+2024-11-12 15:48:15,123 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 0.00 USDT
+2024-11-12 15:48:17,128 - TradingLogger - INFO - PAPER TRADE: BUY 25651.9649 units at 0.3703
+2024-11-12 15:48:25,190 - TradingLogger - INFO - PAPER TRADE: SELL 25651.9649 units at 0.3692
+2024-11-12 15:48:25,191 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -29.99 USDT
+2024-11-12 15:48:32,293 - TradingLogger - INFO - PAPER TRADE: BUY 25553.3762 units at 0.3707
+2024-11-12 15:48:46,475 - TradingLogger - INFO - PAPER TRADE: SELL 25553.3762 units at 0.3711
+2024-11-12 15:48:46,477 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 12.50 USDT
+2024-11-12 15:49:00,577 - TradingLogger - INFO - PAPER TRADE: BUY 25560.6459 units at 0.3710
+2024-11-12 15:49:05,622 - TradingLogger - INFO - PAPER TRADE: SELL 25560.6459 units at 0.3708
+2024-11-12 15:49:05,622 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -4.88 USDT
+2024-11-12 15:49:08,945 - TradingLogger - INFO - User interrupted the stream
+2024-11-12 15:49:09,955 - TradingLogger - INFO - Paper Trading Summary:
+2024-11-12 15:49:09,955 - TradingLogger - INFO - Total Trades: 4
+2024-11-12 15:49:09,955 - TradingLogger - INFO - Win Rate: 25.00%
+2024-11-12 15:49:09,957 - TradingLogger - INFO - Total Return: -0.22%
+2024-11-12 15:49:09,957 - TradingLogger - INFO - Program completely exited
+2024-11-12 15:50:26,726 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 15:50:28,110 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 15:50:28,111 - TradingLogger - INFO - Waiting for data stream initialization...
+2024-11-12 15:50:30,124 - TradingLogger - INFO - Starting main loop...
+2024-11-12 15:50:42,235 - TradingLogger - INFO - PAPER TRADE: BUY 25626.6388 units at 0.3707
+2024-11-12 15:50:53,323 - TradingLogger - INFO - PAPER TRADE: SELL 25626.6388 units at 0.3705
+2024-11-12 15:50:53,324 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -6.12 USDT
+2024-11-12 15:51:11,440 - TradingLogger - INFO - PAPER TRADE: BUY 25650.4523 units at 0.3701
+2024-11-12 15:51:26,561 - TradingLogger - INFO - PAPER TRADE: SELL 25650.4523 units at 0.3711
+2024-11-12 15:51:26,562 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 24.47 USDT
+2024-11-12 15:51:35,615 - TradingLogger - INFO - PAPER TRADE: BUY 25620.9882 units at 0.3715
+2024-11-12 15:51:43,687 - TradingLogger - INFO - PAPER TRADE: SELL 25620.9882 units at 0.3709
+2024-11-12 15:51:43,688 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -14.35 USDT
+2024-11-12 15:51:49,720 - TradingLogger - INFO - PAPER TRADE: BUY 25650.6539 units at 0.3705
+2024-11-12 15:51:50,723 - TradingLogger - INFO - PAPER TRADE: SELL 25650.6539 units at 0.3705
+2024-11-12 15:51:50,723 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -0.03 USDT
+2024-11-12 15:52:08,981 - TradingLogger - INFO - User interrupted the stream
+2024-11-12 15:52:09,256 - TradingLogger - INFO - Paper Trading Summary:
+2024-11-12 15:52:09,257 - TradingLogger - INFO - Total Trades: 4
+2024-11-12 15:52:09,257 - TradingLogger - INFO - Win Rate: 25.00%
+2024-11-12 15:52:09,257 - TradingLogger - INFO - Total Return: 0.04%
+2024-11-12 15:52:09,258 - TradingLogger - INFO - Program completely exited
+2024-11-12 15:52:12,323 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 15:52:12,979 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 15:52:12,981 - TradingLogger - INFO - Waiting for data stream initialization...
+2024-11-12 15:52:14,993 - TradingLogger - INFO - Starting main loop...
+2024-11-12 15:52:25,075 - TradingLogger - INFO - PAPER TRADE: BUY 25656.2601 units at 0.3703
+2024-11-12 15:52:28,099 - TradingLogger - INFO - PAPER TRADE: SELL 25656.2601 units at 0.3699
+2024-11-12 15:52:28,099 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -9.62 USDT
+2024-11-12 15:52:29,105 - TradingLogger - INFO - PAPER TRADE: BUY 25657.5606 units at 0.3699
+2024-11-12 15:52:30,115 - TradingLogger - INFO - PAPER TRADE: SELL 25657.5606 units at 0.3695
+2024-11-12 15:52:30,115 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -11.08 USDT
+2024-11-12 15:52:39,168 - TradingLogger - INFO - PAPER TRADE: BUY 25616.1443 units at 0.3701
+2024-11-12 15:53:05,382 - TradingLogger - INFO - PAPER TRADE: SELL 25616.1443 units at 0.3700
+2024-11-12 15:53:05,383 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -1.69 USDT
+2024-11-12 15:53:16,487 - TradingLogger - INFO - PAPER TRADE: BUY 25655.1301 units at 0.3695
+2024-11-12 15:53:18,506 - TradingLogger - INFO - PAPER TRADE: SELL 25655.1301 units at 0.3693
+2024-11-12 15:53:18,506 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -4.72 USDT
+2024-11-12 15:53:23,548 - TradingLogger - INFO - PAPER TRADE: BUY 25696.6158 units at 0.3687
+2024-11-12 15:53:25,573 - TradingLogger - INFO - PAPER TRADE: SELL 25696.6158 units at 0.3699
+2024-11-12 15:53:25,573 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 30.73 USDT
+2024-11-12 15:53:27,583 - TradingLogger - INFO - PAPER TRADE: BUY 25676.4263 units at 0.3701
+2024-11-12 15:53:41,694 - TradingLogger - INFO - PAPER TRADE: SELL 25676.4263 units at 0.3693
+2024-11-12 15:53:41,694 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -21.08 USDT
+2024-11-12 15:53:50,764 - TradingLogger - INFO - PAPER TRADE: BUY 25664.5475 units at 0.3695
+2024-11-12 15:53:54,799 - TradingLogger - INFO - PAPER TRADE: SELL 25664.5475 units at 0.3698
+2024-11-12 15:53:54,799 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 8.57 USDT
+2024-11-12 15:53:55,802 - TradingLogger - INFO - PAPER TRADE: BUY 25663.3887 units at 0.3698
+2024-11-12 15:53:56,809 - TradingLogger - INFO - PAPER TRADE: SELL 25663.3887 units at 0.3698
+2024-11-12 15:53:56,810 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 0.00 USDT
+2024-11-12 15:54:00,843 - TradingLogger - INFO - PAPER TRADE: BUY 25663.5274 units at 0.3698
+2024-11-12 15:54:08,916 - TradingLogger - INFO - PAPER TRADE: SELL 25663.5274 units at 0.3696
+2024-11-12 15:54:08,916 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -7.57 USDT
+2024-11-12 15:54:15,986 - TradingLogger - INFO - PAPER TRADE: BUY 25622.3968 units at 0.3702
+2024-11-12 15:54:30,099 - TradingLogger - INFO - PAPER TRADE: SELL 25622.3968 units at 0.3695
+2024-11-12 15:54:30,100 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -16.24 USDT
+2024-11-12 15:54:45,223 - TradingLogger - INFO - PAPER TRADE: BUY 25734.0704 units at 0.3680
+2024-11-12 15:54:48,248 - TradingLogger - INFO - PAPER TRADE: SELL 25734.0704 units at 0.3683
+2024-11-12 15:54:48,248 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 9.86 USDT
+2024-11-12 15:54:50,270 - TradingLogger - INFO - User interrupted the stream
+2024-11-12 15:54:50,532 - TradingLogger - INFO - Paper Trading Summary:
+2024-11-12 15:54:50,532 - TradingLogger - INFO - Total Trades: 11
+2024-11-12 15:54:50,533 - TradingLogger - INFO - Win Rate: 27.27%
+2024-11-12 15:54:50,533 - TradingLogger - INFO - Total Return: -0.23%
+2024-11-12 15:54:50,533 - TradingLogger - INFO - Program completely exited
+2024-11-12 15:54:54,474 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 15:54:55,136 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 15:54:55,138 - TradingLogger - INFO - Waiting for data stream initialization...
+2024-11-12 15:54:57,143 - TradingLogger - INFO - Starting main loop...
+2024-11-12 15:55:01,877 - TradingLogger - INFO - User interrupted the stream
+2024-11-12 15:55:02,152 - TradingLogger - INFO - Paper Trading Summary:
+2024-11-12 15:55:02,152 - TradingLogger - INFO - Total Trades: 0
+2024-11-12 15:55:02,153 - TradingLogger - INFO - Win Rate: 0.00%
+2024-11-12 15:55:02,153 - TradingLogger - INFO - Total Return: 0.00%
+2024-11-12 15:55:02,153 - TradingLogger - INFO - Program completely exited
+2024-11-12 15:56:13,385 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 15:56:14,798 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 15:56:14,800 - TradingLogger - INFO - Waiting for data stream initialization...
+2024-11-12 15:56:16,810 - TradingLogger - INFO - Starting main loop...
+2024-11-12 15:56:20,839 - TradingLogger - INFO - PAPER TRADE: BUY 25712.3679 units at 0.3695
+2024-11-12 15:56:25,895 - TradingLogger - INFO - PAPER TRADE: SELL 25712.3679 units at 0.3704
+2024-11-12 15:56:25,895 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 23.01 USDT
+2024-11-12 15:56:26,910 - TradingLogger - INFO - PAPER TRADE: BUY 25735.1793 units at 0.3700
+2024-11-12 15:56:34,964 - TradingLogger - INFO - PAPER TRADE: SELL 25735.1793 units at 0.3692
+2024-11-12 15:56:34,965 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -21.49 USDT
+2024-11-12 15:56:37,988 - TradingLogger - INFO - PAPER TRADE: BUY 25737.5321 units at 0.3692
+2024-11-12 15:56:40,003 - TradingLogger - INFO - PAPER TRADE: SELL 25737.5321 units at 0.3688
+2024-11-12 15:56:40,003 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -8.70 USDT
+2024-11-12 15:56:49,095 - TradingLogger - INFO - PAPER TRADE: BUY 25725.3894 units at 0.3690
+2024-11-12 15:56:52,118 - TradingLogger - INFO - PAPER TRADE: SELL 25725.3894 units at 0.3690
+2024-11-12 15:56:52,118 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -0.08 USDT
+2024-11-12 15:57:14,324 - TradingLogger - INFO - PAPER TRADE: BUY 25822.5273 units at 0.3676
+2024-11-12 15:57:26,419 - TradingLogger - INFO - PAPER TRADE: SELL 25822.5273 units at 0.3669
+2024-11-12 15:57:26,420 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -18.13 USDT
+2024-11-12 15:57:43,548 - TradingLogger - INFO - PAPER TRADE: BUY 25794.9793 units at 0.3674
+2024-11-12 15:58:08,762 - TradingLogger - INFO - PAPER TRADE: SELL 25794.9793 units at 0.3679
+2024-11-12 15:58:08,763 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 14.39 USDT
+2024-11-12 15:58:20,882 - TradingLogger - INFO - PAPER TRADE: BUY 25730.4999 units at 0.3688
+2024-11-12 15:59:04,247 - TradingLogger - INFO - PAPER TRADE: SELL 25730.4999 units at 0.3700
+2024-11-12 15:59:04,247 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 31.42 USDT
+2024-11-12 15:59:10,293 - TradingLogger - INFO - PAPER TRADE: BUY 25638.2595 units at 0.3713
+2024-11-12 15:59:16,335 - TradingLogger - INFO - PAPER TRADE: SELL 25638.2595 units at 0.3711
+2024-11-12 15:59:16,336 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -5.28 USDT
+2024-11-12 15:59:17,346 - TradingLogger - INFO - PAPER TRADE: BUY 25637.4512 units at 0.3711
+2024-11-12 15:59:19,925 - TradingLogger - INFO - User interrupted the stream
+2024-11-12 15:59:20,182 - TradingLogger - INFO - Paper Trading Summary:
+2024-11-12 15:59:20,182 - TradingLogger - INFO - Total Trades: 9
+2024-11-12 15:59:20,182 - TradingLogger - INFO - Win Rate: 33.33%
+2024-11-12 15:59:20,183 - TradingLogger - INFO - Total Return: 0.15%
+2024-11-12 15:59:20,183 - TradingLogger - INFO - Program completely exited
+2024-11-12 15:59:23,601 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 15:59:25,081 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 15:59:25,083 - TradingLogger - INFO - Waiting for data stream initialization...
+2024-11-12 15:59:27,095 - TradingLogger - INFO - Starting main loop...
+2024-11-12 15:59:33,165 - TradingLogger - INFO - PAPER TRADE: BUY 25634.3835 units at 0.3706
+2024-11-12 16:00:13,468 - TradingLogger - INFO - PAPER TRADE: SELL 25634.3835 units at 0.3715
+2024-11-12 16:00:13,468 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 22.58 USDT
+2024-11-12 16:00:49,785 - TradingLogger - INFO - PAPER TRADE: BUY 25647.2233 units at 0.3712
+2024-11-12 16:00:52,810 - TradingLogger - INFO - PAPER TRADE: SELL 25647.2233 units at 0.3712
+2024-11-12 16:00:52,811 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -0.15 USDT
+2024-11-12 16:00:54,822 - TradingLogger - INFO - PAPER TRADE: BUY 25621.5011 units at 0.3716
+2024-11-12 16:01:08,966 - TradingLogger - INFO - PAPER TRADE: SELL 25621.5011 units at 0.3716
+2024-11-12 16:01:08,967 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -1.46 USDT
+2024-11-12 16:01:26,172 - TradingLogger - INFO - PAPER TRADE: BUY 25689.5935 units at 0.3706
+2024-11-12 16:01:40,352 - TradingLogger - INFO - PAPER TRADE: SELL 25689.5935 units at 0.3698
+2024-11-12 16:01:40,352 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -19.96 USDT
+2024-11-12 16:01:45,384 - TradingLogger - INFO - User interrupted the stream
+2024-11-12 16:01:45,662 - TradingLogger - INFO - Paper Trading Summary:
+2024-11-12 16:01:45,663 - TradingLogger - INFO - Total Trades: 4
+2024-11-12 16:01:45,663 - TradingLogger - INFO - Win Rate: 25.00%
+2024-11-12 16:01:45,663 - TradingLogger - INFO - Total Return: 0.01%
+2024-11-12 16:01:45,664 - TradingLogger - INFO - Program completely exited
+2024-11-12 16:01:49,657 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 16:01:51,190 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 16:01:51,191 - TradingLogger - INFO - Waiting for data stream initialization...
+2024-11-12 16:01:53,201 - TradingLogger - INFO - Starting main loop...
+2024-11-12 16:02:04,784 - TradingLogger - INFO - PAPER TRADE: BUY 25735.4933 units at 0.3691
+2024-11-12 16:02:10,050 - TradingLogger - INFO - PAPER TRADE: SELL 25735.4933 units at 0.3676
+2024-11-12 16:02:10,050 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -38.94 USDT
+2024-11-12 16:02:21,582 - TradingLogger - INFO - PAPER TRADE: BUY 25785.7496 units at 0.3670
+2024-11-12 16:02:24,725 - TradingLogger - INFO - PAPER TRADE: SELL 25785.7496 units at 0.3666
+2024-11-12 16:02:24,726 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -9.67 USDT
+2024-11-12 16:02:29,973 - TradingLogger - INFO - PAPER TRADE: BUY 25857.7412 units at 0.3656
+2024-11-12 16:02:35,231 - TradingLogger - INFO - PAPER TRADE: SELL 25857.7412 units at 0.3652
+2024-11-12 16:02:35,231 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -9.93 USDT
+2024-11-12 16:03:07,737 - TradingLogger - INFO - PAPER TRADE: BUY 25978.0280 units at 0.3636
+2024-11-12 16:03:51,797 - TradingLogger - INFO - PAPER TRADE: SELL 25978.0280 units at 0.3649
+2024-11-12 16:03:51,797 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 34.89 USDT
+2024-11-12 16:04:00,189 - TradingLogger - INFO - PAPER TRADE: BUY 25942.3210 units at 0.3653
+2024-11-12 16:04:06,484 - TradingLogger - INFO - PAPER TRADE: SELL 25942.3210 units at 0.3641
+2024-11-12 16:04:06,484 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -31.49 USDT
+2024-11-12 16:04:15,942 - TradingLogger - INFO - PAPER TRADE: BUY 25901.6170 units at 0.3648
+2024-11-12 16:04:22,239 - TradingLogger - INFO - PAPER TRADE: SELL 25901.6170 units at 0.3645
+2024-11-12 16:04:22,240 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -7.64 USDT
+2024-11-12 16:04:32,727 - TradingLogger - INFO - PAPER TRADE: BUY 25797.3397 units at 0.3659
+2024-11-12 16:04:35,880 - TradingLogger - INFO - PAPER TRADE: SELL 25797.3397 units at 0.3662
+2024-11-12 16:04:35,880 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 5.98 USDT
+2024-11-12 16:04:37,985 - TradingLogger - INFO - PAPER TRADE: BUY 25829.1108 units at 0.3657
+2024-11-12 16:05:05,293 - TradingLogger - INFO - PAPER TRADE: SELL 25829.1108 units at 0.3673
+2024-11-12 16:05:05,293 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 41.92 USDT
+2024-11-12 16:05:10,554 - TradingLogger - INFO - PAPER TRADE: BUY 25862.6914 units at 0.3668
+2024-11-12 16:05:12,663 - TradingLogger - INFO - PAPER TRADE: SELL 25862.6914 units at 0.3674
+2024-11-12 16:05:12,663 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 15.88 USDT
+2024-11-12 16:05:14,761 - TradingLogger - INFO - PAPER TRADE: BUY 25772.6320 units at 0.3686
+2024-11-12 16:05:49,355 - TradingLogger - INFO - PAPER TRADE: SELL 25772.6320 units at 0.3698
+2024-11-12 16:05:49,355 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 28.66 USDT
+2024-11-12 16:05:56,694 - TradingLogger - INFO - PAPER TRADE: BUY 25705.9789 units at 0.3707
+2024-11-12 16:06:01,936 - TradingLogger - INFO - PAPER TRADE: SELL 25705.9789 units at 0.3692
+2024-11-12 16:06:01,937 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -36.97 USDT
+2024-11-12 16:06:16,592 - TradingLogger - INFO - PAPER TRADE: BUY 25813.0563 units at 0.3678
+2024-11-12 16:06:20,768 - TradingLogger - INFO - PAPER TRADE: SELL 25813.0563 units at 0.3672
+2024-11-12 16:06:20,768 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -14.95 USDT
+2024-11-12 16:06:28,100 - TradingLogger - INFO - PAPER TRADE: BUY 25772.0658 units at 0.3678
+2024-11-12 16:06:34,418 - TradingLogger - INFO - PAPER TRADE: SELL 25772.0658 units at 0.3670
+2024-11-12 16:06:34,418 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -19.97 USDT
+2024-11-12 16:06:37,580 - TradingLogger - INFO - PAPER TRADE: BUY 25781.2494 units at 0.3669
+2024-11-12 16:06:39,688 - TradingLogger - INFO - PAPER TRADE: SELL 25781.2494 units at 0.3674
+2024-11-12 16:06:39,688 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 12.66 USDT
+2024-11-12 16:06:43,895 - TradingLogger - INFO - PAPER TRADE: BUY 25762.9787 units at 0.3677
+2024-11-12 16:06:49,136 - TradingLogger - INFO - PAPER TRADE: SELL 25762.9787 units at 0.3669
+2024-11-12 16:06:49,136 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -20.25 USDT
+2024-11-12 16:07:00,700 - TradingLogger - INFO - PAPER TRADE: BUY 25784.4336 units at 0.3666
+2024-11-12 16:07:04,896 - TradingLogger - INFO - PAPER TRADE: SELL 25784.4336 units at 0.3651
+2024-11-12 16:07:04,896 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -38.75 USDT
+2024-11-12 16:07:52,077 - TradingLogger - INFO - PAPER TRADE: BUY 26014.9035 units at 0.3619
+2024-11-12 16:08:06,706 - TradingLogger - INFO - PAPER TRADE: SELL 26014.9035 units at 0.3608
+2024-11-12 16:08:06,707 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -28.69 USDT
+2024-11-12 16:08:11,957 - TradingLogger - INFO - PAPER TRADE: BUY 25893.7302 units at 0.3626
+2024-11-12 16:08:27,669 - TradingLogger - INFO - PAPER TRADE: SELL 25893.7302 units at 0.3614
+2024-11-12 16:08:27,669 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -31.72 USDT
+2024-11-12 16:08:37,091 - TradingLogger - INFO - PAPER TRADE: BUY 25854.8318 units at 0.3620
+2024-11-12 16:09:01,221 - TradingLogger - INFO - PAPER TRADE: SELL 25854.8318 units at 0.3619
+2024-11-12 16:09:01,222 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -0.34 USDT
+2024-11-12 16:09:19,016 - TradingLogger - INFO - PAPER TRADE: BUY 25916.1693 units at 0.3611
+2024-11-12 16:09:22,173 - TradingLogger - INFO - PAPER TRADE: SELL 25916.1693 units at 0.3611
+2024-11-12 16:09:22,173 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 0.03 USDT
+2024-11-12 16:09:31,604 - TradingLogger - INFO - PAPER TRADE: BUY 25906.3368 units at 0.3612
+2024-11-12 16:09:39,979 - TradingLogger - INFO - PAPER TRADE: SELL 25906.3368 units at 0.3613
+2024-11-12 16:09:39,979 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 2.75 USDT
+2024-11-12 16:09:41,030 - TradingLogger - INFO - PAPER TRADE: BUY 25893.1298 units at 0.3615
+2024-11-12 16:09:52,562 - TradingLogger - INFO - PAPER TRADE: SELL 25893.1298 units at 0.3610
+2024-11-12 16:09:52,562 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -13.23 USDT
+2024-11-12 16:09:59,877 - TradingLogger - INFO - PAPER TRADE: BUY 25877.5437 units at 0.3612
+2024-11-12 16:10:07,235 - TradingLogger - INFO - PAPER TRADE: SELL 25877.5437 units at 0.3604
+2024-11-12 16:10:07,235 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -22.85 USDT
+2024-11-12 16:10:11,443 - TradingLogger - INFO - PAPER TRADE: BUY 25953.0209 units at 0.3594
+2024-11-12 16:10:14,589 - TradingLogger - INFO - PAPER TRADE: SELL 25953.0209 units at 0.3600
+2024-11-12 16:10:14,590 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 15.34 USDT
+2024-11-12 16:10:18,793 - TradingLogger - INFO - PAPER TRADE: BUY 25908.7110 units at 0.3605
+2024-11-12 16:10:40,816 - TradingLogger - INFO - PAPER TRADE: SELL 25908.7110 units at 0.3612
+2024-11-12 16:10:40,816 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 17.05 USDT
+2024-11-12 16:10:54,441 - TradingLogger - INFO - PAPER TRADE: BUY 25920.6320 units at 0.3610
+2024-11-12 16:11:13,338 - TradingLogger - INFO - PAPER TRADE: SELL 25920.6320 units at 0.3608
+2024-11-12 16:11:13,339 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -4.48 USDT
+2024-11-12 16:11:32,150 - TradingLogger - INFO - PAPER TRADE: BUY 25924.1273 units at 0.3608
+2024-11-12 16:11:35,306 - TradingLogger - INFO - PAPER TRADE: SELL 25924.1273 units at 0.3606
+2024-11-12 16:11:35,306 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -4.54 USDT
+2024-11-12 16:12:01,508 - TradingLogger - INFO - PAPER TRADE: BUY 25998.3660 units at 0.3596
+2024-11-12 16:12:02,559 - TradingLogger - INFO - PAPER TRADE: SELL 25998.3660 units at 0.3593
+2024-11-12 16:12:02,559 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -8.53 USDT
+2024-11-12 16:12:03,601 - TradingLogger - INFO - PAPER TRADE: BUY 25961.7585 units at 0.3598
+2024-11-12 16:12:07,782 - TradingLogger - INFO - PAPER TRADE: SELL 25961.7585 units at 0.3585
+2024-11-12 16:12:07,782 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -32.84 USDT
+2024-11-12 16:12:17,240 - TradingLogger - INFO - PAPER TRADE: BUY 25980.9046 units at 0.3583
+2024-11-12 16:12:19,343 - TradingLogger - INFO - PAPER TRADE: SELL 25980.9046 units at 0.3581
+2024-11-12 16:12:19,343 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -4.68 USDT
+2024-11-12 16:12:23,535 - TradingLogger - INFO - PAPER TRADE: BUY 25904.7410 units at 0.3592
+2024-11-12 16:12:36,117 - TradingLogger - INFO - PAPER TRADE: SELL 25904.7410 units at 0.3575
+2024-11-12 16:12:36,117 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -43.73 USDT
+2024-11-12 16:12:47,651 - TradingLogger - INFO - PAPER TRADE: BUY 25882.0433 units at 0.3579
+2024-11-12 16:12:49,747 - TradingLogger - INFO - PAPER TRADE: SELL 25882.0433 units at 0.3575
+2024-11-12 16:12:49,747 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -11.28 USDT
+2024-11-12 16:13:02,355 - TradingLogger - INFO - PAPER TRADE: BUY 25835.1996 units at 0.3581
+2024-11-12 16:13:12,840 - TradingLogger - INFO - PAPER TRADE: SELL 25835.1996 units at 0.3571
+2024-11-12 16:13:12,840 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -28.21 USDT
+2024-11-12 16:13:20,175 - TradingLogger - INFO - PAPER TRADE: BUY 25929.6369 units at 0.3558
+2024-11-12 16:13:28,597 - TradingLogger - INFO - PAPER TRADE: SELL 25929.6369 units at 0.3551
+2024-11-12 16:13:28,597 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -18.98 USDT
+2024-11-12 16:13:47,523 - TradingLogger - INFO - PAPER TRADE: BUY 25870.1612 units at 0.3559
+2024-11-12 16:14:06,345 - TradingLogger - INFO - PAPER TRADE: SELL 25870.1612 units at 0.3573
+2024-11-12 16:14:06,345 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 36.53 USDT
+2024-11-12 16:14:08,450 - TradingLogger - INFO - PAPER TRADE: BUY 25862.0826 units at 0.3574
+2024-11-12 16:14:16,840 - TradingLogger - INFO - PAPER TRADE: SELL 25862.0826 units at 0.3563
+2024-11-12 16:14:16,840 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -28.34 USDT
+2024-11-12 16:14:41,995 - TradingLogger - INFO - PAPER TRADE: BUY 25908.0185 units at 0.3557
+2024-11-12 16:14:49,342 - TradingLogger - INFO - PAPER TRADE: SELL 25908.0185 units at 0.3562
+2024-11-12 16:14:49,342 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 13.91 USDT
+2024-11-12 16:14:50,386 - TradingLogger - INFO - PAPER TRADE: BUY 25872.5851 units at 0.3567
+2024-11-12 16:15:00,827 - TradingLogger - INFO - PAPER TRADE: SELL 25872.5851 units at 0.3559
+2024-11-12 16:15:00,827 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -21.37 USDT
+2024-11-12 16:15:08,201 - TradingLogger - INFO - PAPER TRADE: BUY 25752.6417 units at 0.3576
+2024-11-12 16:15:23,962 - TradingLogger - INFO - PAPER TRADE: SELL 25752.6417 units at 0.3568
+2024-11-12 16:15:23,962 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -20.76 USDT
+2024-11-12 16:15:30,276 - TradingLogger - INFO - PAPER TRADE: BUY 25658.3890 units at 0.3581
+2024-11-12 16:15:42,913 - TradingLogger - INFO - PAPER TRADE: SELL 25658.3890 units at 0.3581
+2024-11-12 16:15:42,913 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 0.46 USDT
+2024-11-12 16:15:51,335 - TradingLogger - INFO - PAPER TRADE: BUY 25606.2026 units at 0.3589
+2024-11-12 16:16:13,439 - TradingLogger - INFO - PAPER TRADE: SELL 25606.2026 units at 0.3588
+2024-11-12 16:16:13,440 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -1.36 USDT
+2024-11-12 16:16:20,818 - TradingLogger - INFO - PAPER TRADE: BUY 25533.5234 units at 0.3598
+2024-11-12 16:16:28,167 - TradingLogger - INFO - PAPER TRADE: SELL 25533.5234 units at 0.3591
+2024-11-12 16:16:28,168 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -18.54 USDT
+2024-11-12 16:16:39,780 - TradingLogger - INFO - PAPER TRADE: BUY 25516.2805 units at 0.3594
+2024-11-12 16:16:59,789 - TradingLogger - INFO - PAPER TRADE: SELL 25516.2805 units at 0.3597
+2024-11-12 16:16:59,789 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 8.73 USDT
+2024-11-12 16:17:17,687 - TradingLogger - INFO - PAPER TRADE: BUY 25501.5276 units at 0.3599
+2024-11-12 16:17:19,784 - TradingLogger - INFO - PAPER TRADE: SELL 25501.5276 units at 0.3595
+2024-11-12 16:17:19,784 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -9.74 USDT
+2024-11-12 16:17:30,301 - TradingLogger - INFO - PAPER TRADE: BUY 25596.5707 units at 0.3582
+2024-11-12 16:17:43,952 - TradingLogger - INFO - PAPER TRADE: SELL 25596.5707 units at 0.3587
+2024-11-12 16:17:43,953 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 12.88 USDT
+2024-11-12 16:17:46,070 - TradingLogger - INFO - PAPER TRADE: BUY 25608.1252 units at 0.3585
+2024-11-12 16:17:47,157 - TradingLogger - INFO - PAPER TRADE: SELL 25608.1252 units at 0.3580
+2024-11-12 16:17:47,158 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -13.98 USDT
+2024-11-12 16:18:08,180 - TradingLogger - INFO - PAPER TRADE: BUY 25635.4272 units at 0.3576
+2024-11-12 16:18:10,280 - TradingLogger - INFO - PAPER TRADE: SELL 25635.4272 units at 0.3572
+2024-11-12 16:18:10,280 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -10.25 USDT
+2024-11-12 16:18:27,139 - TradingLogger - INFO - PAPER TRADE: BUY 25654.6719 units at 0.3570
+2024-11-12 16:18:39,747 - TradingLogger - INFO - PAPER TRADE: SELL 25654.6719 units at 0.3563
+2024-11-12 16:18:39,748 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -16.93 USDT
+2024-11-12 16:18:50,244 - TradingLogger - INFO - PAPER TRADE: BUY 25600.2200 units at 0.3571
+2024-11-12 16:19:13,436 - TradingLogger - INFO - PAPER TRADE: SELL 25600.2200 units at 0.3564
+2024-11-12 16:19:13,437 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -18.33 USDT
+2024-11-12 16:19:17,646 - TradingLogger - INFO - PAPER TRADE: BUY 25500.9055 units at 0.3578
+2024-11-12 16:19:22,909 - TradingLogger - INFO - PAPER TRADE: SELL 25500.9055 units at 0.3585
+2024-11-12 16:19:22,911 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 16.32 USDT
+2024-11-12 16:19:30,266 - TradingLogger - INFO - PAPER TRADE: BUY 25460.7017 units at 0.3590
+2024-11-12 16:19:35,512 - TradingLogger - INFO - PAPER TRADE: SELL 25460.7017 units at 0.3594
+2024-11-12 16:19:35,512 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 10.11 USDT
+2024-11-12 16:19:41,808 - TradingLogger - INFO - PAPER TRADE: BUY 25487.9459 units at 0.3590
+2024-11-12 16:19:43,936 - TradingLogger - INFO - PAPER TRADE: SELL 25487.9459 units at 0.3586
+2024-11-12 16:19:43,937 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -11.09 USDT
+2024-11-12 16:19:54,429 - TradingLogger - INFO - PAPER TRADE: BUY 25531.7164 units at 0.3580
+2024-11-12 16:19:57,572 - TradingLogger - INFO - PAPER TRADE: SELL 25531.7164 units at 0.3583
+2024-11-12 16:19:57,573 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 7.74 USDT
+2024-11-12 16:20:11,233 - TradingLogger - INFO - PAPER TRADE: BUY 25477.8006 units at 0.3590
+2024-11-12 16:20:22,843 - TradingLogger - INFO - PAPER TRADE: SELL 25477.8006 units at 0.3586
+2024-11-12 16:20:22,844 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -11.03 USDT
+2024-11-12 16:20:28,107 - TradingLogger - INFO - PAPER TRADE: BUY 25396.4751 units at 0.3598
+2024-11-12 16:20:43,889 - TradingLogger - INFO - PAPER TRADE: SELL 25396.4751 units at 0.3595
+2024-11-12 16:20:43,890 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -7.09 USDT
+2024-11-12 16:20:51,258 - TradingLogger - INFO - PAPER TRADE: BUY 25374.2377 units at 0.3598
+2024-11-12 16:21:00,781 - TradingLogger - INFO - PAPER TRADE: SELL 25374.2377 units at 0.3613
+2024-11-12 16:21:00,782 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 37.71 USDT
+2024-11-12 16:21:03,944 - TradingLogger - INFO - PAPER TRADE: BUY 25405.9372 units at 0.3608
+2024-11-12 16:21:09,211 - TradingLogger - INFO - PAPER TRADE: SELL 25405.9372 units at 0.3609
+2024-11-12 16:21:09,212 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 3.58 USDT
+2024-11-12 16:22:09,263 - TradingLogger - INFO - PAPER TRADE: BUY 25799.1015 units at 0.3554
+2024-11-12 16:22:11,372 - TradingLogger - INFO - PAPER TRADE: SELL 25799.1015 units at 0.3554
+2024-11-12 16:22:11,373 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -0.44 USDT
+2024-11-12 16:22:16,630 - TradingLogger - INFO - PAPER TRADE: BUY 25892.2013 units at 0.3541
+2024-11-12 16:22:21,867 - TradingLogger - INFO - PAPER TRADE: SELL 25892.2013 units at 0.3533
+2024-11-12 16:22:21,867 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -19.70 USDT
+2024-11-12 16:22:39,769 - TradingLogger - INFO - PAPER TRADE: BUY 25893.0110 units at 0.3534
+2024-11-12 16:22:55,505 - TradingLogger - INFO - PAPER TRADE: SELL 25893.0110 units at 0.3526
+2024-11-12 16:22:55,505 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -19.78 USDT
+2024-11-12 16:23:24,959 - TradingLogger - INFO - PAPER TRADE: BUY 25862.5903 units at 0.3531
+2024-11-12 16:23:41,787 - TradingLogger - INFO - PAPER TRADE: SELL 25862.5903 units at 0.3514
+2024-11-12 16:23:41,788 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -42.98 USDT
+2024-11-12 16:23:48,114 - TradingLogger - INFO - PAPER TRADE: BUY 25919.5273 units at 0.3507
+2024-11-12 16:24:11,296 - TradingLogger - INFO - PAPER TRADE: SELL 25919.5273 units at 0.3506
+2024-11-12 16:24:11,297 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -2.44 USDT
+2024-11-12 16:24:19,736 - TradingLogger - INFO - PAPER TRADE: BUY 25869.0395 units at 0.3513
+2024-11-12 16:24:25,012 - TradingLogger - INFO - PAPER TRADE: SELL 25869.0395 units at 0.3513
+2024-11-12 16:24:25,012 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -0.08 USDT
+2024-11-12 16:24:30,258 - TradingLogger - INFO - PAPER TRADE: BUY 25824.1363 units at 0.3519
+2024-11-12 16:24:56,568 - TradingLogger - INFO - PAPER TRADE: SELL 25824.1363 units at 0.3524
+2024-11-12 16:24:56,568 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 12.83 USDT
+2024-11-12 16:25:00,792 - TradingLogger - INFO - PAPER TRADE: BUY 25734.4677 units at 0.3536
+2024-11-12 16:25:13,428 - TradingLogger - INFO - PAPER TRADE: SELL 25734.4677 units at 0.3519
+2024-11-12 16:25:13,428 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -44.70 USDT
+2024-11-12 16:25:27,095 - TradingLogger - INFO - PAPER TRADE: BUY 25688.0385 units at 0.3526
+2024-11-12 16:25:38,647 - TradingLogger - INFO - PAPER TRADE: SELL 25688.0385 units at 0.3526
+2024-11-12 16:25:38,647 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -1.05 USDT
+2024-11-12 16:25:43,906 - TradingLogger - INFO - PAPER TRADE: BUY 25676.8992 units at 0.3527
+2024-11-12 16:26:24,980 - TradingLogger - INFO - PAPER TRADE: SELL 25676.8992 units at 0.3547
+2024-11-12 16:26:24,980 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 50.53 USDT
+2024-11-12 16:26:41,869 - TradingLogger - INFO - PAPER TRADE: BUY 25666.8087 units at 0.3547
+2024-11-12 16:26:55,532 - TradingLogger - INFO - PAPER TRADE: SELL 25666.8087 units at 0.3545
+2024-11-12 16:26:55,532 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -5.18 USDT
+2024-11-12 16:27:03,953 - TradingLogger - INFO - PAPER TRADE: BUY 25570.8168 units at 0.3559
+2024-11-12 16:27:14,474 - TradingLogger - INFO - PAPER TRADE: SELL 25570.8168 units at 0.3549
+2024-11-12 16:27:14,475 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -24.24 USDT
+2024-11-12 16:27:29,194 - TradingLogger - INFO - PAPER TRADE: BUY 25644.6813 units at 0.3539
+2024-11-12 16:27:30,249 - TradingLogger - INFO - PAPER TRADE: SELL 25644.6813 units at 0.3536
+2024-11-12 16:27:30,250 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -9.16 USDT
+2024-11-12 16:27:46,016 - TradingLogger - INFO - PAPER TRADE: BUY 25600.3622 units at 0.3542
+2024-11-12 16:27:50,218 - TradingLogger - INFO - PAPER TRADE: SELL 25600.3622 units at 0.3545
+2024-11-12 16:27:50,218 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 7.27 USDT
+2024-11-12 16:27:54,426 - TradingLogger - INFO - PAPER TRADE: BUY 25573.9430 units at 0.3548
+2024-11-12 16:27:55,481 - TradingLogger - INFO - PAPER TRADE: SELL 25573.9430 units at 0.3548
+2024-11-12 16:27:55,481 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -0.08 USDT
+2024-11-12 16:27:57,581 - TradingLogger - INFO - PAPER TRADE: BUY 25557.2443 units at 0.3551
+2024-11-12 16:28:04,927 - TradingLogger - INFO - PAPER TRADE: SELL 25557.2443 units at 0.3546
+2024-11-12 16:28:04,927 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -11.32 USDT
+2024-11-12 16:28:18,005 - TradingLogger - INFO - User interrupted the stream
+2024-11-12 16:28:18,303 - TradingLogger - INFO - Paper Trading Summary:
+2024-11-12 16:28:18,304 - TradingLogger - INFO - Total Trades: 73
+2024-11-12 16:28:18,304 - TradingLogger - INFO - Win Rate: 31.51%
+2024-11-12 16:28:18,304 - TradingLogger - INFO - Total Return: -4.59%
+2024-11-12 16:28:18,305 - TradingLogger - INFO - Program completely exited
+2024-11-12 16:28:21,997 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 16:28:22,630 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 16:28:22,632 - TradingLogger - INFO - Waiting for data stream initialization...
+2024-11-12 16:28:24,645 - TradingLogger - INFO - Starting main loop...
+2024-11-12 16:28:35,212 - TradingLogger - INFO - PAPER TRADE: BUY 26736.6886 units at 0.3553
+2024-11-12 16:28:49,942 - TradingLogger - INFO - PAPER TRADE: SELL 26736.6886 units at 0.3554
+2024-11-12 16:28:49,942 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 1.02 USDT
+2024-11-12 16:28:56,236 - TradingLogger - INFO - PAPER TRADE: BUY 26699.2792 units at 0.3559
+2024-11-12 16:29:00,465 - TradingLogger - INFO - PAPER TRADE: SELL 26699.2792 units at 0.3560
+2024-11-12 16:29:00,465 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 4.59 USDT
+2024-11-12 16:29:04,713 - TradingLogger - INFO - PAPER TRADE: BUY 26667.6987 units at 0.3564
+2024-11-12 16:29:11,037 - TradingLogger - INFO - PAPER TRADE: SELL 26667.6987 units at 0.3572
+2024-11-12 16:29:11,037 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 21.52 USDT
+2024-11-12 16:29:14,187 - TradingLogger - INFO - PAPER TRADE: BUY 26642.5369 units at 0.3575
+2024-11-12 16:29:16,285 - TradingLogger - INFO - PAPER TRADE: SELL 26642.5369 units at 0.3576
+2024-11-12 16:29:16,286 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 1.23 USDT
+2024-11-12 16:29:17,336 - TradingLogger - INFO - PAPER TRADE: BUY 26604.7187 units at 0.3581
+2024-11-12 16:29:25,750 - TradingLogger - INFO - PAPER TRADE: SELL 26604.7187 units at 0.3575
+2024-11-12 16:29:25,750 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -16.07 USDT
+2024-11-12 16:29:33,149 - TradingLogger - INFO - PAPER TRADE: BUY 26541.4086 units at 0.3584
+2024-11-12 16:29:41,553 - TradingLogger - INFO - PAPER TRADE: SELL 26541.4086 units at 0.3577
+2024-11-12 16:29:41,553 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -18.05 USDT
+2024-11-12 16:29:55,242 - TradingLogger - INFO - PAPER TRADE: BUY 26450.7562 units at 0.3590
+2024-11-12 16:30:05,784 - TradingLogger - INFO - PAPER TRADE: SELL 26450.7562 units at 0.3582
+2024-11-12 16:30:05,784 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -20.76 USDT
+2024-11-12 16:30:23,627 - TradingLogger - INFO - PAPER TRADE: BUY 26454.4673 units at 0.3582
+2024-11-12 16:30:26,778 - TradingLogger - INFO - PAPER TRADE: SELL 26454.4673 units at 0.3584
+2024-11-12 16:30:26,778 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 7.67 USDT
+2024-11-12 16:30:27,825 - TradingLogger - INFO - PAPER TRADE: BUY 26416.6219 units at 0.3589
+2024-11-12 16:30:30,978 - TradingLogger - INFO - PAPER TRADE: SELL 26416.6219 units at 0.3592
+2024-11-12 16:30:30,978 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 6.97 USDT
+2024-11-12 16:30:34,123 - TradingLogger - INFO - PAPER TRADE: BUY 26463.2427 units at 0.3586
+2024-11-12 16:30:37,267 - TradingLogger - INFO - PAPER TRADE: SELL 26463.2427 units at 0.3580
+2024-11-12 16:30:37,267 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -15.27 USDT
+2024-11-12 16:30:59,356 - TradingLogger - INFO - PAPER TRADE: BUY 26432.6654 units at 0.3584
+2024-11-12 16:31:25,622 - TradingLogger - INFO - PAPER TRADE: SELL 26432.6654 units at 0.3589
+2024-11-12 16:31:25,622 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 13.77 USDT
+2024-11-12 16:31:28,776 - TradingLogger - INFO - PAPER TRADE: BUY 26364.5693 units at 0.3599
+2024-11-12 16:31:40,347 - TradingLogger - INFO - PAPER TRADE: SELL 26364.5693 units at 0.3590
+2024-11-12 16:31:40,348 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -21.57 USDT
+2024-11-12 16:31:46,635 - TradingLogger - INFO - PAPER TRADE: BUY 26292.3642 units at 0.3601
+2024-11-12 16:31:56,110 - TradingLogger - INFO - PAPER TRADE: SELL 26292.3642 units at 0.3600
+2024-11-12 16:31:56,110 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -1.84 USDT
+2024-11-12 16:31:57,161 - TradingLogger - INFO - PAPER TRADE: BUY 26292.2546 units at 0.3600
+2024-11-12 16:32:08,747 - TradingLogger - INFO - PAPER TRADE: SELL 26292.2546 units at 0.3597
+2024-11-12 16:32:08,748 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -7.52 USDT
+2024-11-12 16:32:15,057 - TradingLogger - INFO - PAPER TRADE: BUY 26224.3322 units at 0.3607
+2024-11-12 16:32:45,600 - TradingLogger - INFO - User interrupted the stream
+2024-11-12 16:32:45,873 - TradingLogger - INFO - Paper Trading Summary:
+2024-11-12 16:32:45,873 - TradingLogger - INFO - Total Trades: 15
+2024-11-12 16:32:45,875 - TradingLogger - INFO - Win Rate: 46.67%
+2024-11-12 16:32:45,875 - TradingLogger - INFO - Total Return: -0.44%
+2024-11-12 16:32:45,875 - TradingLogger - INFO - Program completely exited
+2024-11-12 16:32:51,972 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 16:32:53,464 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 16:32:53,466 - TradingLogger - INFO - Waiting for data stream initialization...
+2024-11-12 16:32:55,472 - TradingLogger - INFO - Starting main loop...
+2024-11-12 16:32:55,512 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:32:56,565 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:32:57,603 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:32:58,655 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:32:59,704 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:00,757 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:01,806 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:02,871 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:03,917 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:04,966 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:06,009 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:07,070 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:08,128 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:09,180 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:10,223 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:11,273 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:12,321 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:13,369 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:14,421 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:15,471 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:16,523 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:17,570 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:18,619 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:19,666 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:20,716 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:21,764 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:22,811 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:23,863 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:24,916 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:25,994 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:27,047 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:28,097 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:29,153 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:30,199 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:31,244 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:32,302 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:33,354 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:34,402 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:35,450 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:36,501 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:37,549 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:38,632 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:39,676 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:40,724 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:41,766 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:42,814 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:43,864 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:44,916 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:45,977 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:47,024 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:48,081 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:49,126 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:50,179 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:51,228 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:52,286 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:53,341 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:54,389 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:55,442 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:56,496 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:57,554 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:58,611 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:33:59,663 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:34:00,728 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:34:01,783 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:34:02,835 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:34:03,885 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:34:04,939 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:34:05,988 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:34:07,034 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:34:08,084 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:34:08,753 - TradingLogger - INFO - User interrupted the stream
+2024-11-12 16:34:09,278 - TradingLogger - INFO - Paper Trading Summary:
+2024-11-12 16:34:09,278 - TradingLogger - INFO - Total Trades: 0
+2024-11-12 16:34:09,279 - TradingLogger - INFO - Win Rate: 0.00%
+2024-11-12 16:34:09,279 - TradingLogger - INFO - Total Return: 0.00%
+2024-11-12 16:34:09,279 - TradingLogger - INFO - Program completely exited
+2024-11-12 16:34:15,716 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 16:34:17,281 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 16:34:17,284 - TradingLogger - INFO - Waiting for data stream initialization...
+2024-11-12 16:34:19,289 - TradingLogger - INFO - Starting main loop...
+2024-11-12 16:34:19,338 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:34:20,386 - TradingLogger - ERROR - Error generating trading signals: 'MA_50'
+2024-11-12 16:34:21,157 - TradingLogger - INFO - User interrupted the stream
+2024-11-12 16:34:21,439 - TradingLogger - INFO - Paper Trading Summary:
+2024-11-12 16:34:21,440 - TradingLogger - INFO - Total Trades: 0
+2024-11-12 16:34:21,440 - TradingLogger - INFO - Win Rate: 0.00%
+2024-11-12 16:34:21,440 - TradingLogger - INFO - Total Return: 0.00%
+2024-11-12 16:34:21,440 - TradingLogger - INFO - Program completely exited
+2024-11-12 16:34:28,239 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 16:34:29,697 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 16:34:29,700 - TradingLogger - INFO - Waiting for data stream initialization...
+2024-11-12 16:34:31,715 - TradingLogger - INFO - Starting main loop...
+2024-11-12 16:34:35,975 - TradingLogger - INFO - PAPER TRADE: BUY 26333.2234 units at 0.3608
+2024-11-12 16:34:46,502 - TradingLogger - INFO - PAPER TRADE: SELL 26333.2234 units at 0.3608
+2024-11-12 16:34:46,502 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -0.13 USDT
+2024-11-12 16:34:47,555 - TradingLogger - INFO - PAPER TRADE: BUY 26311.5801 units at 0.3611
+2024-11-12 16:35:01,206 - TradingLogger - INFO - PAPER TRADE: SELL 26311.5801 units at 0.3603
+2024-11-12 16:35:01,206 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -20.39 USDT
+2024-11-12 16:35:10,692 - TradingLogger - INFO - PAPER TRADE: BUY 26276.4116 units at 0.3608
+2024-11-12 16:35:24,407 - TradingLogger - INFO - PAPER TRADE: SELL 26276.4116 units at 0.3607
+2024-11-12 16:35:24,407 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -3.49 USDT
+2024-11-12 16:35:30,284 - TradingLogger - INFO - User interrupted the stream
+2024-11-12 16:35:30,568 - TradingLogger - INFO - Paper Trading Summary:
+2024-11-12 16:35:30,569 - TradingLogger - INFO - Total Trades: 3
+2024-11-12 16:35:30,569 - TradingLogger - INFO - Win Rate: 0.00%
+2024-11-12 16:35:30,569 - TradingLogger - INFO - Total Return: -0.24%
+2024-11-12 16:35:30,570 - TradingLogger - INFO - Program completely exited
+2024-11-12 16:35:33,563 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 16:35:34,227 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 16:35:34,229 - TradingLogger - INFO - Waiting for data stream initialization...
+2024-11-12 16:35:36,244 - TradingLogger - INFO - Starting main loop...
+2024-11-12 16:35:39,439 - TradingLogger - INFO - PAPER TRADE: BUY 26290.8096 units at 0.3613
+2024-11-12 16:35:47,849 - TradingLogger - INFO - PAPER TRADE: SELL 26290.8096 units at 0.3598
+2024-11-12 16:35:47,849 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -40.96 USDT
+2024-11-12 16:36:01,575 - TradingLogger - INFO - PAPER TRADE: BUY 26309.1526 units at 0.3596
+2024-11-12 16:36:03,683 - TradingLogger - INFO - PAPER TRADE: SELL 26309.1526 units at 0.3594
+2024-11-12 16:36:03,683 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -5.97 USDT
+2024-11-12 16:36:27,918 - TradingLogger - INFO - PAPER TRADE: BUY 26315.2555 units at 0.3593
+2024-11-12 16:36:44,756 - TradingLogger - INFO - PAPER TRADE: SELL 26315.2555 units at 0.3595
+2024-11-12 16:36:44,756 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 5.82 USDT
+2024-11-12 16:36:54,225 - TradingLogger - INFO - PAPER TRADE: BUY 26273.5238 units at 0.3601
+2024-11-12 16:37:08,920 - TradingLogger - INFO - PAPER TRADE: SELL 26273.5238 units at 0.3610
+2024-11-12 16:37:08,920 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 24.54 USDT
+2024-11-12 16:37:17,328 - TradingLogger - INFO - PAPER TRADE: BUY 26297.6592 units at 0.3607
+2024-11-12 16:37:19,428 - TradingLogger - INFO - PAPER TRADE: SELL 26297.6592 units at 0.3604
+2024-11-12 16:37:19,428 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -6.63 USDT
+2024-11-12 16:37:45,720 - TradingLogger - INFO - PAPER TRADE: BUY 26310.8434 units at 0.3602
+2024-11-12 16:37:49,921 - TradingLogger - INFO - PAPER TRADE: SELL 26310.8434 units at 0.3593
+2024-11-12 16:37:49,922 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -25.76 USDT
+2024-11-12 16:37:56,219 - TradingLogger - INFO - PAPER TRADE: BUY 26364.3316 units at 0.3586
+2024-11-12 16:37:58,325 - TradingLogger - INFO - PAPER TRADE: SELL 26364.3316 units at 0.3581
+2024-11-12 16:37:58,326 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -12.58 USDT
+2024-11-12 16:37:59,412 - TradingLogger - INFO - PAPER TRADE: BUY 26363.1427 units at 0.3581
+2024-11-12 16:38:02,562 - TradingLogger - INFO - PAPER TRADE: SELL 26363.1427 units at 0.3575
+2024-11-12 16:38:02,562 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -16.87 USDT
+2024-11-12 16:38:22,515 - TradingLogger - INFO - PAPER TRADE: BUY 26362.2578 units at 0.3575
+2024-11-12 16:38:41,479 - TradingLogger - INFO - PAPER TRADE: SELL 26362.2578 units at 0.3592
+2024-11-12 16:38:41,479 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 43.31 USDT
+2024-11-12 16:38:44,625 - TradingLogger - INFO - PAPER TRADE: BUY 26312.7866 units at 0.3598
+2024-11-12 16:38:53,024 - TradingLogger - INFO - PAPER TRADE: SELL 26312.7866 units at 0.3593
+2024-11-12 16:38:53,024 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -12.87 USDT
+2024-11-12 16:39:07,769 - TradingLogger - INFO - PAPER TRADE: BUY 26256.9163 units at 0.3601
+2024-11-12 16:39:14,094 - TradingLogger - INFO - PAPER TRADE: SELL 26256.9163 units at 0.3604
+2024-11-12 16:39:14,094 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 7.59 USDT
+2024-11-12 16:39:15,143 - TradingLogger - INFO - PAPER TRADE: BUY 26254.4063 units at 0.3604
+2024-11-12 16:39:21,457 - TradingLogger - INFO - PAPER TRADE: SELL 26254.4063 units at 0.3593
+2024-11-12 16:39:21,458 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -29.75 USDT
+2024-11-12 16:39:26,702 - TradingLogger - INFO - PAPER TRADE: BUY 26270.6853 units at 0.3591
+2024-11-12 16:39:29,861 - TradingLogger - INFO - PAPER TRADE: SELL 26270.6853 units at 0.3603
+2024-11-12 16:39:29,861 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 31.50 USDT
+2024-11-12 16:39:31,975 - TradingLogger - INFO - PAPER TRADE: BUY 26266.6056 units at 0.3603
+2024-11-12 16:39:41,426 - TradingLogger - INFO - PAPER TRADE: SELL 26266.6056 units at 0.3596
+2024-11-12 16:39:41,427 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -19.04 USDT
+2024-11-12 16:39:54,072 - TradingLogger - INFO - PAPER TRADE: BUY 26248.3750 units at 0.3598
+2024-11-12 16:40:14,069 - TradingLogger - INFO - PAPER TRADE: SELL 26248.3750 units at 0.3598
+2024-11-12 16:40:14,069 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -0.45 USDT
+2024-11-12 16:40:21,436 - TradingLogger - INFO - PAPER TRADE: BUY 26218.5623 units at 0.3602
+2024-11-12 16:40:38,277 - TradingLogger - INFO - PAPER TRADE: SELL 26218.5623 units at 0.3611
+2024-11-12 16:40:38,277 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 21.92 USDT
+2024-11-12 16:40:41,428 - TradingLogger - INFO - PAPER TRADE: BUY 26180.2883 units at 0.3616
+2024-11-12 16:40:55,094 - TradingLogger - INFO - PAPER TRADE: SELL 26180.2883 units at 0.3615
+2024-11-12 16:40:55,094 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -1.41 USDT
+2024-11-12 16:41:01,395 - TradingLogger - INFO - PAPER TRADE: BUY 26128.9489 units at 0.3622
+2024-11-12 16:41:43,437 - TradingLogger - INFO - PAPER TRADE: SELL 26128.9489 units at 0.3641
+2024-11-12 16:41:43,437 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 49.10 USDT
+2024-11-12 16:41:51,857 - TradingLogger - INFO - PAPER TRADE: BUY 26079.5159 units at 0.3647
+2024-11-12 16:42:32,884 - TradingLogger - INFO - PAPER TRADE: SELL 26079.5159 units at 0.3651
+2024-11-12 16:42:32,884 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 10.20 USDT
+2024-11-12 16:43:08,733 - TradingLogger - INFO - PAPER TRADE: BUY 26140.2694 units at 0.3642
+2024-11-12 16:43:16,122 - TradingLogger - INFO - PAPER TRADE: SELL 26140.2694 units at 0.3635
+2024-11-12 16:43:16,122 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -19.29 USDT
+2024-11-12 16:43:21,367 - TradingLogger - INFO - PAPER TRADE: BUY 26056.2540 units at 0.3647
+2024-11-12 16:43:38,236 - TradingLogger - INFO - PAPER TRADE: SELL 26056.2540 units at 0.3640
+2024-11-12 16:43:38,238 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -16.62 USDT
+2024-11-12 16:43:41,383 - TradingLogger - INFO - PAPER TRADE: BUY 26059.0383 units at 0.3640
+2024-11-12 16:43:42,431 - TradingLogger - INFO - PAPER TRADE: SELL 26059.0383 units at 0.3639
+2024-11-12 16:43:42,431 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -4.61 USDT
+2024-11-12 16:43:58,189 - TradingLogger - INFO - PAPER TRADE: BUY 26031.9847 units at 0.3642
+2024-11-12 16:44:01,331 - TradingLogger - INFO - PAPER TRADE: SELL 26031.9847 units at 0.3636
+2024-11-12 16:44:01,331 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -16.48 USDT
+2024-11-12 16:44:23,405 - TradingLogger - INFO - PAPER TRADE: BUY 26060.5537 units at 0.3632
+2024-11-12 16:44:30,779 - TradingLogger - INFO - PAPER TRADE: SELL 26060.5537 units at 0.3627
+2024-11-12 16:44:30,779 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -13.92 USDT
+2024-11-12 16:44:40,234 - TradingLogger - INFO - PAPER TRADE: BUY 26035.7697 units at 0.3631
+2024-11-12 16:44:45,489 - TradingLogger - INFO - PAPER TRADE: SELL 26035.7697 units at 0.3638
+2024-11-12 16:44:45,490 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 19.42 USDT
+2024-11-12 16:44:52,858 - TradingLogger - INFO - PAPER TRADE: BUY 26009.4382 units at 0.3642
+2024-11-12 16:45:02,330 - TradingLogger - INFO - PAPER TRADE: SELL 26009.4382 units at 0.3639
+2024-11-12 16:45:02,330 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -7.00 USDT
+2024-11-12 16:45:24,380 - TradingLogger - INFO - PAPER TRADE: BUY 26037.9477 units at 0.3635
+2024-11-12 16:45:41,236 - TradingLogger - INFO - PAPER TRADE: SELL 26037.9477 units at 0.3621
+2024-11-12 16:45:41,236 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -37.03 USDT
+2024-11-12 16:45:44,384 - TradingLogger - INFO - PAPER TRADE: BUY 26079.4333 units at 0.3616
+2024-11-12 16:45:49,642 - TradingLogger - INFO - PAPER TRADE: SELL 26079.4333 units at 0.3626
+2024-11-12 16:45:49,642 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 26.37 USDT
+2024-11-12 16:45:52,794 - TradingLogger - INFO - PAPER TRADE: BUY 26082.3434 units at 0.3625
+2024-11-12 16:46:02,257 - TradingLogger - INFO - PAPER TRADE: SELL 26082.3434 units at 0.3621
+2024-11-12 16:46:02,257 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -9.68 USDT
+2024-11-12 16:46:23,316 - TradingLogger - INFO - PAPER TRADE: BUY 26131.3773 units at 0.3615
+2024-11-12 16:46:30,680 - TradingLogger - INFO - PAPER TRADE: SELL 26131.3773 units at 0.3613
+2024-11-12 16:46:30,680 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -4.89 USDT
+2024-11-12 16:46:31,726 - TradingLogger - INFO - PAPER TRADE: BUY 26118.1011 units at 0.3615
+2024-11-12 16:46:45,416 - TradingLogger - INFO - PAPER TRADE: SELL 26118.1011 units at 0.3610
+2024-11-12 16:46:45,416 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -11.47 USDT
+2024-11-12 16:46:55,923 - TradingLogger - INFO - PAPER TRADE: BUY 26093.0926 units at 0.3614
+2024-11-12 16:47:10,685 - TradingLogger - INFO - PAPER TRADE: SELL 26093.0926 units at 0.3618
+2024-11-12 16:47:10,686 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 9.42 USDT
+2024-11-12 16:47:12,796 - TradingLogger - INFO - PAPER TRADE: BUY 26079.0311 units at 0.3619
+2024-11-12 16:47:24,391 - TradingLogger - INFO - PAPER TRADE: SELL 26079.0311 units at 0.3616
+2024-11-12 16:47:24,391 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -8.95 USDT
+2024-11-12 16:47:32,828 - TradingLogger - INFO - PAPER TRADE: BUY 26063.6899 units at 0.3618
+2024-11-12 16:47:37,036 - TradingLogger - INFO - PAPER TRADE: SELL 26063.6899 units at 0.3619
+2024-11-12 16:47:37,037 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 0.99 USDT
+2024-11-12 16:47:53,933 - TradingLogger - INFO - PAPER TRADE: BUY 26100.9155 units at 0.3614
+2024-11-12 16:47:57,093 - TradingLogger - INFO - PAPER TRADE: SELL 26100.9155 units at 0.3615
+2024-11-12 16:47:57,093 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 2.79 USDT
+2024-11-12 16:48:06,571 - TradingLogger - INFO - PAPER TRADE: BUY 26083.7874 units at 0.3617
+2024-11-12 16:48:16,033 - TradingLogger - INFO - PAPER TRADE: SELL 26083.7874 units at 0.3593
+2024-11-12 16:48:16,033 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -61.66 USDT
+2024-11-12 16:48:29,740 - TradingLogger - INFO - PAPER TRADE: BUY 26079.8113 units at 0.3595
+2024-11-12 16:48:31,853 - TradingLogger - INFO - PAPER TRADE: SELL 26079.8113 units at 0.3596
+2024-11-12 16:48:31,853 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 3.63 USDT
+2024-11-12 16:48:51,855 - TradingLogger - INFO - PAPER TRADE: BUY 26089.1006 units at 0.3595
+2024-11-12 16:49:04,467 - TradingLogger - INFO - PAPER TRADE: SELL 26089.1006 units at 0.3591
+2024-11-12 16:49:04,467 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -9.50 USDT
+2024-11-12 16:49:05,522 - TradingLogger - INFO - PAPER TRADE: BUY 26063.9334 units at 0.3595
+2024-11-12 16:49:07,618 - TradingLogger - INFO - PAPER TRADE: SELL 26063.9334 units at 0.3601
+2024-11-12 16:49:07,618 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 15.85 USDT
+2024-11-12 16:49:10,761 - TradingLogger - INFO - PAPER TRADE: BUY 26062.0226 units at 0.3601
+2024-11-12 16:49:20,216 - TradingLogger - INFO - PAPER TRADE: SELL 26062.0226 units at 0.3607
+2024-11-12 16:49:20,216 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 15.48 USDT
+2024-11-12 16:49:23,355 - TradingLogger - INFO - PAPER TRADE: BUY 26079.1087 units at 0.3604
+2024-11-12 16:49:52,761 - TradingLogger - INFO - PAPER TRADE: SELL 26079.1087 units at 0.3611
+2024-11-12 16:49:52,762 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 17.76 USDT
+2024-11-12 16:50:05,356 - TradingLogger - INFO - PAPER TRADE: BUY 26129.3982 units at 0.3604
+2024-11-12 16:50:08,510 - TradingLogger - INFO - PAPER TRADE: SELL 26129.3982 units at 0.3603
+2024-11-12 16:50:08,511 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -2.98 USDT
+2024-11-12 16:50:15,840 - TradingLogger - INFO - PAPER TRADE: BUY 26049.1206 units at 0.3614
+2024-11-12 16:50:28,464 - TradingLogger - INFO - PAPER TRADE: SELL 26049.1206 units at 0.3625
+2024-11-12 16:50:28,464 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 28.32 USDT
+2024-11-12 16:50:36,877 - TradingLogger - INFO - PAPER TRADE: BUY 26023.4613 units at 0.3628
+2024-11-12 16:50:50,501 - TradingLogger - INFO - PAPER TRADE: SELL 26023.4613 units at 0.3629
+2024-11-12 16:50:50,502 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 3.41 USDT
+2024-11-12 16:51:09,373 - TradingLogger - INFO - PAPER TRADE: BUY 25984.2561 units at 0.3635
+2024-11-12 16:51:28,305 - TradingLogger - INFO - PAPER TRADE: SELL 25984.2561 units at 0.3640
+2024-11-12 16:51:28,306 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 14.91 USDT
+2024-11-12 16:51:31,449 - TradingLogger - INFO - PAPER TRADE: BUY 25995.1328 units at 0.3638
+2024-11-12 16:51:35,642 - TradingLogger - INFO - PAPER TRADE: SELL 25995.1328 units at 0.3634
+2024-11-12 16:51:35,642 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -11.65 USDT
+2024-11-12 16:51:41,944 - TradingLogger - INFO - PAPER TRADE: BUY 25950.3182 units at 0.3640
+2024-11-12 16:51:42,995 - TradingLogger - INFO - PAPER TRADE: SELL 25950.3182 units at 0.3640
+2024-11-12 16:51:42,995 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 0.00 USDT
+2024-11-12 16:51:45,102 - TradingLogger - INFO - PAPER TRADE: BUY 25933.3640 units at 0.3643
+2024-11-12 16:51:47,185 - TradingLogger - INFO - PAPER TRADE: SELL 25933.3640 units at 0.3643
+2024-11-12 16:51:47,185 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -0.03 USDT
+2024-11-12 16:52:12,448 - TradingLogger - INFO - PAPER TRADE: BUY 25923.5470 units at 0.3644
+2024-11-12 16:52:28,238 - TradingLogger - INFO - PAPER TRADE: SELL 25923.5470 units at 0.3651
+2024-11-12 16:52:28,238 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 18.33 USDT
+2024-11-12 16:52:31,396 - TradingLogger - INFO - PAPER TRADE: BUY 25912.9467 units at 0.3652
+2024-11-12 16:52:46,141 - TradingLogger - INFO - PAPER TRADE: SELL 25912.9467 units at 0.3660
+2024-11-12 16:52:46,141 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 19.85 USDT
+2024-11-12 16:52:49,291 - TradingLogger - INFO - PAPER TRADE: BUY 25876.7233 units at 0.3665
+2024-11-12 16:53:06,111 - TradingLogger - INFO - PAPER TRADE: SELL 25876.7233 units at 0.3671
+2024-11-12 16:53:06,112 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 15.42 USDT
+2024-11-12 16:53:12,454 - TradingLogger - INFO - PAPER TRADE: BUY 25818.0741 units at 0.3679
+2024-11-12 16:53:18,749 - TradingLogger - INFO - PAPER TRADE: SELL 25818.0741 units at 0.3670
+2024-11-12 16:53:18,750 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -22.44 USDT
+2024-11-12 16:53:29,291 - TradingLogger - INFO - PAPER TRADE: BUY 25788.5272 units at 0.3675
+2024-11-12 16:53:39,824 - TradingLogger - INFO - PAPER TRADE: SELL 25788.5272 units at 0.3672
+2024-11-12 16:53:39,825 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -7.14 USDT
+2024-11-12 16:53:45,076 - TradingLogger - INFO - PAPER TRADE: BUY 25788.8678 units at 0.3672
+2024-11-12 16:53:46,124 - TradingLogger - INFO - PAPER TRADE: SELL 25788.8678 units at 0.3670
+2024-11-12 16:53:46,124 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -4.75 USDT
+2024-11-12 16:54:11,391 - TradingLogger - INFO - PAPER TRADE: BUY 25743.5718 units at 0.3677
+2024-11-12 16:54:22,929 - TradingLogger - INFO - PAPER TRADE: SELL 25743.5718 units at 0.3675
+2024-11-12 16:54:22,929 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -5.46 USDT
+2024-11-12 16:54:40,811 - TradingLogger - INFO - PAPER TRADE: BUY 25716.6010 units at 0.3679
+2024-11-12 16:54:46,093 - TradingLogger - INFO - PAPER TRADE: SELL 25716.6010 units at 0.3681
+2024-11-12 16:54:46,093 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 5.81 USDT
+2024-11-12 16:54:49,252 - TradingLogger - INFO - PAPER TRADE: BUY 25734.5484 units at 0.3678
+2024-11-12 16:54:53,498 - TradingLogger - INFO - PAPER TRADE: SELL 25734.5484 units at 0.3676
+2024-11-12 16:54:53,498 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -5.12 USDT
+2024-11-12 16:54:58,741 - TradingLogger - INFO - PAPER TRADE: BUY 25749.6039 units at 0.3674
+2024-11-12 16:54:59,781 - TradingLogger - INFO - PAPER TRADE: SELL 25749.6039 units at 0.3674
+2024-11-12 16:54:59,782 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 0.00 USDT
+2024-11-12 16:55:30,251 - TradingLogger - INFO - PAPER TRADE: BUY 25800.3031 units at 0.3667
+2024-11-12 16:55:42,856 - TradingLogger - INFO - PAPER TRADE: SELL 25800.3031 units at 0.3665
+2024-11-12 16:55:42,856 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -5.11 USDT
+2024-11-12 16:55:47,066 - TradingLogger - INFO - PAPER TRADE: BUY 25830.0370 units at 0.3661
+2024-11-12 16:55:49,171 - TradingLogger - INFO - PAPER TRADE: SELL 25830.0370 units at 0.3661
+2024-11-12 16:55:49,171 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 1.06 USDT
+2024-11-12 16:55:52,329 - TradingLogger - INFO - PAPER TRADE: BUY 25843.1624 units at 0.3659
+2024-11-12 16:55:57,615 - TradingLogger - INFO - PAPER TRADE: SELL 25843.1624 units at 0.3659
+2024-11-12 16:55:57,615 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -0.03 USDT
+2024-11-12 16:56:10,223 - TradingLogger - INFO - PAPER TRADE: BUY 25846.8387 units at 0.3659
+2024-11-12 16:56:15,462 - TradingLogger - INFO - PAPER TRADE: SELL 25846.8387 units at 0.3660
+2024-11-12 16:56:15,462 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 2.71 USDT
+2024-11-12 16:56:17,543 - TradingLogger - INFO - PAPER TRADE: BUY 25863.0038 units at 0.3658
+2024-11-12 16:56:39,582 - TradingLogger - INFO - PAPER TRADE: SELL 25863.0038 units at 0.3658
+2024-11-12 16:56:39,582 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 2.12 USDT
+2024-11-12 16:56:44,820 - TradingLogger - INFO - PAPER TRADE: BUY 25884.5061 units at 0.3655
+2024-11-12 16:56:46,912 - TradingLogger - INFO - PAPER TRADE: SELL 25884.5061 units at 0.3659
+2024-11-12 16:56:46,912 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 8.46 USDT
+2024-11-12 16:56:48,613 - TradingLogger - INFO - User interrupted the stream
+2024-11-12 16:56:48,884 - TradingLogger - INFO - Paper Trading Summary:
+2024-11-12 16:56:48,884 - TradingLogger - INFO - Total Trades: 64
+2024-11-12 16:56:48,885 - TradingLogger - INFO - Win Rate: 43.75%
+2024-11-12 16:56:48,885 - TradingLogger - INFO - Total Return: -0.32%
+2024-11-12 16:56:48,885 - TradingLogger - INFO - Program completely exited
+2024-11-12 16:56:52,300 - TradingLogger - INFO - Starting real-time data stream for DOGE-USD
+2024-11-12 16:56:54,078 - TradingLogger - INFO - Initializing data stream...
+2024-11-12 16:56:54,080 - TradingLogger - INFO - Waiting for data stream initialization...
+2024-11-12 16:56:56,096 - TradingLogger - INFO - Starting main loop...
+2024-11-12 16:56:56,141 - TradingLogger - INFO - PAPER TRADE: BUY 25999.7592 units at 0.3654
+2024-11-12 16:56:57,192 - TradingLogger - INFO - PAPER TRADE: SELL 25999.7592 units at 0.3652
+2024-11-12 16:56:57,192 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -5.04 USDT
+2024-11-12 16:57:00,348 - TradingLogger - INFO - PAPER TRADE: BUY 26012.6300 units at 0.3650
+2024-11-12 16:57:07,680 - TradingLogger - INFO - PAPER TRADE: SELL 26012.6300 units at 0.3643
+2024-11-12 16:57:07,680 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -19.56 USDT
+2024-11-12 16:57:27,733 - TradingLogger - INFO - PAPER TRADE: BUY 25976.9491 units at 0.3648
+2024-11-12 16:57:43,468 - TradingLogger - INFO - PAPER TRADE: SELL 25976.9491 units at 0.3651
+2024-11-12 16:57:43,469 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 6.96 USDT
+2024-11-12 16:57:48,727 - TradingLogger - INFO - PAPER TRADE: BUY 25933.0198 units at 0.3657
+2024-11-12 16:58:05,619 - TradingLogger - INFO - PAPER TRADE: SELL 25933.0198 units at 0.3651
+2024-11-12 16:58:05,619 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -14.34 USDT
+2024-11-12 16:58:14,017 - TradingLogger - INFO - PAPER TRADE: BUY 25947.9175 units at 0.3649
+2024-11-12 16:58:16,123 - TradingLogger - INFO - PAPER TRADE: SELL 25947.9175 units at 0.3646
+2024-11-12 16:58:16,123 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -10.09 USDT
+2024-11-12 16:58:20,325 - TradingLogger - INFO - PAPER TRADE: BUY 25967.3942 units at 0.3643
+2024-11-12 16:58:27,697 - TradingLogger - INFO - PAPER TRADE: SELL 25967.3942 units at 0.3640
+2024-11-12 16:58:27,698 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -7.53 USDT
+2024-11-12 16:58:28,749 - TradingLogger - INFO - PAPER TRADE: BUY 25968.4286 units at 0.3640
+2024-11-12 16:58:31,916 - TradingLogger - INFO - PAPER TRADE: SELL 25968.4286 units at 0.3644
+2024-11-12 16:58:31,916 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 9.82 USDT
+2024-11-12 16:58:36,120 - TradingLogger - INFO - PAPER TRADE: BUY 25968.0081 units at 0.3644
+2024-11-12 16:58:43,494 - TradingLogger - INFO - PAPER TRADE: SELL 25968.0081 units at 0.3634
+2024-11-12 16:58:43,494 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -24.46 USDT
+2024-11-12 16:58:55,060 - TradingLogger - INFO - PAPER TRADE: BUY 25923.5119 units at 0.3641
+2024-11-12 16:58:59,295 - TradingLogger - INFO - PAPER TRADE: SELL 25923.5119 units at 0.3632
+2024-11-12 16:58:59,295 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -24.63 USDT
+2024-11-12 16:59:12,988 - TradingLogger - INFO - PAPER TRADE: BUY 25982.9240 units at 0.3624
+2024-11-12 16:59:21,400 - TradingLogger - INFO - PAPER TRADE: SELL 25982.9240 units at 0.3626
+2024-11-12 16:59:21,400 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 4.70 USDT
+2024-11-12 16:59:22,449 - TradingLogger - INFO - PAPER TRADE: BUY 25981.2722 units at 0.3626
+2024-11-12 16:59:40,378 - TradingLogger - INFO - PAPER TRADE: SELL 25981.2722 units at 0.3634
+2024-11-12 16:59:40,379 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 20.91 USDT
+2024-11-12 16:59:41,420 - TradingLogger - INFO - PAPER TRADE: BUY 25991.2692 units at 0.3632
+2024-11-12 16:59:48,766 - TradingLogger - INFO - PAPER TRADE: SELL 25991.2692 units at 0.3628
+2024-11-12 16:59:48,767 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -9.85 USDT
+2024-11-12 17:00:02,458 - TradingLogger - INFO - PAPER TRADE: BUY 25931.6601 units at 0.3637
+2024-11-12 17:00:11,952 - TradingLogger - INFO - PAPER TRADE: SELL 25931.6601 units at 0.3625
+2024-11-12 17:00:11,952 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -29.74 USDT
+2024-11-12 17:00:15,088 - TradingLogger - INFO - PAPER TRADE: BUY 25949.1477 units at 0.3623
+2024-11-12 17:00:16,143 - TradingLogger - INFO - PAPER TRADE: SELL 25949.1477 units at 0.3623
+2024-11-12 17:00:16,143 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 0.00 USDT
+2024-11-12 17:00:23,495 - TradingLogger - INFO - PAPER TRADE: BUY 25885.4940 units at 0.3632
+2024-11-12 17:00:31,885 - TradingLogger - INFO - PAPER TRADE: SELL 25885.4940 units at 0.3635
+2024-11-12 17:00:31,885 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 8.08 USDT
+2024-11-12 17:00:33,995 - TradingLogger - INFO - PAPER TRADE: BUY 25876.2688 units at 0.3637
+2024-11-12 17:00:49,783 - TradingLogger - INFO - PAPER TRADE: SELL 25876.2688 units at 0.3646
+2024-11-12 17:00:49,783 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 25.70 USDT
+2024-11-12 17:00:50,832 - TradingLogger - INFO - PAPER TRADE: BUY 25844.6077 units at 0.3650
+2024-11-12 17:01:12,899 - TradingLogger - INFO - PAPER TRADE: SELL 25844.6077 units at 0.3650
+2024-11-12 17:01:12,899 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -1.76 USDT
+2024-11-12 17:01:29,738 - TradingLogger - INFO - PAPER TRADE: BUY 25979.6676 units at 0.3631
+2024-11-12 17:01:33,942 - TradingLogger - INFO - PAPER TRADE: SELL 25979.6676 units at 0.3637
+2024-11-12 17:01:33,942 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 16.70 USDT
+2024-11-12 17:01:35,003 - TradingLogger - INFO - PAPER TRADE: BUY 25976.7285 units at 0.3637
+2024-11-12 17:01:51,834 - TradingLogger - INFO - PAPER TRADE: SELL 25976.7285 units at 0.3643
+2024-11-12 17:01:51,834 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 13.51 USDT
+2024-11-12 17:01:53,939 - TradingLogger - INFO - PAPER TRADE: BUY 25962.8997 units at 0.3644
+2024-11-12 17:02:05,503 - TradingLogger - INFO - PAPER TRADE: SELL 25962.8997 units at 0.3642
+2024-11-12 17:02:05,503 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -4.47 USDT
+2024-11-12 17:02:09,704 - TradingLogger - INFO - PAPER TRADE: BUY 25947.7694 units at 0.3645
+2024-11-12 17:02:16,015 - TradingLogger - INFO - PAPER TRADE: SELL 25947.7694 units at 0.3641
+2024-11-12 17:02:16,015 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -8.82 USDT
+2024-11-12 17:02:48,751 - TradingLogger - INFO - PAPER TRADE: BUY 26058.1142 units at 0.3626
+2024-11-12 17:02:56,152 - TradingLogger - INFO - PAPER TRADE: SELL 26058.1142 units at 0.3617
+2024-11-12 17:02:56,152 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -24.05 USDT
+2024-11-12 17:03:03,554 - TradingLogger - INFO - PAPER TRADE: BUY 26007.4369 units at 0.3624
+2024-11-12 17:03:13,025 - TradingLogger - INFO - PAPER TRADE: SELL 26007.4369 units at 0.3617
+2024-11-12 17:03:13,025 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -19.71 USDT
+2024-11-12 17:03:20,379 - TradingLogger - INFO - PAPER TRADE: BUY 25966.1523 units at 0.3623
+2024-11-12 17:03:27,729 - TradingLogger - INFO - PAPER TRADE: SELL 25966.1523 units at 0.3617
+2024-11-12 17:03:27,729 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -14.64 USDT
+2024-11-12 17:03:33,011 - TradingLogger - INFO - PAPER TRADE: BUY 25914.5884 units at 0.3625
+2024-11-12 17:03:45,660 - TradingLogger - INFO - PAPER TRADE: SELL 25914.5884 units at 0.3633
+2024-11-12 17:03:45,660 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 22.36 USDT
+2024-11-12 17:03:48,817 - TradingLogger - INFO - PAPER TRADE: BUY 25918.3589 units at 0.3632
+2024-11-12 17:03:56,193 - TradingLogger - INFO - PAPER TRADE: SELL 25918.3589 units at 0.3630
+2024-11-12 17:03:56,193 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -7.15 USDT
+2024-11-12 17:04:03,544 - TradingLogger - INFO - PAPER TRADE: BUY 25870.3067 units at 0.3636
+2024-11-12 17:04:20,419 - TradingLogger - INFO - PAPER TRADE: SELL 25870.3067 units at 0.3643
+2024-11-12 17:04:20,419 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 17.05 USDT
+2024-11-12 17:04:43,767 - TradingLogger - INFO - PAPER TRADE: BUY 25847.5334 units at 0.3646
+2024-11-12 17:04:46,946 - TradingLogger - INFO - PAPER TRADE: SELL 25847.5334 units at 0.3646
+2024-11-12 17:04:46,946 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 0.21 USDT
+2024-11-12 17:04:49,051 - TradingLogger - INFO - PAPER TRADE: BUY 25808.9267 units at 0.3651
+2024-11-12 17:04:53,242 - TradingLogger - INFO - PAPER TRADE: SELL 25808.9267 units at 0.3655
+2024-11-12 17:04:53,242 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 9.01 USDT
+2024-11-12 17:04:57,437 - TradingLogger - INFO - PAPER TRADE: BUY 25842.9768 units at 0.3650
+2024-11-12 17:05:00,577 - TradingLogger - INFO - PAPER TRADE: SELL 25842.9768 units at 0.3648
+2024-11-12 17:05:00,577 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -4.78 USDT
+2024-11-12 17:05:25,785 - TradingLogger - INFO - PAPER TRADE: BUY 25815.0442 units at 0.3652
+2024-11-12 17:05:41,539 - TradingLogger - INFO - PAPER TRADE: SELL 25815.0442 units at 0.3670
+2024-11-12 17:05:41,539 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 45.90 USDT
+2024-11-12 17:05:46,781 - TradingLogger - INFO - PAPER TRADE: BUY 25777.8151 units at 0.3674
+2024-11-12 17:05:57,254 - TradingLogger - INFO - PAPER TRADE: SELL 25777.8151 units at 0.3673
+2024-11-12 17:05:57,254 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -4.12 USDT
+2024-11-12 17:06:12,964 - TradingLogger - INFO - PAPER TRADE: BUY 25820.3468 units at 0.3667
+2024-11-12 17:06:30,848 - TradingLogger - INFO - PAPER TRADE: SELL 25820.3468 units at 0.3671
+2024-11-12 17:06:30,848 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 10.61 USDT
+2024-11-12 17:06:32,951 - TradingLogger - INFO - PAPER TRADE: BUY 25818.9014 units at 0.3671
+2024-11-12 17:06:50,807 - TradingLogger - INFO - PAPER TRADE: SELL 25818.9014 units at 0.3673
+2024-11-12 17:06:50,807 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 4.78 USDT
+2024-11-12 17:06:53,976 - TradingLogger - INFO - PAPER TRADE: BUY 25825.7047 units at 0.3672
+2024-11-12 17:07:02,398 - TradingLogger - INFO - PAPER TRADE: SELL 25825.7047 units at 0.3666
+2024-11-12 17:07:02,398 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -14.02 USDT
+2024-11-12 17:07:31,754 - TradingLogger - INFO - PAPER TRADE: BUY 25941.3229 units at 0.3650
+2024-11-12 17:07:33,857 - TradingLogger - INFO - PAPER TRADE: SELL 25941.3229 units at 0.3655
+2024-11-12 17:07:33,857 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 11.54 USDT
+2024-11-12 17:07:39,126 - TradingLogger - INFO - PAPER TRADE: BUY 25939.7436 units at 0.3655
+2024-11-12 17:08:02,181 - TradingLogger - INFO - PAPER TRADE: SELL 25939.7436 units at 0.3657
+2024-11-12 17:08:02,181 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 5.19 USDT
+2024-11-12 17:08:12,658 - TradingLogger - INFO - PAPER TRADE: BUY 26018.0134 units at 0.3646
+2024-11-12 17:08:14,765 - TradingLogger - INFO - PAPER TRADE: SELL 26018.0134 units at 0.3651
+2024-11-12 17:08:14,765 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 14.39 USDT
+2024-11-12 17:08:19,995 - TradingLogger - INFO - PAPER TRADE: BUY 26068.5215 units at 0.3644
+2024-11-12 17:08:21,048 - TradingLogger - INFO - PAPER TRADE: SELL 26068.5215 units at 0.3646
+2024-11-12 17:08:21,048 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 4.69 USDT
+2024-11-12 17:08:36,764 - TradingLogger - INFO - PAPER TRADE: BUY 26108.3416 units at 0.3640
+2024-11-12 17:08:44,111 - TradingLogger - INFO - PAPER TRADE: SELL 26108.3416 units at 0.3636
+2024-11-12 17:08:44,112 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -9.50 USDT
+2024-11-12 17:08:56,683 - TradingLogger - INFO - PAPER TRADE: BUY 26198.0499 units at 0.3624
+2024-11-12 17:09:02,969 - TradingLogger - INFO - PAPER TRADE: SELL 26198.0499 units at 0.3626
+2024-11-12 17:09:02,969 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 6.08 USDT
+2024-11-12 17:09:12,427 - TradingLogger - INFO - PAPER TRADE: BUY 26183.8539 units at 0.3628
+2024-11-12 17:09:17,720 - TradingLogger - INFO - PAPER TRADE: SELL 26183.8539 units at 0.3619
+2024-11-12 17:09:17,721 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -24.32 USDT
+2024-11-12 17:09:20,900 - TradingLogger - INFO - PAPER TRADE: BUY 26188.0831 units at 0.3619
+2024-11-12 17:09:21,959 - TradingLogger - INFO - PAPER TRADE: SELL 26188.0831 units at 0.3621
+2024-11-12 17:09:21,959 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 4.82 USDT
+2024-11-12 17:09:27,204 - TradingLogger - INFO - PAPER TRADE: BUY 26133.2108 units at 0.3628
+2024-11-12 17:09:42,952 - TradingLogger - INFO - PAPER TRADE: SELL 26133.2108 units at 0.3629
+2024-11-12 17:09:42,953 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 2.48 USDT
+2024-11-12 17:09:52,413 - TradingLogger - INFO - PAPER TRADE: BUY 26106.6832 units at 0.3633
+2024-11-12 17:10:10,302 - TradingLogger - INFO - PAPER TRADE: SELL 26106.6832 units at 0.3632
+2024-11-12 17:10:10,302 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -2.27 USDT
+2024-11-12 17:10:15,562 - TradingLogger - INFO - PAPER TRADE: BUY 26031.6635 units at 0.3642
+2024-11-12 17:10:42,863 - TradingLogger - INFO - PAPER TRADE: SELL 26031.6635 units at 0.3645
+2024-11-12 17:10:42,863 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 8.02 USDT
+2024-11-12 17:10:51,277 - TradingLogger - INFO - PAPER TRADE: BUY 26111.1449 units at 0.3634
+2024-11-12 17:10:52,326 - TradingLogger - INFO - PAPER TRADE: SELL 26111.1449 units at 0.3637
+2024-11-12 17:10:52,326 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 6.29 USDT
+2024-11-12 17:10:56,509 - TradingLogger - INFO - PAPER TRADE: BUY 26132.9161 units at 0.3633
+2024-11-12 17:10:57,563 - TradingLogger - INFO - PAPER TRADE: SELL 26132.9161 units at 0.3632
+2024-11-12 17:10:57,563 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -4.52 USDT
+2024-11-12 17:10:58,613 - TradingLogger - INFO - PAPER TRADE: BUY 26133.3947 units at 0.3632
+2024-11-12 17:11:01,754 - TradingLogger - INFO - PAPER TRADE: SELL 26133.3947 units at 0.3641
+2024-11-12 17:11:01,754 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 23.60 USDT
+2024-11-12 17:11:02,803 - TradingLogger - INFO - PAPER TRADE: BUY 26140.4930 units at 0.3639
+2024-11-12 17:11:09,098 - TradingLogger - INFO - PAPER TRADE: SELL 26140.4930 units at 0.3652
+2024-11-12 17:11:09,098 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 33.77 USDT
+2024-11-12 17:11:14,366 - TradingLogger - INFO - PAPER TRADE: BUY 26157.3555 units at 0.3649
+2024-11-12 17:11:17,525 - TradingLogger - INFO - PAPER TRADE: SELL 26157.3555 units at 0.3649
+2024-11-12 17:11:17,526 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -0.16 USDT
+2024-11-12 17:11:26,979 - TradingLogger - INFO - PAPER TRADE: BUY 26223.6340 units at 0.3640
+2024-11-12 17:11:33,257 - TradingLogger - INFO - PAPER TRADE: SELL 26223.6340 units at 0.3645
+2024-11-12 17:11:33,257 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 14.61 USDT
+2024-11-12 17:11:35,369 - TradingLogger - INFO - PAPER TRADE: BUY 26200.1416 units at 0.3648
+2024-11-12 17:11:43,802 - TradingLogger - INFO - PAPER TRADE: SELL 26200.1416 units at 0.3643
+2024-11-12 17:11:43,802 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -15.17 USDT
+2024-11-12 17:11:56,404 - TradingLogger - INFO - PAPER TRADE: BUY 26148.7447 units at 0.3650
+2024-11-12 17:12:20,612 - TradingLogger - INFO - PAPER TRADE: SELL 26148.7447 units at 0.3656
+2024-11-12 17:12:20,613 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 16.21 USDT
+2024-11-12 17:12:42,622 - TradingLogger - INFO - PAPER TRADE: BUY 26155.1833 units at 0.3655
+2024-11-12 17:12:46,830 - TradingLogger - INFO - PAPER TRADE: SELL 26155.1833 units at 0.3653
+2024-11-12 17:12:46,830 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -5.54 USDT
+2024-11-12 17:12:59,446 - TradingLogger - INFO - PAPER TRADE: BUY 26119.8337 units at 0.3658
+2024-11-12 17:13:12,157 - TradingLogger - INFO - PAPER TRADE: SELL 26119.8337 units at 0.3659
+2024-11-12 17:13:12,157 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 2.38 USDT
+2024-11-12 17:13:23,693 - TradingLogger - INFO - PAPER TRADE: BUY 26071.4841 units at 0.3666
+2024-11-12 17:13:26,833 - TradingLogger - INFO - PAPER TRADE: SELL 26071.4841 units at 0.3662
+2024-11-12 17:13:26,834 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -9.72 USDT
+2024-11-12 17:13:32,099 - TradingLogger - INFO - PAPER TRADE: BUY 26016.1191 units at 0.3670
+2024-11-12 17:13:42,605 - TradingLogger - INFO - PAPER TRADE: SELL 26016.1191 units at 0.3664
+2024-11-12 17:13:42,605 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -14.83 USDT
+2024-11-12 17:13:51,015 - TradingLogger - INFO - PAPER TRADE: BUY 25981.2723 units at 0.3669
+2024-11-12 17:14:00,469 - TradingLogger - INFO - PAPER TRADE: SELL 25981.2723 units at 0.3664
+2024-11-12 17:14:00,469 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -15.33 USDT
+2024-11-12 17:14:10,973 - TradingLogger - INFO - PAPER TRADE: BUY 25947.8801 units at 0.3669
+2024-11-12 17:14:34,191 - TradingLogger - INFO - PAPER TRADE: SELL 25947.8801 units at 0.3667
+2024-11-12 17:14:34,191 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -3.48 USDT
+2024-11-12 17:14:55,245 - TradingLogger - INFO - PAPER TRADE: BUY 26032.4733 units at 0.3655
+2024-11-12 17:14:56,299 - TradingLogger - INFO - PAPER TRADE: SELL 26032.4733 units at 0.3655
+2024-11-12 17:14:56,299 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 0.00 USDT
+2024-11-12 17:15:01,561 - TradingLogger - INFO - PAPER TRADE: BUY 25979.9503 units at 0.3663
+2024-11-12 17:15:14,153 - TradingLogger - INFO - PAPER TRADE: SELL 25979.9503 units at 0.3676
+2024-11-12 17:15:14,154 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 33.12 USDT
+2024-11-12 17:15:18,361 - TradingLogger - INFO - PAPER TRADE: BUY 25946.8539 units at 0.3680
+2024-11-12 17:15:20,475 - TradingLogger - INFO - PAPER TRADE: SELL 25946.8539 units at 0.3678
+2024-11-12 17:15:20,475 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -4.72 USDT
+2024-11-12 17:15:22,589 - TradingLogger - INFO - PAPER TRADE: BUY 25975.1820 units at 0.3674
+2024-11-12 17:15:27,840 - TradingLogger - INFO - PAPER TRADE: SELL 25975.1820 units at 0.3678
+2024-11-12 17:15:27,840 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 10.18 USDT
+2024-11-12 17:15:29,936 - TradingLogger - INFO - PAPER TRADE: BUY 25986.9404 units at 0.3676
+2024-11-12 17:15:33,081 - TradingLogger - INFO - PAPER TRADE: SELL 25986.9404 units at 0.3677
+2024-11-12 17:15:33,081 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 1.90 USDT
+2024-11-12 17:15:37,284 - TradingLogger - INFO - PAPER TRADE: BUY 25980.6053 units at 0.3677
+2024-11-12 17:15:43,571 - TradingLogger - INFO - PAPER TRADE: SELL 25980.6053 units at 0.3664
+2024-11-12 17:15:43,571 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -35.15 USDT
+2024-11-12 17:16:07,679 - TradingLogger - INFO - PAPER TRADE: BUY 26039.8420 units at 0.3656
+2024-11-12 17:16:12,906 - TradingLogger - INFO - PAPER TRADE: SELL 26039.8420 units at 0.3654
+2024-11-12 17:16:12,906 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -5.44 USDT
+2024-11-12 17:16:26,531 - TradingLogger - INFO - PAPER TRADE: BUY 26040.3729 units at 0.3654
+2024-11-12 17:16:37,025 - TradingLogger - INFO - PAPER TRADE: SELL 26040.3729 units at 0.3648
+2024-11-12 17:16:37,027 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -16.80 USDT
+2024-11-12 17:16:45,422 - TradingLogger - INFO - PAPER TRADE: BUY 25986.6098 units at 0.3656
+2024-11-12 17:16:51,704 - TradingLogger - INFO - PAPER TRADE: SELL 25986.6098 units at 0.3666
+2024-11-12 17:16:51,704 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: 25.67 USDT
+2024-11-12 17:16:57,957 - TradingLogger - INFO - PAPER TRADE: BUY 25939.5865 units at 0.3672
+2024-11-12 17:17:17,923 - TradingLogger - INFO - PAPER TRADE: SELL 25939.5865 units at 0.3666
+2024-11-12 17:17:17,923 - TradingLogger - INFO - PAPER TRADE: Profit/Loss: -13.67 USDT
+2024-11-12 17:17:25,266 - TradingLogger - INFO - PAPER TRADE: BUY 25873.7745 units at 0.3676

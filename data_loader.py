@@ -2,36 +2,38 @@
 
 import yfinance as yf
 import pandas as pd
+import logging
+
+logger = logging.getLogger(__name__)
 
 def load_data(ticker: str, start_date: str, end_date: str) -> pd.DataFrame:
     """
-    获取指定交易对的历史数据。
+    Load historical data for specified trading pair.
 
-    参数:
-    - ticker: str, 如 "DOGE-USD"
-    - start_date: str, 数据开始日期，格式 "YYYY-MM-DD"
-    - end_date: str, 数据结束日期，格式 "YYYY-MM-DD"
+    Args:
+    - ticker: str, e.g., "DOGE-USD"
+    - start_date: str, start date in "YYYY-MM-DD" format
+    - end_date: str, end date in "YYYY-MM-DD" format
 
-    返回:
-    - pd.DataFrame, 包含历史收盘价的 DataFrame
+    Returns:
+    - pd.DataFrame with historical closing prices
     """
     try:
-        # 从 Yahoo Finance 下载数据
+        # Download data from Yahoo Finance
         data = yf.download(ticker, start=start_date, end=end_date)
         
-        # 检查数据是否成功下载
         if data.empty:
-            print(f"没有找到 {ticker} 的数据.")
+            logger.error(f"No data found for {ticker}")
             return None
         
-        # 创建多级列索引
+        # Create multi-level column index
         data = data[['Close']]
         data.columns = pd.MultiIndex.from_product([['Close'], [ticker]])
-        data.dropna(inplace=True)  # 移除缺失值
-        print(f"成功加载 {ticker} 的数据，包含 {len(data)} 条记录.")
+        data.dropna(inplace=True)
         
+        logger.info(f"Successfully loaded {len(data)} records for {ticker}")
         return data
 
     except Exception as e:
-        print(f"加载数据时出错: {e}")
+        logger.error(f"Error loading data: {str(e)}")
         return None

@@ -10,8 +10,7 @@ class TradingMonitor:
         self.check_alerts()
         
     def check_alerts(self):
-        # 检查各种预警条件
         if self.metrics['active_positions'] >= 3:
-            self.alerts.append("持仓数量警告：接近最大限制")
+            self.alerts.append("Position Warning: Near maximum limit")
         if self.metrics['account_balance'] < self.initial_balance * 0.9:
-            self.alerts.append("账户余额警告：接近止损线") 
+            self.alerts.append("Balance Warning: Near stop loss level")

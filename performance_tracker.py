@@ -21,16 +21,16 @@ class PerformanceTracker:
     
     def get_statistics(self):
         if not self.trades:
-            return "没有交易记录"
+            return "No trades recorded"
             
         df = pd.DataFrame(self.trades)
         return {
-            '总交易次数': len(df),
-            '盈利交易': len(df[df.profit_loss > 0]),
-            '亏损交易': len(df[df.profit_loss < 0]),
-            '胜率': len(df[df.profit_loss > 0]) / len(df) * 100,
-            '平均收益率': df.return_percent.mean(),
-            '最大收益': df.return_percent.max(),
-            '最大亏损': df.return_percent.min(),
-            '总收益': df.profit_loss.sum()
+            'Total Trades': len(df),
+            'Profitable Trades': len(df[df.profit_loss > 0]),
+            'Loss Trades': len(df[df.profit_loss < 0]),
+            'Win Rate': len(df[df.profit_loss > 0]) / len(df) * 100,
+            'Average Return': df.return_percent.mean(),
+            'Max Profit': df.return_percent.max(),
+            'Max Loss': df.return_percent.min(),
+            'Total Profit': df.profit_loss.sum()
         } 

@@ -1,49 +1,59 @@
 # config.py
 
-# 交易对信息
-TICKER = 'DOGE-USD'  # Yahoo Finance 格式
-BINANCE_SYMBOL = 'dogeusdt'  # Binance 格式
+import os
+from dotenv import load_dotenv
 
-# 数据时间范围
+# Load environment variables
+load_dotenv()
+
+# Trading pair information
+TICKER = 'DOGE-USD'  # Yahoo Finance format
+BINANCE_SYMBOL = 'dogeusdt'  # Binance format
+
+# API credentials
+API_KEY = os.getenv('API_KEY')
+API_SECRET = os.getenv('API_SECRET')
+
+# Data time range
 START_DATE = '2020-01-01'
 END_DATE = '2024-11-11'
 
-# 策略参数
-SHORT_WINDOW = 20  # 短期均线窗口
-LONG_WINDOW = 50  # 长期均线窗口
+# Strategy parameters
+SHORT_WINDOW = 20  # Short-term MA window
+LONG_WINDOW = 50  # Long-term MA window
 
-# 日志配置
-LOG_FILE = 'trading_log.txt'  # 日志文件路径
-LOG_LEVEL = 'DEBUG'  # 临时改为 DEBUG 以获取更多信息
+# Logging configuration
+LOG_FILE = 'trading_log.txt'
+LOG_LEVEL = 'DEBUG'
 
-# 交易参数
-TRADE_AMOUNT = 100  # 每次交易的USDT金额
-STOP_LOSS_PERCENT = 2.0  # 止损百分比
-TAKE_PROFIT_PERCENT = 4.0  # 止盈百分比
-MAX_POSITIONS = 3  # 最大持仓数量
+# Trading parameters
+TRADE_AMOUNT = 100  # USDT amount per trade
+STOP_LOSS_PERCENT = 2.0
+TAKE_PROFIT_PERCENT = 4.0
+MAX_POSITIONS = 3
 
-# WebSocket配置
-WEBSOCKET_TIMEOUT = 30  # WebSocket超时时间（秒）
-WEBSOCKET_RETRY = 3    # 重试次数
+# WebSocket configuration
+WEBSOCKET_TIMEOUT = 30
+WEBSOCKET_RETRY = 3
 WEBSOCKET_RECONNECT = True
 WEBSOCKET_PING_INTERVAL = 30
 WEBSOCKET_PING_TIMEOUT = 10
 
-# 添加新的配置项
+# Trading configuration
 TRADE_CONFIG = {
-    'max_daily_trades': 10,      # 每日最大交易次数
-    'min_profit_target': 1.5,    # 最小获利目标(%)
-    'max_spread': 0.1,           # 最大允许价差(%)
-    'trading_hours': {           # 交易时间段
+    'max_daily_trades': 10,
+    'min_profit_target': 1.5,
+    'max_spread': 0.1,
+    'trading_hours': {
         'start': '00:00',
         'end': '23:59'
     }
 }
 
-# 风险控制参数
+# Risk management configuration
 RISK_CONFIG = {
-    'max_daily_loss': -5.0,      # 每日最大亏损限制(%)
-    'position_sizing': 0.2,      # 单个仓位最大资金比例
-    'max_drawdown': 20,          # 最大回撤限制(%)
-    'min_volume': 100            # 最小交易量
+    'max_daily_loss': -5.0,
+    'position_sizing': 0.2,
+    'max_drawdown': 20,
+    'min_volume': 100
 }

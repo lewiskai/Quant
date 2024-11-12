@@ -1,186 +1,220 @@
-import pandas as pd
-import time
-from realtime_data import RealTimeData
-from strategy import moving_average_strategy
-from logger import setup_logger
-from config import TICKER, SHORT_WINDOW, LONG_WINDOW, BINANCE_SYMBOL
-import yfinance as yf
-import threading
 import os
 import sys
+import time
 import logging
+import pandas as pd
+from dotenv import load_dotenv
 from datetime import datetime
-import locale
+from typing import Dict, Any
 
-# 设置默认编码为UTF-8
-if sys.platform.startswith('win'):
-    locale.setlocale(locale.LC_ALL, 'zh_CN.UTF-8')
+from realtime_data import RealTimeData
+from crypto_api import CryptoComAPI
+from strategy import generate_trading_signals
+from plot import plot_results
+from performance_tracker import PerformanceTracker
+from monitor import TradingMonitor
+from paper_trader import PaperTrader
 
-def setup_logging():
-    """配置日志记录"""
-    logger = logging.getLogger('TradingLogger')
-    logger.setLevel(logging.INFO)
-    
-    # 文件处理器
-    file_handler = logging.FileHandler('trading_log.txt', encoding='utf-8')
-    file_handler.setLevel(logging.INFO)
-    
-    # 控制台处理器
-    console_handler = logging.StreamHandler(sys.stdout)
-    console_handler.setLevel(logging.INFO)
-    
-    # 创建格式化器
-    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-    file_handler.setFormatter(formatter)
-    console_handler.setFormatter(formatter)
-    
-    # 添加处理器
-    logger.addHandler(file_handler)
-    logger.addHandler(console_handler)
-    
-    return logger
+# Load environment variables
+load_dotenv()
 
-# 初始化日志
-logger = setup_logging()
+# Configure logging
+logger = logging.getLogger('TradingLogger')
+logger.setLevel(logging.INFO)
 
-def display_data(latest, rt_data):
-    """显示最新数据和交易信号"""
+# File handler
+file_handler = logging.FileHandler('trading_log.txt', encoding='utf-8')
+file_handler.setLevel(logging.INFO)
+
+# Console handler
+console_handler = logging.StreamHandler(sys.stdout)
+console_handler.setLevel(logging.INFO)
+
+# Formatter
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+file_handler.setFormatter(formatter)
+console_handler.setFormatter(formatter)
+
+# Add handlers
+logger.addHandler(file_handler)
+logger.addHandler(console_handler)
+
+def clear_console():
+    """Clear the console output."""
+    # For Windows
+    if os.name == 'nt':
+        os.system('cls')
+    # For macOS and Linux
+    else:
+        os.system('clear')
+
+def display_data(data: pd.DataFrame) -> str:
+    """Display real-time trading data and signals with detailed analysis"""
     try:
-        os.system('cls' if os.name == 'nt' else 'clear')
+        if data.empty or len(data) < 2:
+            logger.error("Insufficient data to calculate indicators")
+            return "HOLD"
         
-        print(f"\n实时市场数据 - {time.strftime('%Y-%m-%d %H:%M:%S')}")
-        print("=" * 60)
+        # Clear the console before displaying new data
+        clear_console()
         
-        # 显示交易建议
-        if ('Trading_Advice', '') in latest:
-            print(f"\n交易建议:")
-            print("-" * 60)
-            print(latest[('Trading_Details', '')])
-            
-        # 基本价格信息
-        print(f"\n价格信息:")
-        print("-" * 60)
-        print(f"当前价格:     {latest[('Close', TICKER)]:.5f}")
+        latest = data.iloc[-1]
+        ma_diff = latest['SMA_short'] - latest['SMA_long']
+        ma_diff_prev = data.iloc[-2]['SMA_short'] - data.iloc[-2]['SMA_long']
         
-        # 检查并显示移动平均线
-        if ('Short_MA', '') in latest:
-            print(f"短期MA({SHORT_WINDOW}):   {latest[('Short_MA', '')]:.5f}")
-        if ('Long_MA', '') in latest:
-            print(f"长期MA({LONG_WINDOW}):  {latest[('Long_MA', '')]:.5f}")
+        # Display current time
+        current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        print(f"\n================= Current Time: {current_time} =================")
         
-        # MACD指标
-        if all(x in latest for x in [('MACD', ''), ('Signal_Line', ''), ('MACD_Hist', '')]):
-            print(f"\nMACD指标:")
-            print("-" * 60)
-            print(f"MACD:         {latest[('MACD', '')]:.5f}")
-            print(f"信号线:       {latest[('Signal_Line', '')]:.5f}")
-            print(f"MACD柱状:     {latest[('MACD_Hist', '')]:.5f}")
+        # Determine MA Cross signal
+        ma_signal = "HOLD"
+        if ma_diff > 0 and ma_diff_prev <= 0:
+            ma_signal = "STRONG_BUY"
+        elif ma_diff < 0 and ma_diff_prev >= 0:
+            ma_signal = "STRONG_SELL"
+        elif ma_diff > 0:
+            ma_signal = "BUY"
+        else:
+            ma_signal = "SELL"
         
-        # RSI指标
-        if ('RSI', '') in latest:
-            print(f"\nRSI指标:")
-            print("-" * 60)
-            print(f"RSI(14):      {latest[('RSI', '')]:.2f}")
-            rsi_signal = "超卖" if latest[('RSI', '')] < 30 else "超买" if latest[('RSI', '')] > 70 else "中性"
-            print(f"RSI信号:      {rsi_signal}")
+        # Initialize signals
+        signals = []
+        signals.append(("MA Cross", ma_signal))
         
-        # 布林带
-        if all(x in latest for x in [('BB_Upper', ''), ('BB_Middle', ''), ('BB_Lower', '')]):
-            print(f"\n布林带:")
-            print("-" * 60)
-            print(f"上轨:         {latest[('BB_Upper', '')]:.5f}")
-            print(f"中轨:         {latest[('BB_Middle', '')]:.5f}")
-            print(f"下轨:         {latest[('BB_Lower', '')]:.5f}")
+        # Additional indicators
+        macd_signal = "HOLD"
+        if latest['MACD'] > latest['Signal_Line']:
+            macd_signal = "BUY"
+        elif latest['MACD'] < latest['Signal_Line']:
+            macd_signal = "SELL"
         
-        # 趋势分析
-        if ('Trend', '') in latest:
-            print(f"\n趋势分析:")
-            print("-" * 60)
-            trend = "上升" if latest[('Trend', '')] > 0 else "下降"
-            print(f"当前趋势:     {trend}")
-            
-            if ('Trend_Strength', '') in latest:
-                print(f"趋势强度:     {latest[('Trend_Strength', '')]:.2f}%")
-            if ('Momentum', '') in latest:
-                print(f"动量:         {latest[('Momentum', '')]:.5f}")
+        rsi_signal = "HOLD"
+        if latest['RSI'] > 70:
+            rsi_signal = "SELL"
+        elif latest['RSI'] < 30:
+            rsi_signal = "BUY"
         
-        # 价格偏离度
-        print(f"\n价格偏离度:")
-        print("-" * 60)
+        signals.append(("MACD", macd_signal))
+        signals.append(("RSI", rsi_signal))
         
-        # 计算价格偏离度
-        if ('Short_MA', '') in latest:
-            short_dev = (latest[('Close', TICKER)] - latest[('Short_MA', '')]) / latest[('Short_MA', '')] * 100
-            print(f"距短期MA:     {short_dev:.2f}%")
+        # Display market data
+        print("\n================= Market Data =================")
+        print(f"Current Price: {latest['close']:.5f}")
+        print(f"Open Price:    {latest['open']:.5f}")
+        print(f"High Price:    {latest['high']:.5f}")
+        print(f"Low Price:     {latest['low']:.5f}")
+        print(f"Volume:        {latest['volume']:.2f}")
         
-        if ('Long_MA', '') in latest:
-            long_dev = (latest[('Close', TICKER)] - latest[('Long_MA', '')]) / latest[('Long_MA', '')] * 100
-            print(f"距长期MA:     {long_dev:.2f}%")
+        # Display moving averages
+        print("\n============= Moving Averages =============")
+        print(f"Short MA (20): {latest['SMA_short']:.5f}")
+        print(f"Long MA (50):  {latest['SMA_long']:.5f}")
         
-        print("=" * 60)
-        sys.stdout.flush()
+        # Display MACD and RSI
+        print("\n============= MACD and RSI =============")
+        print(f"MACD:          {latest['MACD']:.5f}")
+        print(f"Signal Line:   {latest['Signal_Line']:.5f}")
+        print(f"RSI:           {latest['RSI']:.2f}")
         
+        # Display trading signals
+        print("\n============= Trading Signals =============")
+        for signal_name, signal_value in signals:
+            print(f"{signal_name}: {signal_value}")
+        
+        # Determine overall recommendation
+        buy_signals = sum(1 for _, signal in signals if signal in ["BUY", "STRONG_BUY"])
+        sell_signals = sum(1 for _, signal in signals if signal in ["SELL", "STRONG_SELL"])
+        
+        if buy_signals > sell_signals:
+            recommendation = "BUY"
+        elif sell_signals > buy_signals:
+            recommendation = "SELL"
+        else:
+            recommendation = "HOLD"
+        
+        print("\n============= Overall Recommendation =============")
+        print(f"Recommendation: {recommendation}")
+        
+        return recommendation
     except Exception as e:
-        logger.error(f"显示数据时出错: {str(e)}")
+        logger.error(f"Error generating trading signals: {str(e)}")
+        return "HOLD"
 
 def main():
+    """Main function to run the trading bot with paper trading"""
+    rt_data = None
+    paper_trader = None
     try:
-        # 初始化数据
-        data = yf.download(TICKER, start='2024-01-01')
-        if data.empty:
-            logger.error(f"无法获取 {TICKER} 的历史数据")
-            return
-            
-        data = data[['Close']]
-        data.columns = pd.MultiIndex.from_tuples([('Close', TICKER)])
+        # Load environment variables
+        load_dotenv()
+        api_key = os.getenv('API_KEY')
+        api_secret = os.getenv('API_SECRET')
+        symbol = os.getenv('TICKER', 'DOGE-USD')
         
-        # 应用策略
-        data_with_signals = moving_average_strategy(data, SHORT_WINDOW, LONG_WINDOW)
+        # Initialize logging
+        logger.info(f"Starting real-time data stream for {symbol}")
         
-        # 初始化实时数据流
-        rt_data = RealTimeData(TICKER)
+        # Initialize real-time data handler
+        rt_data = RealTimeData(
+            symbol=symbol,
+            api_key=api_key,
+            api_secret=api_secret
+        )
         
-        # 在新线程中启动WebSocket
-        ws_thread = threading.Thread(target=rt_data.start_stream)
-        ws_thread.daemon = True
-        ws_thread.start()
+        logger.info("Initializing data stream...")
+        rt_data.start()
         
-        logger.info(f"Starting real-time data stream for {TICKER}")
+        logger.info("Waiting for data stream initialization...")
+        time.sleep(2)
         
-        last_price = None
+        # Initialize paper trader
+        paper_trader = PaperTrader(initial_balance=10000.0)  # Start with 10,000 USDT
+        
+        logger.info("Starting main loop...")
         while True:
-            if rt_data.price and rt_data.price != last_price:
-                current_price = rt_data.price
-                last_price = current_price
+            data = rt_data.data
+            if not data.empty:
+                latest = data.iloc[-1]
                 
-                try:
-                    # 创建新的数据行
-                    new_row = pd.DataFrame({
-                        ('Close', TICKER): [current_price]
-                    }, index=[pd.Timestamp.now()])
-                    
-                    # 更新数据
-                    data_with_signals = pd.concat([data_with_signals, new_row])
-                    data_with_signals = moving_average_strategy(
-                        data_with_signals.tail(1000),
-                        SHORT_WINDOW, 
-                        LONG_WINDOW
-                    )
-                    
-                    # 显示数据
-                    display_data(data_with_signals.iloc[-1], rt_data)
-                    
-                except Exception as e:
-                    logger.error(f"处理数据时出错: {str(e)}")
-                    
-            time.sleep(0.1)  # 减少CPU使用
+                # Display market data and signals
+                recommendation = display_data(data)
+                
+                # Execute paper trade based on recommendation
+                paper_trader.execute_trade(
+                    signal=recommendation,
+                    price=latest['close'],
+                    timestamp=latest.name
+                )
+                
+                # Display paper trading status
+                metrics = paper_trader.calculate_metrics()
+                print("\nPaper Trading Status:")
+                print(f"Initial Balance:    {paper_trader.initial_balance:.2f} USDT")
+                print(f"Current Balance:    {paper_trader.balance:.2f} USDT")
+                print(f"Position Size:      {paper_trader.position:.4f}")
+                print(f"Position Value:     {paper_trader.get_position_value(latest['close']):.2f} USDT")
+                print(f"Total Value:        {paper_trader.get_total_value(latest['close']):.2f} USDT")
+                print(f"Total Return:       {metrics['return_pct']:.2f}%")
+                print(f"Total Trades:       {metrics['total_trades']}")
+                print(f"Win Rate:           {metrics['win_rate']:.2f}%")
+                
+            time.sleep(1)
             
     except KeyboardInterrupt:
-        logger.info("User interrupted the stream. Closing.")
-        rt_data.stop_stream()
-    except Exception as e:
-        logger.error(f"程序运行出错: {str(e)}")
-        rt_data.stop_stream()
+        logger.info("User interrupted the stream")
+    finally:
+        if rt_data is not None:
+            rt_data.stop()
+        
+        # Display final trading summary if paper trader exists
+        if paper_trader is not None:
+            metrics = paper_trader.calculate_metrics()
+            logger.info("Paper Trading Summary:")
+            logger.info(f"Total Trades: {metrics['total_trades']}")
+            logger.info(f"Win Rate: {metrics['win_rate']:.2f}%")
+            logger.info(f"Total Return: {metrics['return_pct']:.2f}%")
+            
+        logger.info("Program completely exited")
 
 if __name__ == "__main__":
     main()
