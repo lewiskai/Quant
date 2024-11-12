@@ -14,6 +14,7 @@ from plot import plot_results
 from performance_tracker import PerformanceTracker
 from monitor import TradingMonitor
 from paper_trader import PaperTrader
+from chart import LiveChart
 
 # Load environment variables
 load_dotenv()
@@ -144,6 +145,9 @@ def main():
     """Main function to run the trading bot with paper trading"""
     rt_data = None
     paper_trader = None
+    chart_shown = False
+    last_position = 0  # Track position changes
+    
     try:
         # Load environment variables
         load_dotenv()
@@ -170,11 +174,19 @@ def main():
         # Initialize paper trader
         paper_trader = PaperTrader(initial_balance=10000.0)  # Start with 10,000 USDT
         
+        # Initialize the chart
+        live_chart = LiveChart()
+        
         logger.info("Starting main loop...")
         while True:
             data = rt_data.data
             if not data.empty:
                 latest = data.iloc[-1]
+                current_time = latest.name
+                current_price = latest['close']
+                
+                # Store previous position to detect trades
+                previous_position = paper_trader.position
                 
                 # Display market data and signals
                 recommendation = display_data(data)
@@ -182,9 +194,18 @@ def main():
                 # Execute paper trade based on recommendation
                 paper_trader.execute_trade(
                     signal=recommendation,
-                    price=latest['close'],
-                    timestamp=latest.name
+                    price=current_price,
+                    timestamp=current_time
                 )
+                
+                # Detect if a trade was executed
+                if paper_trader.position != previous_position:
+                    trade_type = 'BUY' if paper_trader.position > previous_position else 'SELL'
+                    live_chart.add_trade_marker(
+                        current_time,
+                        current_price,
+                        trade_type
+                    )
                 
                 # Display paper trading status
                 metrics = paper_trader.calculate_metrics()
@@ -192,15 +213,24 @@ def main():
                 print(f"Initial Balance:    {paper_trader.initial_balance:.2f} USDT")
                 print(f"Current Balance:    {paper_trader.balance:.2f} USDT")
                 print(f"Position Size:      {paper_trader.position:.4f}")
-                print(f"Position Value:     {paper_trader.get_position_value(latest['close']):.2f} USDT")
-                print(f"Total Value:        {paper_trader.get_total_value(latest['close']):.2f} USDT")
+                print(f"Position Value:     {paper_trader.get_position_value(current_price):.2f} USDT")
+                print(f"Total Value:        {paper_trader.get_total_value(current_price):.2f} USDT")
                 print(f"Total Return:       {metrics['return_pct']:.2f}%")
                 print(f"Total Trades:       {metrics['total_trades']}")
                 print(f"Win Rate:           {metrics['win_rate']:.2f}%")
                 
+                # Update the chart with new data
+                live_chart.update_chart(data, paper_trader.trades)
+                
+                # Show the chart (first time only)
+                if not chart_shown:
+                    live_chart.show()
+                    chart_shown = True
+                
             time.sleep(1)
             
     except KeyboardInterrupt:
+        live_chart.close()
         logger.info("User interrupted the stream")
     finally:
         if rt_data is not None:

@@ -10,113 +10,125 @@ logger = logging.getLogger(__name__)
 
 def generate_trading_signals(data: pd.DataFrame) -> dict:
     """
-    Generate trading signals and recommendations with improved strategy
+    Generate trading signals with improved strategy focusing on stronger trends
+    and reduced trading frequency
     """
     try:
+        # Minimum required data points
+        if len(data) < 200:
+            return {'signal': 0, 'strength': 0, 'confidence': 0}
+
         latest = data.iloc[-1]
-        prev = data.iloc[-2] if len(data) > 1 else None
-        
-        close_price = float(latest['close'])
         
         signals = {
-            'price': close_price,
             'signal': 0,
             'strength': 0,
-            'confidence': 0,
-            'reasons': [],
-            'risks': []
+            'confidence': 0
         }
 
-        # Trend Analysis
-        short_ma = float(latest['SMA_short'])
-        long_ma = float(latest['SMA_long'])
-        ma_50 = float(latest['MA_50'])
-        ma_200 = float(latest['MA_200'])
+        # === Improved Risk Management ===
+        min_profit_target = 0.15  # Minimum 0.15% profit target
+        max_loss = 0.10          # Maximum 0.10% loss
+        current_price = float(latest['close'])
         
-        # MACD Analysis
-        macd = float(latest['MACD'])
-        macd_signal = float(latest['Signal_Line'])
-        macd_hist = float(latest['MACD_Hist'])
+        # === Enhanced Trend Analysis ===
+        trend_period = 20
+        price_trend = data['close'].tail(trend_period)
+        trend_strength = abs(price_trend.iloc[-1] - price_trend.iloc[0]) / price_trend.iloc[0] * 100
         
-        # RSI Analysis
-        rsi = float(latest['RSI'])
-        
-        # Bollinger Bands
-        bb_upper = float(latest['BB_Upper'])
-        bb_lower = float(latest['BB_Lower'])
-        
-        # Volume Analysis
+        # === Volume Analysis ===
         volume = float(latest['volume'])
-        avg_volume = float(latest['Volume_MA'])
-
-        # Trend Confirmation (更严格的条件)
-        if short_ma > long_ma and ma_50 > ma_200 and close_price > ma_50:
-            signals['reasons'].append("Strong uptrend confirmed")
-            signals['strength'] += 20
-            signals['signal'] = 1
-        elif short_ma < long_ma and ma_50 < ma_200 and close_price < ma_50:
-            signals['reasons'].append("Strong downtrend confirmed")
-            signals['strength'] -= 20
-            signals['signal'] = -1
-
-        # MACD Signal (增加确认条件)
-        if macd > macd_signal and macd_hist > 0 and macd_hist > prev['MACD_Hist']:
-            signals['reasons'].append("MACD indicates increasing bullish momentum")
-            signals['strength'] += 15
-            signals['signal'] = max(signals['signal'], 0) + 1
-        elif macd < macd_signal and macd_hist < 0 and macd_hist < prev['MACD_Hist']:
-            signals['reasons'].append("MACD indicates increasing bearish momentum")
-            signals['strength'] -= 15
-            signals['signal'] = min(signals['signal'], 0) - 1
-
-        # RSI Overbought/Oversold (调整阈值)
-        if rsi > 75:
-            signals['risks'].append("RSI indicates strong overbought conditions")
-            signals['strength'] -= 15
-        elif rsi < 25:
-            signals['reasons'].append("RSI indicates strong oversold conditions")
-            signals['strength'] += 15
-
-        # Bollinger Bands Breakout (增加确认条件)
-        if close_price > bb_upper and volume > avg_volume * 1.2:
-            signals['risks'].append("Price above upper Bollinger Band with high volume, potential reversal")
-            signals['strength'] -= 10
-        elif close_price < bb_lower and volume > avg_volume * 1.2:
-            signals['reasons'].append("Price below lower Bollinger Band with high volume, potential buying opportunity")
-            signals['strength'] += 10
-
-        # Volume Confirmation (增加条件)
-        if volume > avg_volume * 2:
-            signals['reasons'].append("Extremely high volume confirms the move")
-            signals['strength'] = signals['strength'] * 1.3 if signals['strength'] > 0 else signals['strength'] * 0.7
-
-        # Determine final signal (调整阈值)
-        if signals['strength'] > 40:
-            signals['signal'] = 1  # Strong Buy
-        elif signals['strength'] > 20:
-            signals['signal'] = 0.5  # Buy
-        elif signals['strength'] < -40:
-            signals['signal'] = -1  # Strong Sell
-        elif signals['strength'] < -20:
-            signals['signal'] = -0.5  # Sell
-        else:
-            signals['signal'] = 0  # Hold
-
-        # Calculate final confidence
-        signals['confidence'] = min(100, max(0, abs(signals['strength'])))
+        avg_volume = float(data['volume'].rolling(20).mean().iloc[-1])
+        volume_std = float(data['volume'].rolling(20).std().iloc[-1])
+        significant_volume = volume > (avg_volume + volume_std)
         
+        # === Market Condition Check ===
+        volatility = data['close'].pct_change().tail(20).std() * 100
+        is_stable_market = volatility < 0.2  # Only trade in stable conditions
+        
+        # === Entry Conditions ===
+        if is_stable_market and significant_volume:
+            if trend_strength > 0.2:  # Minimum trend strength requirement
+                entry_price = current_price
+                take_profit = entry_price * (1 + min_profit_target)
+                stop_loss = entry_price * (1 - max_loss)
+                
+                signals['take_profit'] = take_profit
+                signals['stop_loss'] = stop_loss
+                
+                # Long position
+                if all([
+                    latest['close'] > latest['MA_50'],
+                    latest['RSI'] > 40 and latest['RSI'] < 60,
+                    latest['MACD'] > latest['Signal_Line'],
+                    latest['close'] > latest['BB_Middle']
+                ]):
+                    signals['signal'] = 1
+                
+                # Short position
+                elif all([
+                    latest['close'] < latest['MA_50'],
+                    latest['RSI'] > 60 or latest['RSI'] < 40,
+                    latest['MACD'] < latest['Signal_Line'],
+                    latest['close'] < latest['BB_Middle']
+                ]):
+                    signals['signal'] = -1
+
+        # === Position Management ===
+        if hasattr(generate_trading_signals, 'last_trade'):
+            time_since_trade = (datetime.now() - generate_trading_signals.last_trade).seconds
+            if time_since_trade < 300:  # 5-minute minimum between trades
+                signals['signal'] = 0
+
+        if signals['signal'] != 0:
+            generate_trading_signals.last_trade = datetime.now()
+
         return signals
-        
+
     except Exception as e:
-        logger.error(f"Error in signal generation: {str(e)}")
-        return {
-            'price': 0,
-            'signal': 0,
-            'strength': 0,
-            'confidence': 0,
-            'reasons': [],
-            'risks': []
-        }
+        logger.error(f"Signal generation error: {str(e)}")
+        return {'signal': 0, 'strength': 0, 'confidence': 0}
+
+def calculate_trend_stability(data: pd.DataFrame, window: int = 20) -> float:
+    """Calculate how stable the trend is"""
+    price_changes = data['close'].pct_change().tail(window)
+    direction_changes = (price_changes > 0).diff().abs().sum()
+    return 1 - (direction_changes / window)
+
+def is_valid_entry(data: pd.DataFrame, trend_strength: float, volatility: float) -> bool:
+    """Check if market conditions are suitable for entry"""
+    latest = data.iloc[-1]
+    
+    # Check if price is near support/resistance
+    bb_position = (latest['close'] - latest['BB_Lower']) / (latest['BB_Upper'] - latest['BB_Lower'])
+    
+    return (trend_strength > 0.5 and  # Minimum trend strength
+            volatility < 2.0 and      # Maximum volatility
+            0.2 < bb_position < 0.8)  # Not too close to BB extremes
+
+def calculate_confidence(data: pd.DataFrame) -> float:
+    """Calculate trade confidence based on multiple factors"""
+    latest = data.iloc[-1]
+    
+    # Volume confidence
+    volume_ratio = latest['volume'] / data['volume'].rolling(20).mean().iloc[-1]
+    volume_conf = min(1.0, volume_ratio / 3)
+    
+    # Trend confidence
+    trend_conf = abs(latest['SMA_short'] - latest['SMA_long']) / latest['SMA_long']
+    
+    # RSI confidence
+    rsi_conf = 1.0 - abs(latest['RSI'] - 50) / 50
+    
+    # MACD confidence
+    macd_conf = abs(latest['MACD'] - latest['Signal_Line']) / abs(latest['Signal_Line'])
+    
+    # Combine confidences
+    total_conf = (volume_conf + trend_conf + rsi_conf + macd_conf) / 4
+    return min(0.95, total_conf)  # Cap at 95% confidence
+
+# Initialize last trade time
+generate_trading_signals.last_trade = datetime.now()
 
 def moving_average_strategy(data: pd.DataFrame, short_window: int, long_window: int) -> pd.DataFrame:
     """
