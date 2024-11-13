@@ -13,7 +13,7 @@ from strategy import generate_trading_signals
 from plot import plot_results
 from performance_tracker import PerformanceTracker
 from monitor import TradingMonitor
-from paper_trader import PaperTrader
+from live_trader import LiveTrader
 
 # Load environment variables
 load_dotenv()
@@ -141,80 +141,40 @@ def display_data(data: pd.DataFrame) -> str:
         return "HOLD"
 
 def main():
-    """Main function to run the trading bot with paper trading"""
-    rt_data = None
-    paper_trader = None
     try:
-        # Load environment variables
-        load_dotenv()
-        api_key = os.getenv('API_KEY')
-        api_secret = os.getenv('API_SECRET')
-        symbol = os.getenv('TICKER', 'DOGE-USD')
-        
-        # Initialize logging
-        logger.info(f"Starting real-time data stream for {symbol}")
-        
-        # Initialize real-time data handler
-        rt_data = RealTimeData(
-            symbol=symbol,
-            api_key=api_key,
-            api_secret=api_secret
+        # Initialize components
+        rt_data = RealTimeData(symbol='DOGE-USD')
+        live_trader = LiveTrader(
+            api_key=os.getenv('API_KEY'),
+            api_secret=os.getenv('API_SECRET')
         )
         
-        logger.info("Initializing data stream...")
-        rt_data.start()
+        logger.info("Starting 10 AM trading strategy...")
         
-        logger.info("Waiting for data stream initialization...")
-        time.sleep(2)
-        
-        # Initialize paper trader
-        paper_trader = PaperTrader(initial_balance=10000.0)  # Start with 10,000 USDT
-        
-        logger.info("Starting main loop...")
         while True:
             data = rt_data.data
             if not data.empty:
                 latest = data.iloc[-1]
                 
-                # Display market data and signals
-                recommendation = display_data(data)
+                # Execute 10 AM strategy
+                result = live_trader.execute_10am_strategy(latest['close'])
                 
-                # Execute paper trade based on recommendation
-                paper_trader.execute_trade(
-                    signal=recommendation,
-                    price=latest['close'],
-                    timestamp=latest.name
-                )
+                if result['status'] == 'success':
+                    logger.info(f"Orders placed successfully: {result['orders']}")
+                elif result['status'] == 'error':
+                    logger.error(f"Strategy error: {result['reason']}")
                 
-                # Display paper trading status
-                metrics = paper_trader.calculate_metrics()
-                print("\nPaper Trading Status:")
-                print(f"Initial Balance:    {paper_trader.initial_balance:.2f} USDT")
-                print(f"Current Balance:    {paper_trader.balance:.2f} USDT")
-                print(f"Position Size:      {paper_trader.position:.4f}")
-                print(f"Position Value:     {paper_trader.get_position_value(latest['close']):.2f} USDT")
-                print(f"Total Value:        {paper_trader.get_total_value(latest['close']):.2f} USDT")
-                print(f"Total Return:       {metrics['return_pct']:.2f}%")
-                print(f"Total Trades:       {metrics['total_trades']}")
-                print(f"Win Rate:           {metrics['win_rate']:.2f}%")
-                
+                # Display market data
+                display_data(data)
+            
             time.sleep(1)
             
     except KeyboardInterrupt:
-        logger.info("User interrupted the stream")
+        logger.info("User interrupted the program")
     finally:
-        if rt_data is not None:
+        if rt_data:
             rt_data.stop()
-        
-        # Display final trading summary if paper trader exists
-        if paper_trader is not None:
-            metrics = paper_trader.calculate_metrics()
-            logger.info("Paper Trading Summary:")
-            logger.info(f"Total Trades: {metrics['total_trades']}")
-            logger.info(f"Win Rate: {metrics['win_rate']:.2f}%")
-            logger.info(f"Total Return: {metrics['return_pct']:.2f}%")
-            
-        logger.info("Program completely exited")
+        logger.info("Trading session ended")
 
 if __name__ == "__main__":
     main()

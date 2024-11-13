@@ -39,30 +39,32 @@ class RealTimeData:
         self._initialize_data_structure()
         
     def _initialize_data_structure(self) -> None:
-        """Initialize historical data and indicators"""
+        """Initialize data structure with historical data"""
         try:
-            # Get historical klines
             klines = self.api.get_klines(self.symbol)
             
+            if not klines:
+                logger.warning("No historical data received")
+                return
+            
             # Convert klines to DataFrame
-            df_data = []
-            for kline in klines:
-                df_data.append({
-                    'timestamp': pd.to_datetime(int(kline['t']), unit='ms'),
-                    'open': float(kline['o']),
-                    'high': float(kline['h']),
-                    'low': float(kline['l']),
-                    'close': float(kline['c']),
-                    'volume': float(kline['v'])
+            data = []
+            for k in klines:
+                data.append({
+                    'timestamp': k['t'] / 1000,  # Convert ms to seconds
+                    'open': k['o'],
+                    'high': k['h'],
+                    'low': k['l'],
+                    'close': k['c'],
+                    'volume': k['v']
                 })
             
-            self.data = pd.DataFrame(df_data)
-            self.data.set_index('timestamp', inplace=True)
+            self.data = pd.DataFrame(data)
+            self.data['datetime'] = pd.to_datetime(self.data['timestamp'], unit='s')
+            self.data.set_index('datetime', inplace=True)
             
-            # Calculate indicators
+            # Calculate initial indicators
             self._calculate_indicators()
-            
-            logger.info(f"Successfully loaded {len(self.data)} historical records")
             
         except Exception as e:
             logger.error(f"Error initializing data structure: {str(e)}")
